@@ -1,0 +1,25 @@
+Site: Aesthetica Dental Clinic
+Type: Dental Clinic
+Location: Punawale, Pune, India
+
+Description:
+Aesthetica Dental Clinic offers advanced dental treatments including root canal therapy, dental implants, aligners, teeth cleaning, and cosmetic dentistry.
+
+Key Services:
+- Root Canal Treatment in Punawale
+- Dental Implants in Punawale
+- Invisible Aligners in Punawale
+- Teeth Cleaning and Whitening
+- Veneers in punawale 
+- Wisdom teeth extraction in punawale 
+- Teeth Scaling treatment in punawale 
+
+Pages:
+https://aestheticadental.github.io/
+https://aestheticadental.github.io/root-canal-punawale.html
+https://aestheticadental.github.io/aligners-punawale.html
+https://aestheticadental.github.io/dental-implants-punawale.html
+
+Contact:
+Phone: +919226680164
+Location: Swaraaj Heights, Punawale, Pune - 411033
