@@ -12,49 +12,6 @@
     
 <link rel="canonical" href="https://aestheticadental.github.io/">
 
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Dentist",
- "name": "Aesthetica Dental Clinic",
- "image": "https://aestheticadental.github.io/logo.webp",
- "address": {
-   "@type": "PostalAddress",
-   "streetAddress": "1st floor, Shop no 103, Swaraaj Heights, Kate Wasti Rd, opp. Legacy IVy",
-   "addressLocality": "Punawale",
-   "addressRegion": "Pune",
-   "postalCode": "411033",
-   "addressCountry": "IN"
- },
- "geo": {
-   "@type": "GeoCoordinates",
-   "latitude": 18.6232,
-   "longitude": 73.7291
- },
- "telephone": "09226680164",
- "openingHours": "Open 24 hours,
- "sameAs": [
-   "https://instagram.com/aesthetica.dental.punawale"
- ]
-}
-</script>
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
-   {
-     "@type": "Question",
-     "name": "Is root canal painful?",
-     "acceptedAnswer": {
-       "@type": "Answer",
-       "text": "Root canal treatment is painless with modern anesthesia."
-     }
-   }
- ]
-}
-</script>
     
     <!-- Google Analytics 4 (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-072FEM5MSV"></script>
@@ -1279,11 +1236,77 @@
         window.addEventListener('beforeunload', function() {
             const timeSpent = Math.floor((Date.now() - performance.timing.navigationStart) / 1000);
             trackEvent('engagement', 'page_exit', 'total_time', timeSpent);
-        });
-
-        
-
-        
+        });        
     </script>
+    
+    <!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Dental clinic","Dentist", "MedicalClinic", "LocalBusiness", "orthodontist", "endodontist", "kids dentist"],
+  "name": "Aesthetica Dental Clinic",
+  "alternateName": "Aesthetica",
+  "description": "Multispeciality dental clinic in Punawale led by Dr. Prachi Gupta Garg. Services include root canal treatment, dental implants, teeth whitening, clear aligners, veneers, and paediatric dentistry.",
+  "url": "https://aestheticadental.github.io/",
+  "telephone": "+919226680164",
+  "image": "https://aestheticadental.github.io/logo.webp",
+  "priceRange": "₹₹",
+  "currenciesAccepted": "INR",
+  "paymentAccepted": "Cash, UPI, Card",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1st floor, Shop no 103, Swaraaj Heights, Kate Wasti Rd, opp. Legacy IVy, Kate Wasti",
+    "addressLocality": "Punawale",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411033",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 18.6298,
+    "longitude": 73.7359
+  },
+  "areaServed": [
+    "Punawale", "Wakad", "Tathawade", "Ravet", "Hinjewadi", "Pimpri-Chinchwad"
+  ],
+  "hasMap": "https://maps.google.com/?q=Aesthetica+Dental+Clinic+Punawale",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "10:15",
+      "closes": "20:30"
+    }
+  ],
+  "medicalSpecialty": [
+    "Dentistry",
+    "Endodontics",
+    "Orthodontics",
+    "Cosmetic Dentistry",
+    "Pediatric Dentistry"
+  ],
+  "availableService": [
+    { "@type": "MedicalProcedure", "name": "Root Canal Treatment" },
+    { "@type": "MedicalProcedure", "name": "Dental Implants" },
+    { "@type": "MedicalProcedure", "name": "Teeth Whitening" },
+    { "@type": "MedicalProcedure", "name": "Clear Aligners" },
+    { "@type": "MedicalProcedure", "name": "Dental Veneers" },
+    { "@type": "MedicalProcedure", "name": "Paediatric Dentistry" },
+    { "@type": "MedicalProcedure", "name": "Teeth Cleaning" }
+  ],
+  "founder": {
+    "@type": "Dentist",
+    "name": "Dr. Prachi Gupta Garg",
+    "jobTitle": "Dentist & Certified Cosmetologist",
+    "hasCredential": "BDS"
+  },
+  "sameAs": [
+    "https://instagram.com/aesthetica.dental.punawale",
+    "https://linkedin.com/in/prachi-gupta-0b67a9190/",
+    "https://wa.me/919226680164",
+    "https://www.youtube.com/@AestheticaDentalClinic"
+  ]
+}
+</script>
 </body>
 </html>
