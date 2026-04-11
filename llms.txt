@@ -1,25 +1,23 @@
-Site: Aesthetica Dental Clinic
-Type: Dental Clinic
-Location: Punawale, Pune, India
+# Aesthetica Dental Clinic — Punawale, Pune
 
-Description:
-Aesthetica Dental Clinic offers advanced dental treatments including root canal therapy, dental implants, aligners, teeth cleaning, and cosmetic dentistry.
+> Multispeciality dental clinic led by Dr. Prachi Gupta Garg (BDS, Certified Cosmetologist).
+> Located in Punawale, Pimpri-Chinchwad, Pune – 411033.
+> Phone: +91 92266 80164
 
-Key Services:
-- Root Canal Treatment in Punawale
-- Dental Implants in Punawale
-- Invisible Aligners in Punawale
-- Teeth Cleaning and Whitening
-- Veneers in punawale 
-- Wisdom teeth extraction in punawale 
-- Teeth Scaling treatment in punawale 
+## Pages
 
-Pages:
-https://aestheticadental.github.io/
-https://aestheticadental.github.io/root-canal-punawale.html
-https://aestheticadental.github.io/aligners-punawale.html
-https://aestheticadental.github.io/dental-implants-punawale.html
+- [Homepage](https://aestheticadental.github.io/): Overview of all services, doctor profile, contact
+- [Root Canal Treatment](https://aestheticadental.github.io/root-canal-punawale.html): Painless RCT in Punawale
+- [Dental Implants](https://aestheticadental.github.io/dental-implants-punawale.html): Permanent tooth replacement
+- [Clear Aligners](https://aestheticadental.github.io/aligners-punawale.html): Invisible orthodontic treatment
+- [Root Canal Cost Guide](https://aestheticadental.github.io/blog/cost-of-root-canal-in-punawale.html): 2026 pricing guide
+- [Signs You Need Root Canal](https://aestheticadental.github.io/blog/signs-you-need-root-canal.html): Symptoms guide
 
-Contact:
-Phone: +919226680164
-Location: Swaraaj Heights, Punawale, Pune - 411033
+## Services offered
+
+Root canal treatment, dental implants, clear aligners, porcelain veneers, teeth whitening,
+teeth cleaning, orthodontics, paediatric dentistry, restorative care.
+
+## Catchment area
+
+Punawale, Wakad, Tathawade, Ravet, Hinjewadi, Pimpri-Chinchwad.
