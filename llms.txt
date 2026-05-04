@@ -1,23 +1,52 @@
 # Aesthetica Dental Clinic — Punawale, Pune
-
 > Multispeciality dental clinic led by Dr. Prachi Gupta Garg (BDS, Certified Cosmetologist).
-> Located in Punawale, Pimpri-Chinchwad, Pune – 411033.
+> Located in Punawale, Pimpri-Chinchwad, Pune – 411033, Maharashtra, India.
 > Phone: +91 92266 80164
-
+> Hours: Monday–Saturday, 10:00 AM – 8:00 PM
+> Website: [aestheticadental.github.io](https://aestheticadental.github.io/)
+## About the Clinic
+Aesthetica Dental Clinic is a modern, multispeciality dental clinic in Punawale, serving patients
+from Wakad, Tathawade, Ravet, Hinjewadi, and wider Pimpri-Chinchwad. The clinic combines advanced
+dental technology with a patient-centric approach and strict hygiene protocols.
+## About the Doctor
+**Dr. Prachi Gupta Garg** — BDS, Certified Cosmetologist
+Principal dentist and founder of Aesthetica Dental Clinic. Specialises in cosmetic dentistry,
+painless root canal therapy, clear aligner orthodontics, and restorative dentistry.
+Committed to continuing education and modern treatment protocols.
+## Services Offered
+- **Root Canal Treatment (RCT)**: Painless, single or multi-sitting using rotary endodontics. Cost: ₹3,000–₹8,000 per tooth.
+- **Dental Implants**: Permanent titanium implants with porcelain crowns. Timeline: 3–6 months.
+- **Clear Aligners**: Invisible orthodontic treatment for teens and adults.
+- **Porcelain Veneers**: Smile makeover with custom-fabricated veneers.
+- **Teeth Whitening**: In-clinic professional bleaching for visibly whiter teeth.
+- **Teeth Cleaning (Scaling & Polishing)**: Preventive care to remove tartar and plaque.
+- **Braces / Orthodontics**: Metal and ceramic braces for all ages.
+- **Paediatric Dentistry**: Gentle, child-friendly dental care including checkups, fillings, and fluoride.
+- **Restorative Care**: Tooth-coloured fillings, inlays, onlays, crowns, and bridges.
+- **Dental X-Rays**: Digital radiography for accurate diagnosis.
+## Service Area
+Primary: Punawale, Pimpri-Chinchwad
+Also serves: Wakad, Tathawade, Ravet, Hinjewadi, Akurdi, Nigdi
 ## Pages
-
-- [Homepage](https://aestheticadental.github.io/): Overview of all services, doctor profile, contact
-- [Root Canal Treatment](https://aestheticadental.github.io/root-canal-punawale.html): Painless RCT in Punawale
-- [Dental Implants](https://aestheticadental.github.io/dental-implants-punawale.html): Permanent tooth replacement
-- [Clear Aligners](https://aestheticadental.github.io/aligners-punawale.html): Invisible orthodontic treatment
-- [Root Canal Cost Guide](https://aestheticadental.github.io/blog/cost-of-root-canal-in-punawale.html): 2026 pricing guide
-- [Signs You Need Root Canal](https://aestheticadental.github.io/blog/signs-you-need-root-canal.html): Symptoms guide
-
-## Services offered
-
-Root canal treatment, dental implants, clear aligners, porcelain veneers, teeth whitening,
-teeth cleaning, orthodontics, paediatric dentistry, restorative care.
-
-## Catchment area
-
+- [Homepage](https://aestheticadental.github.io/): Overview of all services, doctor profile, FAQ, contact
+- [Root Canal Treatment in Punawale](https://aestheticadental.github.io/root-canal-punawale.html): Painless RCT details, cost, procedure
+- [Dental Implants in Punawale](https://aestheticadental.github.io/dental-implants-punawale.html): Permanent tooth replacement
+- [Clear Aligners in Punawale](https://aestheticadental.github.io/aligners-punawale.html): Invisible orthodontic treatment
+- [Root Canal Cost Guide 2026](https://aestheticadental.github.io/blog/cost-of-root-canal-in-punawale.html): Detailed pricing breakdown
+- [Signs You Need Root Canal](https://aestheticadental.github.io/blog/signs-you-need-root-canal.html): Symptom guide
+- [Best Dentist Near Wakad vs Punawale](https://aestheticadental.github.io/blog/best-dentist-near-wakad.html): Location comparison guide
+## Common Patient Questions
+**Is root canal treatment painful?**
+No. Aesthetica uses advanced anaesthesia and rotary endodontic technology for a virtually painless experience.
+**How much does root canal cost in Punawale?**
+Between ₹3,000 and ₹8,000 depending on tooth type and severity.
+**Does the clinic treat children?**
+Yes. Paediatric dental services are available with a gentle, child-friendly approach.
+**Are clear aligners available?**
+Yes. Custom clear aligners for discreet orthodontic correction.
+**What areas does the clinic serve?**
 Punawale, Wakad, Tathawade, Ravet, Hinjewadi, Pimpri-Chinchwad.
+## Contact
+- Phone / WhatsApp: +91 92266 80164
+- Address: Punawale, Pimpri-Chinchwad, Pune – 411033, Maharashtra, India
+- Map: [maps.google.com](https://maps.google.com/?q=Aesthetica+Dental+Clinic+Punawale)
