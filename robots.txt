@@ -1,3 +1,27 @@
+# Aesthetica Dental Clinic — robots.txt
+# [aestheticadental.github.io](https://aestheticadental.github.io/)
 User-agent: *
 Allow: /
-Sitemap: https://aestheticadental.github.io/sitemap.xml
+# Crawl budget hints — disallow non-content assets
+Disallow: /components/
+Disallow: /*.ico$
+# Allow all major search engines explicitly
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+# AI / LLM crawlers — allow access to llms.txt and all content
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Applebot
+Allow: /
+# Sitemaps
+Sitemap: [aestheticadental.github.io](https://aestheticadental.github.io/sitemap.xml)
+# LLM-specific resource (see llms.txt spec)
+# [aestheticadental.github.io](https://aestheticadental.github.io/llms.txt)
