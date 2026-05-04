@@ -25,3 +25,5 @@ Allow: /
 Sitemap: [aestheticadental.github.io](https://aestheticadental.github.io/sitemap.xml)
 # LLM-specific resource (see llms.txt spec)
 # [aestheticadental.github.io](https://aestheticadental.github.io/llms.txt)
+
+
