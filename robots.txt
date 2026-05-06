@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aestheticadental.github.io/sitemap.xml

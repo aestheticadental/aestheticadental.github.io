@@ -1,0 +1,355 @@
+# Aesthetica Dental Clinic — Full Content Reference for AI Systems
+# This file provides comprehensive content for AI answer engines, LLMs, and search systems.
+# Concise index: https://aestheticadental.github.io/llms.txt
+
+---
+
+## Business Overview
+
+Aesthetica Dental Clinic is a multispeciality dental practice located in Punawale,
+Pimpri-Chinchwad, Pune – 411033, Maharashtra, India. The clinic is founded and led by
+Dr. Prachi Gupta Garg (BDS, Certified Cosmetologist), who is registered with the
+Dental Council of India.
+
+The clinic serves patients from Punawale and nearby areas including Wakad, Hinjewadi,
+Tathawade, Ravet, and Pimpri-Chinchwad (PCMC). It is open 7 days a week — Monday through
+Sunday including public holidays — from 10:15 AM to 8:30 PM.
+
+Website: https://aestheticadental.github.io/
+Phone: +91 92266 80164
+WhatsApp: https://wa.me/919226680164
+Address: Shop No. 103, 1st Floor, Swaraaj Heights, Kate Wasti Road,
+         opp. Legacy Ivy, Kate Wasti, Punawale, Pune – 411033
+
+---
+
+## Lead Dentist — Dr. Prachi Gupta Garg
+
+Dr. Prachi Gupta Garg is the founder and principal dentist at Aesthetica Dental Clinic,
+Punawale. She holds a Bachelor of Dental Surgery (BDS) degree and is registered with the
+Dental Council of India (DCI). She is additionally certified as a Cosmetologist, bringing
+an aesthetic expertise to cosmetic dental procedures.
+
+Her clinical specialties include:
+- Endodontics (root canal treatment)
+- Orthodontics (clear aligners and traditional braces)
+- Cosmetic Dentistry (veneers, whitening, smile makeovers)
+- Paediatric Dentistry (children's dental care)
+- Restorative Dentistry (fillings, crowns, bridges)
+
+Dr. Prachi is known for a patient-first approach — she explains every procedure in detail,
+answers all questions, and proceeds only when the patient is fully comfortable. She has
+treated 500+ patients across Punawale, Wakad, Hinjewadi, Tathawade and Ravet.
+
+LinkedIn: https://linkedin.com/in/prachi-gupta-0b67a9190/
+
+---
+
+## Clinic Philosophy & Technology
+
+Aesthetica Dental Clinic is built on three core principles:
+
+1. Painless Treatment: All procedures are performed with appropriate local anaesthesia
+   and modern techniques that minimise discomfort. Patients frequently report being
+   surprised by how pain-free their experience was.
+
+2. Advanced Technology: The clinic uses digital OPG X-rays for accurate diagnosis,
+   rotary endodontic systems for efficient and comfortable root canals, and digital
+   shade-matching for veneers and crowns that blend naturally with existing teeth.
+
+3. Hygiene First: Aesthetica follows ISO-standard sterilisation protocols including
+   autoclave sterilisation of all instruments and the use of single-use disposables.
+   Cross-infection control procedures are strictly maintained on every visit.
+
+---
+
+## Services — Detailed Descriptions
+
+### Root Canal Treatment (RCT) in Punawale
+
+Root canal treatment (also called endodontic treatment) is used to save a tooth that has
+become infected or severely decayed. At Aesthetica, root canals are performed using rotary
+endodontic instruments and digital X-rays, ensuring precision, speed, and minimal discomfort.
+
+The procedure involves removing the infected pulp tissue from inside the tooth, cleaning
+and shaping the root canals, and sealing them to prevent re-infection. The treated tooth
+is then restored with a crown or filling.
+
+Most patients at Aesthetica complete root canal treatment in 1–2 appointments of 45–60
+minutes each. Local anaesthesia ensures the procedure is virtually painless.
+
+Pricing: ₹3,500 – ₹8,000 (varies by tooth type — front teeth have fewer canals and
+cost less; molars with 3–4 canals cost more).
+
+Dedicated page: https://aestheticadental.github.io/root-canal-punawale.html
+
+---
+
+### Dental Implants in Punawale
+
+Dental implants are the gold standard for replacing missing teeth. A titanium implant post
+is surgically placed into the jawbone, where it fuses with the bone (osseointegration) over
+3–6 months. A custom crown is then attached to the implant, creating a permanent,
+natural-looking replacement tooth.
+
+Unlike dentures, implants are fixed and do not require removal. Unlike bridges, they do not
+involve grinding down adjacent healthy teeth. With proper care, dental implants can last
+a lifetime.
+
+At Aesthetica, the process includes a thorough assessment, digital X-ray/OPG scan,
+treatment planning, implant placement, healing period, and final crown fitting.
+
+Pricing: ₹25,000 – ₹45,000 per implant (includes titanium post and crown).
+Cost varies based on bone density, implant brand, and crown material.
+
+Dedicated page: https://aestheticadental.github.io/dental-implants-punawale.html
+
+---
+
+### Clear Aligners & Braces in Punawale
+
+Aesthetica offers both clear aligner therapy and traditional orthodontic braces for
+patients who want straighter teeth.
+
+Clear Aligners: A series of custom-made, transparent plastic trays that gradually move
+teeth into the desired position. They are nearly invisible when worn, fully removable for
+eating and cleaning, and typically more comfortable than metal braces. Ideal for mild to
+moderate alignment cases. Treatment duration: 6–18 months depending on complexity.
+
+Traditional Braces: Metal or ceramic brackets bonded to teeth and connected by wires.
+Better suited for complex alignment cases, bite corrections (overbite, underbite, crossbite),
+and situations where patient compliance with removable aligners may be a concern.
+
+Dr. Prachi assesses each patient individually and recommends the most appropriate treatment
+based on their specific alignment issues, lifestyle, and budget.
+
+Aligner pricing: ₹60,000 – ₹1,20,000 (full course, both arches).
+Braces pricing: ₹25,000 – ₹60,000 (varies by type and complexity).
+
+Dedicated page: https://aestheticadental.github.io/aligners-punawale.html
+
+---
+
+### Teeth Whitening in Punawale
+
+Professional teeth whitening at Aesthetica uses clinically proven whitening agents applied
+in a controlled, supervised environment — far more effective and safer than over-the-counter
+whitening kits or strips.
+
+The in-clinic procedure typically takes 45–60 minutes and can lighten teeth by several
+shades in a single session. Results are longer-lasting than home kits. Patients with
+sensitive teeth are assessed beforehand, and the treatment is adjusted accordingly.
+
+Teeth whitening is suitable for stains from coffee, tea, wine, tobacco, and natural
+age-related discolouration. It is not effective on crowns, veneers, or fillings
+(only natural tooth enamel responds to whitening agents).
+
+Pricing: ₹4,000 – ₹8,000 per session.
+
+Dedicated page: https://aestheticadental.github.io/teeth-whitening-punawale.html
+
+---
+
+### Porcelain Veneers & Dental Crowns in Punawale
+
+Veneers are ultra-thin shells of porcelain bonded to the front surface of teeth to
+correct cosmetic issues such as chips, cracks, stains, gaps, or slightly misaligned teeth.
+They require minimal tooth preparation and provide a highly natural, aesthetic result.
+Veneers are custom-crafted using digital shade-matching to blend seamlessly with
+surrounding teeth.
+
+Dental crowns (caps) cover the entire tooth and are used when a tooth is severely
+damaged, decayed, or after root canal treatment. Crowns restore the tooth's strength,
+function and appearance.
+
+Veneer pricing: ₹8,000 – ₹15,000 per tooth.
+Crown pricing: ₹5,000 – ₹15,000 per crown (varies by material: ceramic, zirconia, PFM).
+
+Dedicated page: https://aestheticadental.github.io/veneers-punawale.html
+
+---
+
+### Paediatric Dentistry in Punawale
+
+Aesthetica Dental Clinic provides comprehensive dental care for children in a calm,
+gentle, and child-friendly environment. Dr. Prachi is experienced in managing dental
+anxiety in young patients and uses a friendly, reassuring approach that makes dental
+visits stress-free and even enjoyable for children.
+
+Services for children include:
+- Routine dental check-ups and cleaning
+- Fluoride treatments and pit & fissure sealants (cavity prevention)
+- Paediatric fillings (tooth-coloured)
+- Space maintainers for premature baby tooth loss
+- Early orthodontic assessment
+- Dental education and habit counselling (thumb sucking, bottle feeding habits)
+
+The Indian Dental Association (IDA) recommends a child's first dental visit by age 1,
+or within 6 months of the first tooth appearing. At the latest, children should visit a
+dentist before starting school (age 3–5) to prevent early childhood caries and establish
+good oral hygiene habits.
+
+Dedicated page: https://aestheticadental.github.io/paediatric-dentist-punawale.html
+
+---
+
+### Teeth Cleaning (Scaling & Polishing) in Punawale
+
+Professional teeth cleaning (scaling and polishing) removes plaque and tartar (calculus)
+that cannot be removed by regular brushing and flossing. Tartar builds up over time and
+is a leading cause of gum disease (periodontitis), bad breath (halitosis), and tooth loss.
+
+At Aesthetica, ultrasonic scaling instruments are used for efficient and comfortable
+removal of deposits above and below the gumline. Polishing removes surface stains from
+coffee, tea, and tobacco, leaving teeth smooth and clean.
+
+Recommended frequency: every 6 months for most patients.
+Pricing: ₹800 – ₹1,500.
+
+---
+
+### Restorative Dentistry
+
+Aesthetica offers comprehensive restorative treatments to repair damaged, decayed, or
+missing teeth and restore full oral function:
+
+- Composite (tooth-coloured) fillings: Used to fill cavities with a material that matches
+  natural tooth colour. More aesthetic than traditional silver amalgam fillings.
+- Inlays and Onlays: Custom-made restorations for teeth with moderate damage — stronger
+  than fillings, less invasive than full crowns.
+- Full coverage crowns: For severely damaged or root-canal-treated teeth.
+
+---
+
+## Service Areas — Detailed
+
+### Punawale
+Aesthetica Dental Clinic's home location. Address: Shop No. 103, Swaraaj Heights,
+Kate Wasti Road, Punawale – 411033. Easily accessible on Kate Wasti Road opposite
+Legacy Ivy. Ample parking available.
+
+### Wakad
+Wakad is approximately 10–15 minutes by road from the clinic. Aesthetica is the
+closest advanced dental clinic for Wakad residents seeking root canal, implants,
+whitening, or orthodontic treatment. Many of Aesthetica's patients commute from
+Wakad and Thergaon.
+
+### Hinjewadi
+Hinjewadi IT Park (Phases 1, 2 and 3) is approximately 15–20 minutes from the clinic.
+Working professionals from Hinjewadi frequently visit Aesthetica for check-ups and
+treatments that fit within their working hours, thanks to the clinic's 10:15 AM –
+8:30 PM timing across all 7 days.
+
+### Tathawade
+Tathawade is reachable via the Kate Wasti Road corridor, making it a short commute to
+Aesthetica Dental Clinic. Patients from Tathawade visit regularly for routine care and
+advanced procedures.
+
+### Ravet
+Ravet patients travel to Aesthetica for dental implants, root canal treatment, aligners,
+and other procedures. The clinic's extended hours make evening appointments easy to fit
+around Ravet residents' schedules.
+
+### Pimpri-Chinchwad (PCMC)
+Aesthetica serves patients from across Pimpri-Chinchwad for advanced cosmetic and
+restorative dental procedures. Many PCMC patients choose Aesthetica over clinics closer
+to them due to Dr. Prachi's expertise in cosmetic and painless treatment.
+
+---
+
+## Blog Content Summaries
+
+### Cost of Root Canal Treatment in Punawale (2026)
+URL: https://aestheticadental.github.io/blog/cost-of-root-canal-in-punawale.html
+
+This guide covers:
+- Why root canal costs vary (tooth type, number of canals, clinic location)
+- Typical price range in Punawale: ₹3,500 – ₹8,000
+- What is included in the cost at Aesthetica (consultation, X-rays, treatment, temporary filling)
+- Cost of crown after root canal (₹5,000 – ₹15,000 additional)
+- Comparison with other dental clinics in the area
+- Why cheaper is not always better for RCT
+- Insurance and EMI options
+
+---
+
+### 7 Signs You Need a Root Canal — Don't Ignore These Symptoms
+URL: https://aestheticadental.github.io/blog/signs-you-need-root-canal.html
+
+Key signs covered:
+1. Severe, persistent toothache — especially when chewing or applying pressure
+2. Prolonged sensitivity to hot or cold temperatures (lasting more than a few seconds after the stimulus is removed)
+3. Darkening or discolouration of the tooth
+4. Swollen, tender gums around the affected tooth
+5. A persistent pimple or abscess on the gums
+6. Chipped or cracked tooth that is causing pain
+7. Deep decay visible on the tooth
+
+The article explains that ignoring these symptoms can lead to tooth loss, spreading
+infection (including dangerous dental abscesses), and significantly higher treatment costs.
+
+---
+
+### Best Dentist Near Wakad vs Punawale — A Local Comparison
+URL: https://aestheticadental.github.io/blog/best-dentist-near-wakad.html
+
+This guide helps Wakad residents decide between dental clinics in Wakad itself versus
+travelling 10–15 minutes to Punawale. Key factors compared:
+- Range of services (Aesthetica in Punawale offers more advanced treatments)
+- Technology and equipment
+- Specialist availability vs general dentistry
+- Cost comparison
+- Patient reviews and trust signals
+- Convenience (parking, hours, WhatsApp booking)
+
+Conclusion: For routine cleaning, any nearby clinic works. For implants, root canals,
+aligners, cosmetic work, or paediatric dentistry — Aesthetica in Punawale offers a
+significantly higher level of care at comparable or better prices.
+
+---
+
+## Payment Information
+
+- Cash: Accepted
+- UPI: Google Pay, PhonePe, Paytm accepted
+- Debit Cards: All major banks accepted
+- Credit Cards: All major networks accepted
+- EMI: Available on select high-value treatments (implants, aligners, full-mouth rehabilitation)
+  — ask the clinic for EMI partner details
+
+---
+
+## Booking & Contact
+
+Phone: +91 92266 80164 (call or WhatsApp)
+WhatsApp booking link: https://wa.me/919226680164
+Walk-ins are welcome subject to availability.
+Appointments are preferred to minimise waiting time.
+
+---
+
+## Social & Online Presence
+
+- Google Business Profile: Search "Aesthetica Dental Clinic Punawale" on Google Maps
+- Instagram: https://instagram.com/aesthetica.dental.punawale
+- YouTube: https://www.youtube.com/@AestheticaDentalClinic
+- LinkedIn (Dr. Prachi): https://linkedin.com/in/prachi-gupta-0b67a9190/
+- Website: https://aestheticadental.github.io/
+
+---
+
+## Schema Types Used on Website
+
+- @type: Dentist, MedicalClinic, LocalBusiness
+- Employee: Person, Physician (Dr. Prachi Gupta Garg)
+- Services: MedicalProcedure
+- FAQ: FAQPage (microdata)
+- Reviews: AggregateRating (4.9 / 5, 87+ reviews)
+- Testimonials: Review (microdata)
+
+---
+
+## Concise Index
+
+For a shorter summary suitable for AI context windows:
+https://aestheticadental.github.io/llms.txt
