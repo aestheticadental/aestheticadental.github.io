@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ══ SEO: Title & Meta ══ -->
+  <title>All Dental Services in Punawale, Pune | Aesthetica Dental Clinic</title>
+  <meta name="description" content="Complete list of dental services at Aesthetica Dental Clinic, Punawale — root canal, implants, aligners, whitening, veneers, paediatric dentistry, scaling & restorative care. Led by Dr. Prachi Gupta Garg (BDS). Open 7 days.">
+  <meta name="keywords" content="dental services Punawale, dentist Punawale, root canal Punawale, dental implants Punawale, teeth whitening Punawale, aligners Punawale, paediatric dentist Punawale, teeth cleaning Punawale, veneers Punawale">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Dr. Prachi Gupta Garg, Aesthetica Dental Clinic">
+  <link rel="canonical" href="https://aestheticadental.github.io/services.html">
+
+  <!-- ══ Open Graph ══ -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="All Dental Services in Punawale — Aesthetica Dental Clinic">
+  <meta property="og:description" content="Root canal, implants, aligners, whitening, veneers, paediatric dentistry & more in Punawale. Led by Dr. Prachi Gupta Garg (BDS). Open 7 days.">
+  <meta property="og:url" content="https://aestheticadental.github.io/services.html">
+  <meta property="og:image" content="https://aestheticadental.github.io/logo.webp">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Aesthetica Dental Clinic">
+
+  <!-- ══ Twitter / X Card ══ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="All Dental Services in Punawale — Aesthetica Dental Clinic">
+  <meta name="twitter:description" content="Root canal, implants, aligners, whitening, veneers, paediatric dentistry & more. Open 7 days in Punawale.">
+  <meta name="twitter:image" content="https://aestheticadental.github.io/logo.webp">
+
+  <!-- ══ GA4 ══ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-072FEM5MSV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-072FEM5MSV');
+  </script>
+
+  <!-- ══ Fonts — async / non-render-blocking ══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  </noscript>
+
+  <!-- ══ Shared stylesheet ══ -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ══ Page-specific styles ══ -->
+  <style>
+    /* ── Hero ── */
+    .services-hero {
+      padding: 7rem 0 3.5rem;
+      background: linear-gradient(135deg, #f8fafc 0%, #ffffff 55%, #f1f5f9 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .services-hero::before {
+      content: '';
+      position: absolute; top: 0; right: -15%; width: 50%; height: 100%;
+      background: var(--gradient-primary); opacity: .03;
+      border-radius: 50% 0 0 50%;
+    }
+    .services-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700; letter-spacing: -.02em;
+      color: var(--primary-dark); margin-bottom: .85rem;
+    }
+    .services-hero p {
+      font-size: 1.1rem; color: var(--neutral-600);
+      max-width: 620px; margin: 0 auto 2rem; line-height: 1.65;
+    }
+    .hero-stats {
+      display: flex; justify-content: center; gap: 2.5rem;
+      flex-wrap: wrap; margin-top: 1.5rem;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat .num { font-size: 1.7rem; font-weight: 700; color: var(--accent-blue); display: block; line-height: 1; }
+    .hero-stat .lbl { font-size: .78rem; color: var(--neutral-600); margin-top: .2rem; }
+
+    /* ── Services full listing ── */
+    .services-listing { padding: 5rem 0; background: var(--neutral-100); }
+
+    /* Category label above each group */
+    .category-label {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .75rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--accent-teal);
+      background: rgba(0,180,166,.08); border: 1px solid rgba(0,180,166,.2);
+      padding: 5px 14px; border-radius: 20px;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Full-width service row card */
+    .service-row {
+      background: white; border-radius: 18px;
+      border: 1px solid var(--neutral-200);
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      transition: all .3s ease;
+    }
+    .service-row:hover { box-shadow: var(--shadow-medium); border-color: var(--accent-blue); transform: translateY(-2px); }
+
+    .service-row-inner {
+      display: grid;
+      grid-template-columns: 72px 1fr auto;
+      gap: 0; align-items: stretch;
+    }
+
+    /* Icon column */
+    .service-row-icon {
+      background: var(--gradient-primary);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.75rem; min-height: 120px;
+      flex-shrink: 0;
+    }
+
+    /* Content column */
+    .service-row-body { padding: 1.5rem 1.75rem; }
+    .service-row-body h2 {
+      font-size: 1.15rem; font-weight: 700;
+      color: var(--primary-dark); margin-bottom: .45rem;
+      letter-spacing: -.01em;
+    }
+    .service-row-body p {
+      font-size: .9rem; color: var(--neutral-600);
+      line-height: 1.65; margin-bottom: .75rem;
+    }
+    .service-row-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .tag {
+      font-size: .75rem; font-weight: 500;
+      padding: 3px 11px; border-radius: 14px;
+      background: var(--neutral-100); color: var(--neutral-600);
+      border: 1px solid var(--neutral-200);
+    }
+    .tag.price { background: rgba(0,102,204,.07); color: var(--accent-blue); border-color: rgba(0,102,204,.2); }
+    .tag.time  { background: rgba(0,180,166,.07); color: var(--accent-teal); border-color: rgba(0,180,166,.2); }
+    .tag.open  { background: rgba(34,197,94,.08); color: #16a34a; border-color: rgba(34,197,94,.25); }
+
+    /* CTA column */
+    .service-row-cta {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: .75rem; padding: 1.5rem 1.75rem;
+      border-left: 1px solid var(--neutral-200);
+      min-width: 160px; flex-shrink: 0;
+    }
+    .service-row-cta .learn-btn {
+      display: inline-block; padding: .65rem 1.3rem;
+      background: var(--gradient-primary); color: white;
+      border-radius: 8px; text-decoration: none;
+      font-size: .85rem; font-weight: 600;
+      text-align: center; white-space: nowrap;
+      transition: all .25s;
+    }
+    .service-row-cta .learn-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-soft); }
+    .service-row-cta .book-btn {
+      display: inline-block; padding: .6rem 1.3rem;
+      background: transparent; color: var(--accent-blue);
+      border: 1.5px solid var(--accent-blue); border-radius: 8px;
+      text-decoration: none; font-size: .85rem; font-weight: 600;
+      text-align: center; white-space: nowrap;
+      transition: all .25s;
+    }
+    .service-row-cta .book-btn:hover { background: var(--accent-blue); color: white; }
+
+    /* ── Comparison table ── */
+    .compare-section { padding: 5rem 0; background: white; }
+    .compare-table-wrap { overflow-x: auto; margin-top: 2.5rem; }
+    .compare-table {
+      width: 100%; border-collapse: collapse;
+      font-size: .88rem; min-width: 640px;
+    }
+    .compare-table thead th {
+      background: var(--gradient-primary); color: white;
+      padding: .9rem 1.1rem; text-align: left;
+      font-weight: 600; font-size: .82rem; letter-spacing: .3px;
+    }
+    .compare-table thead th:first-child { border-radius: 10px 0 0 0; }
+    .compare-table thead th:last-child  { border-radius: 0 10px 0 0; }
+    .compare-table tbody tr { border-bottom: 1px solid var(--neutral-200); transition: background .2s; }
+    .compare-table tbody tr:hover { background: var(--neutral-100); }
+    .compare-table tbody tr:last-child { border-bottom: none; }
+    .compare-table td { padding: .85rem 1.1rem; color: var(--neutral-600); vertical-align: middle; }
+    .compare-table td:first-child { font-weight: 600; color: var(--primary-dark); white-space: nowrap; }
+    .compare-table td a { color: var(--accent-blue); text-decoration: none; font-weight: 600; font-size: .82rem; }
+    .compare-table td a:hover { color: var(--accent-teal); }
+    .pill-y { background: rgba(34,197,94,.1); color: #16a34a; padding: 2px 9px; border-radius: 10px; font-size: .77rem; font-weight: 600; white-space: nowrap; }
+    .pill-n { background: var(--neutral-100); color: var(--neutral-600); padding: 2px 9px; border-radius: 10px; font-size: .77rem; white-space: nowrap; }
+
+    /* ── Why Aesthetica strip ── */
+    .why-strip { padding: 4rem 0; background: var(--gradient-primary); color: white; }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .why-item { text-align: center; }
+    .why-icon { font-size: 2rem; margin-bottom: .65rem; display: block; }
+    .why-title { font-size: .95rem; font-weight: 700; margin-bottom: .35rem; }
+    .why-desc  { font-size: .82rem; opacity: .85; line-height: 1.55; }
+
+    /* ── FAQ ── */
+    .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.1rem; margin-top: 2rem; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .service-row-inner { grid-template-columns: 56px 1fr; }
+      .service-row-cta {
+        grid-column: 1 / -1;
+        flex-direction: row; justify-content: flex-start;
+        border-left: none; border-top: 1px solid var(--neutral-200);
+        padding: 1rem 1.25rem; min-width: unset;
+      }
+      .hero-stats { gap: 1.25rem; }
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .service-row-inner { grid-template-columns: 1fr; }
+      .service-row-icon { min-height: 64px; }
+    }
+  </style>
+
+  <!-- ══ JSON-LD Schema ══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "All Dental Services in Punawale, Pune — Aesthetica Dental Clinic",
+    "url": "https://aestheticadental.github.io/services.html",
+    "description": "Complete listing of dental services at Aesthetica Dental Clinic, Punawale — root canal, implants, aligners, whitening, veneers, paediatric dentistry, scaling and restorative care.",
+    "provider": {
+      "@type": "Dentist",
+      "name": "Aesthetica Dental Clinic",
+      "telephone": "+919226680164",
+      "url": "https://aestheticadental.github.io/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No. 103, 1st Floor, Swaraaj Heights, Kate Wasti Road, opp. Legacy Ivy",
+        "addressLocality": "Punawale",
+        "addressRegion": "Maharashtra",
+        "postalCode": "411033",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "10:15",
+        "closes": "20:30"
+      }],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Dental Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Root Canal Treatment",        "url": "https://aestheticadental.github.io/root-canal-punawale.html" }, "priceSpecification": { "@type": "PriceSpecification", "price": "3500", "priceCurrency": "INR", "maxPrice": "8000" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Dental Implants",            "url": "https://aestheticadental.github.io/dental-implants-punawale.html" }, "priceSpecification": { "@type": "PriceSpecification", "price": "25000", "priceCurrency": "INR", "maxPrice": "45000" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Clear Aligners",            "url": "https://aestheticadental.github.io/aligners-punawale.html" }, "priceSpecification": { "@type": "PriceSpecification", "price": "60000", "priceCurrency": "INR", "maxPrice": "120000" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Teeth Whitening",           "url": "https://aestheticadental.github.io/teeth-whitening-punawale.html" }, "priceSpecification": { "@type": "PriceSpecification", "price": "4000",  "priceCurrency": "INR", "maxPrice": "8000" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Porcelain Veneers",         "url": "https://aestheticadental.github.io/veneers-punawale.html" }, "priceSpecification": { "@type": "PriceSpecification", "price": "8000",  "priceCurrency": "INR", "maxPrice": "15000" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Paediatric Dentistry",      "url": "https://aestheticadental.github.io/paediatric-dentist-punawale.html" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Teeth Cleaning & Scaling",  "url": "https://aestheticadental.github.io/teeth-cleaning-scaling-punawale.html" }, "priceSpecification": { "@type": "PriceSpecification", "price": "800", "priceCurrency": "INR", "maxPrice": "1500" } },
+          { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Restorative Dentistry",     "url": "https://aestheticadental.github.io/restorative-dentistry-punawale.html" }, "priceSpecification": { "@type": "PriceSpecification", "price": "800", "priceCurrency": "INR", "maxPrice": "18000" } }
+        ]
+      }
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Prachi Gupta Garg",
+      "jobTitle": "BDS, Certified Cosmetologist"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What dental services does Aesthetica Dental Clinic in Punawale offer?", "acceptedAnswer": { "@type": "Answer", "text": "Aesthetica Dental Clinic in Punawale offers root canal treatment, dental implants, clear aligners, braces, teeth whitening, porcelain veneers, dental crowns, paediatric dentistry, professional teeth cleaning & scaling, and restorative dentistry (fillings, bridges, inlays). All services are provided by Dr. Prachi Gupta Garg (BDS, Certified Cosmetologist)." } },
+      { "@type": "Question", "name": "Which is the most affordable dental service at Aesthetica?", "acceptedAnswer": { "@type": "Answer", "text": "Professional teeth cleaning (scaling & polishing) starts from ₹800 and dental consultations from ₹200–₹500. Tooth-coloured fillings start from ₹800 per tooth. These are the most accessible entry-point treatments at Aesthetica Dental Clinic, Punawale." } },
+      { "@type": "Question", "name": "Does Aesthetica offer cosmetic dental services?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Aesthetica specialises in cosmetic dentistry including teeth whitening (from ₹4,000), porcelain veneers (from ₹8,000 per tooth), clear aligners for invisible teeth straightening, and full smile makeovers. Dr. Prachi holds an additional certification in cosmetology." } },
+      { "@type": "Question", "name": "Is there a children's dentist at Aesthetica Dental Clinic, Punawale?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Aesthetica offers dedicated paediatric dentistry for children of all ages. Dr. Prachi uses a calm, child-friendly tell-show-do approach. Services for children include check-ups, fluoride treatments, sealants, fillings, space maintainers and early orthodontic assessment." } },
+      { "@type": "Question", "name": "Are all dental services available 7 days a week?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All dental services at Aesthetica are available Monday through Sunday, 10:15 AM to 8:30 PM, including public holidays. Call +91 92266 80164 or WhatsApp to book your appointment." } }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://aestheticadental.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://aestheticadental.github.io/services.html" }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- ══ BREADCRUMB — inline for SEO ══ -->
+<nav class="breadcrumb" aria-label="Breadcrumb" style="margin-top:72px;">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1">
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <span itemprop="name" aria-current="page">Services</span>
+      <meta itemprop="position" content="2">
+    </li>
+  </ol>
+</nav>
+
+<main>
+
+  <!-- ══════════════════════════
+       HERO
+  ══════════════════════════ -->
+  <section class="services-hero">
+    <div class="container">
+      <span class="hero-badge">🦷 Punawale, Pune · Open 7 Days</span>
+      <h1>All Dental Services in Punawale, Pune</h1>
+      <p>Advanced, painless dental care for every need — from routine check-ups to complete smile makeovers. Led by Dr. Prachi Gupta Garg (BDS, Certified Cosmetologist). Serving Punawale, Wakad, Hinjewadi, Tathawade & Ravet.</p>
+      <div class="hero-cta" style="justify-content:center;">
+        <a href="contact.html" class="cta-button cta-primary">📅 Book Appointment</a>
+        <a href="https://wa.me/919226680164?text=Hello%2C%20I%20want%20to%20book%20a%20dental%20appointment." class="cta-button cta-secondary" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="num">8+</span><span class="lbl">Dental Services</span></div>
+        <div class="hero-stat"><span class="num">500+</span><span class="lbl">Patients Treated</span></div>
+        <div class="hero-stat"><span class="num">4.9★</span><span class="lbl">Google Rating</span></div>
+        <div class="hero-stat"><span class="num">7</span><span class="lbl">Days a Week Open</span></div>
+        <div class="hero-stat"><span class="num">₹800</span><span class="lbl">Starting Price</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+       SERVICES FULL LISTING
+  ══════════════════════════ -->
+  <section class="services-listing" id="all-services">
+    <div class="container">
+
+      <!-- Category: Restorative & Emergency -->
+      <div class="category-label">⚡ Restorative &amp; Emergency</div>
+
+      <!-- Root Canal -->
+      <article class="service-row" itemscope itemtype="https://schema.org/MedicalProcedure">
+        <meta itemprop="name" content="Root Canal Treatment in Punawale">
+        <meta itemprop="url" content="https://aestheticadental.github.io/root-canal-punawale.html">
+        <div class="service-row-inner">
+          <div class="service-row-icon" aria-hidden="true">⚡</div>
+          <div class="service-row-body">
+            <h2>Root Canal Treatment (RCT) in Punawale</h2>
+            <p itemprop="description">Save your infected or severely decayed tooth with painless root canal treatment using rotary endodontics and digital X-rays. Completed in 1–2 sittings under local anaesthesia — most patients are surprised by how comfortable the procedure is. A crown is recommended after treatment for long-lasting protection.</p>
+            <div class="service-row-tags">
+              <span class="tag price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <meta itemprop="priceCurrency" content="INR">
+                <meta itemprop="price" content="3500">
+                From ₹3,500
+              </span>
+              <span class="tag time">1–2 Sittings</span>
+              <span class="tag">Painless</span>
+              <span class="tag">Rotary Endodontics</span>
+              <span class="tag open">Walk-ins Welcome</span>
+            </div>
+          </div>
+          <div class="service-row-cta">
+            <a href="root-canal-punawale.html" class="learn-btn">Learn More</a>
+            <a href="https://wa.me/919226680164?text=I%20want%20to%20book%20root%20canal%20treatment" class="book-btn" target="_blank" rel="noopener">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Restorative -->
+      <article class="service-row" itemscope itemtype="https://schema.org/MedicalProcedure">
+        <meta itemprop="name" content="Restorative Dentistry in Punawale">
+        <meta itemprop="url" content="https://aestheticadental.github.io/restorative-dentistry-punawale.html">
+        <div class="service-row-inner">
+          <div class="service-row-icon" aria-hidden="true">🔧</div>
+          <div class="service-row-body">
+            <h2>Restorative Dentistry in Punawale</h2>
+            <p itemprop="description">Repair chipped, cracked, decayed or damaged teeth with tooth-coloured composite fillings, dental crowns, bridges, inlays and onlays. All restorations are shade-matched to your natural teeth for a completely invisible finish. Also includes post-and-core build-up and full-mouth rehabilitation.</p>
+            <div class="service-row-tags">
+              <span class="tag price">Fillings from ₹800</span>
+              <span class="tag price">Crowns from ₹5,000</span>
+              <span class="tag">Tooth-Coloured</span>
+              <span class="tag">No Amalgam</span>
+              <span class="tag">Bridges Available</span>
+            </div>
+          </div>
+          <div class="service-row-cta">
+            <a href="restorative-dentistry-punawale.html" class="learn-btn">Learn More</a>
+            <a href="https://wa.me/919226680164?text=I%20need%20restorative%20dental%20treatment" class="book-btn" target="_blank" rel="noopener">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Teeth Cleaning -->
+      <article class="service-row" itemscope itemtype="https://schema.org/MedicalProcedure">
+        <meta itemprop="name" content="Teeth Cleaning & Scaling in Punawale">
+        <meta itemprop="url" content="https://aestheticadental.github.io/teeth-cleaning-scaling-punawale.html">
+        <div class="service-row-inner">
+          <div class="service-row-icon" aria-hidden="true">🔬</div>
+          <div class="service-row-body">
+            <h2>Teeth Cleaning &amp; Scaling in Punawale</h2>
+            <p itemprop="description">Professional ultrasonic scaling and polishing removes plaque, tartar and surface stains that brushing cannot reach — preventing gum disease, bad breath and tooth loss. Deep cleaning (scaling & root planing) is available for patients with gum disease. Recommended every 6 months for all patients.</p>
+            <div class="service-row-tags">
+              <span class="tag price">From ₹800</span>
+              <span class="tag time">30–45 Minutes</span>
+              <span class="tag">Gum Disease Prevention</span>
+              <span class="tag">Stain Removal</span>
+              <span class="tag open">Same-Day Available</span>
+            </div>
+          </div>
+          <div class="service-row-cta">
+            <a href="teeth-cleaning-scaling-punawale.html" class="learn-btn">Learn More</a>
+            <a href="https://wa.me/919226680164?text=I%20want%20to%20book%20teeth%20cleaning" class="book-btn" target="_blank" rel="noopener">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Category: Replacement -->
+      <div class="category-label" style="margin-top:2.5rem;">🦷 Tooth Replacement</div>
+
+      <!-- Implants -->
+      <article class="service-row" itemscope itemtype="https://schema.org/MedicalProcedure">
+        <meta itemprop="name" content="Dental Implants in Punawale">
+        <meta itemprop="url" content="https://aestheticadental.github.io/dental-implants-punawale.html">
+        <div class="service-row-inner">
+          <div class="service-row-icon" aria-hidden="true">🦷</div>
+          <div class="service-row-body">
+            <h2>Dental Implants in Punawale</h2>
+            <p itemprop="description">The gold standard for replacing missing teeth. A titanium implant fuses permanently with your jawbone and is topped with a custom-matched crown — looking, feeling and functioning exactly like a natural tooth. Prevents bone loss, requires no damage to adjacent teeth, and lasts a lifetime with normal care.</p>
+            <div class="service-row-tags">
+              <span class="tag price">From ₹25,000 per tooth</span>
+              <span class="tag time">3–6 Month Process</span>
+              <span class="tag">Titanium Implant</span>
+              <span class="tag">Lifetime Solution</span>
+              <span class="tag">EMI Available</span>
+            </div>
+          </div>
+          <div class="service-row-cta">
+            <a href="dental-implants-punawale.html" class="learn-btn">Learn More</a>
+            <a href="https://wa.me/919226680164?text=I%20want%20to%20know%20about%20dental%20implants" class="book-btn" target="_blank" rel="noopener">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Category: Orthodontics -->
+      <div class="category-label" style="margin-top:2.5rem;">😁 Orthodontics &amp; Alignment</div>
+
+      <!-- Aligners -->
+      <article class="service-row" itemscope itemtype="https://schema.org/MedicalProcedure">
+        <meta itemprop="name" content="Clear Aligners & Braces in Punawale">
+        <meta itemprop="url" content="https://aestheticadental.github.io/aligners-punawale.html">
+        <div class="service-row-inner">
+          <div class="service-row-icon" aria-hidden="true">😁</div>
+          <div class="service-row-body">
+            <h2>Clear Aligners &amp; Braces in Punawale</h2>
+            <p itemprop="description">Straighten your teeth with nearly invisible clear aligners — removable, comfortable and discreet. Ideal for working professionals and adults. Also offering traditional metal braces (most effective for complex cases) and ceramic braces (tooth-coloured, less visible). A digital smile preview is created before treatment begins.</p>
+            <div class="service-row-tags">
+              <span class="tag price">Aligners from ₹60,000</span>
+              <span class="tag price">Braces from ₹25,000</span>
+              <span class="tag time">6–18 Months</span>
+              <span class="tag">Nearly Invisible</span>
+              <span class="tag">Removable</span>
+              <span class="tag">EMI Available</span>
+            </div>
+          </div>
+          <div class="service-row-cta">
+            <a href="aligners-punawale.html" class="learn-btn">Learn More</a>
+            <a href="https://wa.me/919226680164?text=I%20want%20to%20know%20about%20clear%20aligners" class="book-btn" target="_blank" rel="noopener">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Category: Cosmetic -->
+      <div class="category-label" style="margin-top:2.5rem;">✨ Cosmetic Dentistry</div>
+
+      <!-- Whitening -->
+      <article class="service-row" itemscope itemtype="https://schema.org/MedicalProcedure">
+        <meta itemprop="name" content="Teeth Whitening in Punawale">
+        <meta itemprop="url" content="https://aestheticadental.github.io/teeth-whitening-punawale.html">
+        <div class="service-row-inner">
+          <div class="service-row-icon" aria-hidden="true">✨</div>
+          <div class="service-row-body">
+            <h2>Teeth Whitening in Punawale</h2>
+            <p itemprop="description">Professional in-clinic whitening using clinically proven agents to lighten teeth 4–8 shades in a single 45–60 minute session. Safe, supervised, and far more effective than over-the-counter strips or gels. Removes stains from tea, coffee, tobacco and natural ageing. Results last 1–3 years.</p>
+            <div class="service-row-tags">
+              <span class="tag price">From ₹4,000</span>
+              <span class="tag time">Single Session</span>
+              <span class="tag">4–8 Shades Lighter</span>
+              <span class="tag">Lasts 1–3 Years</span>
+              <span class="tag open">Same-Day Results</span>
+            </div>
+          </div>
+          <div class="service-row-cta">
+            <a href="teeth-whitening-punawale.html" class="learn-btn">Learn More</a>
+            <a href="https://wa.me/919226680164?text=I%20want%20to%20book%20teeth%20whitening" class="book-btn" target="_blank" rel="noopener">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Veneers -->
+      <article class="service-row" itemscope itemtype="https://schema.org/MedicalProcedure">
+        <meta itemprop="name" content="Veneers & Dental Crowns in Punawale">
+        <meta itemprop="url" content="https://aestheticadental.github.io/veneers-punawale.html">
+        <div class="service-row-inner">
+          <div class="service-row-icon" aria-hidden="true">💎</div>
+          <div class="service-row-body">
+            <h2>Veneers &amp; Dental Crowns in Punawale</h2>
+            <p itemprop="description">Transform chipped, stained, gapped or misshapen teeth with precision-crafted porcelain veneers. Digital shade-matching ensures a perfectly natural result. Dental crowns (ceramic, zirconia or PFM) restore full strength and appearance to severely damaged or root-canal-treated teeth. Full smile makeovers (6–10 veneers) available.</p>
+            <div class="service-row-tags">
+              <span class="tag price">Veneers from ₹8,000/tooth</span>
+              <span class="tag price">Crowns from ₹5,000</span>
+              <span class="tag">Porcelain / Zirconia</span>
+              <span class="tag">Digital Shade Match</span>
+              <span class="tag">Smile Makeover</span>
+            </div>
+          </div>
+          <div class="service-row-cta">
+            <a href="veneers-punawale.html" class="learn-btn">Learn More</a>
+            <a href="https://wa.me/919226680164?text=I%20want%20to%20know%20about%20veneers%20or%20crowns" class="book-btn" target="_blank" rel="noopener">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Category: Children -->
+      <div class="category-label" style="margin-top:2.5rem;">🧒 Paediatric Dentistry</div>
+
+      <!-- Paediatric -->
+      <article class="service-row" itemscope itemtype="https://schema.org/MedicalProcedure">
+        <meta itemprop="name" content="Paediatric Dentist in Punawale">
+        <meta itemprop="url" content="https://aestheticadental.github.io/paediatric-dentist-punawale.html">
+        <div class="service-row-inner">
+          <div class="service-row-icon" aria-hidden="true">🧒</div>
+          <div class="service-row-body">
+            <h2>Paediatric Dentist in Punawale</h2>
+            <p itemprop="description">Gentle, child-friendly dental care for children from their very first tooth through to teenage years. Dr. Prachi uses a calm, patient tell-show-do technique that makes dental visits stress-free and even enjoyable. Services include check-ups, fluoride treatments, pit & fissure sealants, tooth-coloured fillings, space maintainers and early orthodontic assessment.</p>
+            <div class="service-row-tags">
+              <span class="tag price">Check-up from ₹200</span>
+              <span class="tag time">Recommended from Age 1</span>
+              <span class="tag">Child-Friendly</span>
+              <span class="tag">Fluoride Treatments</span>
+              <span class="tag">Sealants Available</span>
+              <span class="tag open">Weekend Slots</span>
+            </div>
+          </div>
+          <div class="service-row-cta">
+            <a href="paediatric-dentist-punawale.html" class="learn-btn">Learn More</a>
+            <a href="https://wa.me/919226680164?text=I%20want%20to%20book%20a%20dental%20appointment%20for%20my%20child" class="book-btn" target="_blank" rel="noopener">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+       COMPARISON TABLE
+  ══════════════════════════ -->
+  <section class="compare-section" id="compare">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Service Quick-Reference Guide</h2>
+        <p class="section-subtitle">All treatments at a glance — cost, duration, sittings and suitability.</p>
+      </div>
+      <div class="compare-table-wrap">
+        <table class="compare-table" aria-label="Dental services comparison">
+          <thead>
+            <tr>
+              <th>Treatment</th>
+              <th>Starting Price</th>
+              <th>Duration</th>
+              <th>Sittings</th>
+              <th>Best For</th>
+              <th>EMI</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Root Canal Treatment</td>
+              <td>₹3,500</td>
+              <td>45–60 min</td>
+              <td>1–2</td>
+              <td>Infected / painful tooth</td>
+              <td><span class="pill-n">No</span></td>
+              <td><a href="root-canal-punawale.html">View →</a></td>
+            </tr>
+            <tr>
+              <td>Dental Implants</td>
+              <td>₹25,000</td>
+              <td>3–6 months</td>
+              <td>Multiple</td>
+              <td>Missing teeth</td>
+              <td><span class="pill-y">Yes</span></td>
+              <td><a href="dental-implants-punawale.html">View →</a></td>
+            </tr>
+            <tr>
+              <td>Clear Aligners</td>
+              <td>₹60,000</td>
+              <td>6–18 months</td>
+              <td>Check-ups every 6–8 wks</td>
+              <td>Crooked / misaligned teeth</td>
+              <td><span class="pill-y">Yes</span></td>
+              <td><a href="aligners-punawale.html">View →</a></td>
+            </tr>
+            <tr>
+              <td>Metal / Ceramic Braces</td>
+              <td>₹25,000</td>
+              <td>12–24 months</td>
+              <td>Monthly adjustments</td>
+              <td>Complex alignment / bite</td>
+              <td><span class="pill-y">Yes</span></td>
+              <td><a href="aligners-punawale.html">View →</a></td>
+            </tr>
+            <tr>
+              <td>Teeth Whitening</td>
+              <td>₹4,000</td>
+              <td>45–60 min</td>
+              <td>1</td>
+              <td>Stained / discoloured teeth</td>
+              <td><span class="pill-n">No</span></td>
+              <td><a href="teeth-whitening-punawale.html">View →</a></td>
+            </tr>
+            <tr>
+              <td>Porcelain Veneers</td>
+              <td>₹8,000 / tooth</td>
+              <td>2–3 visits</td>
+              <td>2–3</td>
+              <td>Chips, stains, gaps, shape</td>
+              <td><span class="pill-y">Yes</span></td>
+              <td><a href="veneers-punawale.html">View →</a></td>
+            </tr>
+            <tr>
+              <td>Dental Crowns</td>
+              <td>₹5,000 / tooth</td>
+              <td>2 visits</td>
+              <td>2</td>
+              <td>Damaged / post-RCT teeth</td>
+              <td><span class="pill-n">No</span></td>
+              <td><a href="veneers-punawale.html">View →</a></td>
+            </tr>
+            <tr>
+              <td>Teeth Cleaning &amp; Scaling</td>
+              <td>₹800</td>
+              <td>30–45 min</td>
+              <td>1</td>
+              <td>Everyone, every 6 months</td>
+              <td><span class="pill-n">No</span></td>
+              <td><a href="teeth-cleaning-scaling-punawale.html">View →</a></td>
+            </tr>
+            <tr>
+              <td>Tooth-Coloured Filling</td>
+              <td>₹800 / tooth</td>
+              <td>30–45 min</td>
+              <td>1</td>
+              <td>Cavities / small repairs</td>
+              <td><span class="pill-n">No</span></td>
+              <td><a href="restorative-dentistry-punawale.html">View →</a></td>
+            </tr>
+            <tr>
+              <td>Paediatric Dentistry</td>
+              <td>₹200 (check-up)</td>
+              <td>20–45 min</td>
+              <td>1</td>
+              <td>Children age 1–17</td>
+              <td><span class="pill-n">No</span></td>
+              <td><a href="paediatric-dentist-punawale.html">View →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+       WHY AESTHETICA STRIP
+  ══════════════════════════ -->
+  <section class="why-strip">
+    <div class="container">
+      <div class="section-header" style="text-align:center;margin-bottom:0;">
+        <h2 class="section-title" style="color:white;">Why Choose Aesthetica for Dental Treatment in Punawale?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <span class="why-icon">🏆</span>
+          <div class="why-title">DCI Registered Doctor</div>
+          <div class="why-desc">Dr. Prachi Gupta Garg — BDS, Certified Cosmetologist, Dental Council of India registered.</div>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">🔬</span>
+          <div class="why-title">Advanced Technology</div>
+          <div class="why-desc">Digital OPG X-ray, rotary endodontics, digital shade-matching for precision care.</div>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">🛡️</span>
+          <div class="why-title">ISO Sterilisation</div>
+          <div class="why-desc">Autoclave sterilisation and single-use disposables — hygienic on every single visit.</div>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">⏰</span>
+          <div class="why-title">Open 7 Days</div>
+          <div class="why-desc">Mon–Sun, 10:15 AM–8:30 PM. Evening & weekend appointments for working professionals.</div>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">💳</span>
+          <div class="why-title">Flexible Payments</div>
+          <div class="why-desc">Cash, UPI, Cards and EMI on implants, aligners & smile makeovers.</div>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">⭐</span>
+          <div class="why-title">4.9★ on Google</div>
+          <div class="why-desc">Trusted by 500+ patients across Punawale, Wakad, Hinjewadi & Ravet.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+       FAQ
+  ══════════════════════════ -->
+  <section class="faq-section" id="faq" itemscope itemtype="https://schema.org/FAQPage">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Services — Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything patients ask about dental treatments at Aesthetica, Punawale.</p>
+      </div>
+      <div class="faq-grid">
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name">What dental services does Aesthetica offer in Punawale?</h3>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">Aesthetica Dental Clinic offers root canal treatment, dental implants, clear aligners, braces, teeth whitening, porcelain veneers, dental crowns, paediatric dentistry, professional teeth cleaning & scaling, and restorative dentistry (fillings, bridges, inlays). All services are provided by Dr. Prachi Gupta Garg (BDS, Certified Cosmetologist, DCI Registered).</p>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name">Which is the most affordable treatment at Aesthetica?</h3>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">The most affordable treatments are dental consultation (₹200–₹500), teeth cleaning / scaling (from ₹800) and tooth-coloured fillings (from ₹800 per tooth). These are also the most important preventive treatments — catching problems early saves significant cost later.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name">Does Aesthetica offer cosmetic dental treatments?</h3>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">Yes. Aesthetica specialises in cosmetic dentistry — teeth whitening (from ₹4,000), porcelain veneers (from ₹8,000 per tooth), clear aligners for invisible teeth straightening, and full smile makeovers. Dr. Prachi holds an additional certification in cosmetology, giving her a precise aesthetic eye for cosmetic cases.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name">Is there a children's dentist at Aesthetica?</h3>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">Yes. Aesthetica offers dedicated paediatric dentistry for children of all ages. Dr. Prachi uses a calm, child-friendly tell-show-do approach that makes dental visits stress-free. Services include check-ups, fluoride treatments, pit & fissure sealants, fillings, space maintainers and early orthodontic assessment. Recommended from age 1.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name">Are all services available on Sundays?</h3>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">Yes. All dental services at Aesthetica are available Monday through Sunday, 10:15 AM to 8:30 PM, including public holidays. Call +91 92266 80164 or WhatsApp to book any treatment on any day of the week.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name">Is EMI available for expensive treatments?</h3>
+          <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+            <p itemprop="text">Yes. EMI is available on high-value treatments including dental implants, clear aligners, full smile makeovers and full-mouth rehabilitation. Ask at the clinic for EMI partner details. We accept Cash, UPI (GPay, PhonePe, Paytm) and Debit/Credit Cards for all treatments.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+       CONTACT CTA — inline NAP
+  ══════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Book Any Dental Treatment in Punawale</h3>
+          <address itemscope itemtype="https://schema.org/Dentist" style="font-style:normal;">
+            <meta itemprop="name" content="Aesthetica Dental Clinic">
+            <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"
+               style="opacity:.85;font-size:.9rem;line-height:1.75;margin-bottom:.25rem;">
+              <span itemprop="streetAddress">Shop No. 103, 1st Floor, Swaraaj Heights, Kate Wasti Road, opp. Legacy Ivy</span><br>
+              <span itemprop="addressLocality">Punawale</span>,
+              <span itemprop="addressRegion">Maharashtra</span> –
+              <span itemprop="postalCode">411033</span>
+            </p>
+            <div class="clinic-hours">
+              <p itemprop="openingHours" content="Mo-Su 10:15-20:30">
+                🕙 <strong>Mon – Sun: 10:15 AM – 8:30 PM</strong><br>
+                Open all 7 days including Sundays &amp; public holidays.
+              </p>
+            </div>
+            <div class="contact-methods">
+              <div class="contact-item">
+                <a href="tel:+919226680164" itemprop="telephone" content="+919226680164">
+                  <div class="contact-icon">📞</div>
+                  <div class="contact-details"><h4>Call Us</h4><p>+91 92266 80164</p></div>
+                </a>
+              </div>
+              <div class="contact-item">
+                <a href="https://wa.me/919226680164?text=Hello%2C%20I%20want%20to%20book%20a%20dental%20appointment." target="_blank" rel="noopener">
+                  <div class="contact-icon">💬</div>
+                  <div class="contact-details"><h4>WhatsApp</h4><p>Message us to book</p></div>
+                </a>
+              </div>
+              <div class="contact-item">
+                <a href="https://maps.google.com/?q=Aesthetica+Dental+Clinic+Punawale" target="_blank" rel="noopener" itemprop="hasMap">
+                  <div class="contact-icon">📍</div>
+                  <div class="contact-details"><h4>Get Directions</h4><p>Kate Wasti Road, Punawale</p></div>
+                </a>
+              </div>
+            </div>
+          </address>
+        </div>
+        <div class="map-container">
+          <iframe class="map-embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.9076944731596!2d73.72917131033374!3d18.623221082417306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb2992128b05%3A0x290e50e3505b5465!2sAesthetica%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1775192274966!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Aesthetica Dental Clinic — Punawale, Pune"
+            width="100%" height="280">
+          </iframe>
+          <p style="color:rgba(255,255,255,.7);font-size:.82rem;text-align:center;margin-top:.5rem;">
+            📍 Swaraaj Heights, Kate Wasti Road, Punawale – 411033
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Shared: header, footer, floating WA, sticky CTA, animations, tracking -->
+<script src="components.js"></script>
+
+</body>
+</html>
