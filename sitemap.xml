@@ -1,77 +1,96 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
 <url>
-  <loc>https://aestheticadental.github.io/</loc>
-  <lastmod>2026-05-11T06:05:45+00:00</lastmod>
-  <priority>1.00</priority>
+  <loc>http://aestheticadental.github.io/</loc>
 </url>
 <url>
-  <loc>https://aestheticadental.github.io/root-canal-punawale.html</loc>
-  <lastmod>2026-05-11T06:05:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://aestheticadental.github.io/root-canal-punawale.html</loc>
 </url>
 <url>
-  <loc>https://aestheticadental.github.io/dental-implants-punawale.html</loc>
-  <lastmod>2026-05-11T06:05:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://aestheticadental.github.io/dental-implants-punawale.html</loc>
 </url>
 <url>
-  <loc>https://aestheticadental.github.io/aligners-punawale.html</loc>
-  <lastmod>2026-05-11T06:05:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://aestheticadental.github.io/aligners-punawale.html</loc>
 </url>
 <url>
-  <loc>https://aestheticadental.github.io/teeth-whitening-punawale.html</loc>
-  <lastmod>2026-05-11T06:05:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://aestheticadental.github.io/teeth-whitening-punawale.html</loc>
 </url>
 <url>
-  <loc>https://aestheticadental.github.io/veneers-punawale.html</loc>
-  <lastmod>2026-05-11T06:05:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://aestheticadental.github.io/veneers-punawale.html</loc>
 </url>
 <url>
-  <loc>https://aestheticadental.github.io/paediatric-dentist-punawale.html</loc>
-  <lastmod>2026-05-11T06:05:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://aestheticadental.github.io/paediatric-dentist-punawale.html</loc>
 </url>
 <url>
-  <loc>https://aestheticadental.github.io/teeth-cleaning-scaling-punawale.html</loc>
-  <lastmod>2026-05-11T06:05:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://aestheticadental.github.io/teeth-cleaning-scaling-punawale.html</loc>
 </url>
 <url>
-  <loc>https://aestheticadental.github.io/restorative-dentistry-punawale.html</loc>
-  <lastmod>2026-05-11T06:05:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://aestheticadental.github.io/restorative-dentistry-punawale.html</loc>
 </url>
 <url>
-  <loc>https://aestheticadental.github.io/blog/cost-of-root-canal-in-punawale.html</loc>
-  <lastmod>2026-05-11T06:05:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://aestheticadental.github.io/blog/cost-of-root-canal-in-punawale.html</loc>
 </url>
 <url>
-  <loc>https://aestheticadental.github.io/blog/best-dentist-near-wakad.html</loc>
-  <lastmod>2026-05-11T06:05:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://aestheticadental.github.io/blog/best-dentist-near-wakad.html</loc>
 </url>
 <url>
-  <loc>https://aestheticadental.github.io/blog/signs-you-need-root-canal.html</loc>
-  <lastmod>2026-05-11T06:05:45+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://aestheticadental.github.io/blog/signs-you-need-root-canal.html</loc>
 </url>
 <url>
-  <loc>https://aestheticadental.github.io/blog/</loc>
-  <lastmod>2026-05-11T06:05:45+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>http://aestheticadental.github.io/tel:+919226680164</loc>
 </url>
-
-
+<url>
+  <loc>http://aestheticadental.github.io/#services</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/#about</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/#doctor</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/#faq</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/#reviews</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/#contact</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/blog/</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/../root-canal-punawale.html</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/../dental-implants-punawale.html</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/signs-you-need-root-canal.html</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/../</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/../aligners-punawale.html</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/../teeth-whitening-punawale.html</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/../veneers-punawale.html</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/../paediatric-dentist-punawale.html</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/cost-of-root-canal-in-punawale.html</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/best-dentist-near-wakad.html</loc>
+</url>
+<url>
+  <loc>http://aestheticadental.github.io/../contact.html</loc>
+</url>
 </urlset>
