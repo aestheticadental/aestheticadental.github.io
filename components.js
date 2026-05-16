@@ -59,7 +59,7 @@
           <li><a href="${root}index.html#doctor"   class="nav-link">Our Doctor</a></li>
           <li><a href="${root}blog/"               class="nav-link">Blog</a></li>
           <li><a href="${root}index.html#faq"      class="nav-link">FAQ</a></li>
-          <li><a href="${root}contact.html"        class="nav-link">Contact</a></li>
+          <li><a href="${root}contact-us.html"     class="nav-link">Contact</a></li>
         </ul>
         <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
           <span aria-hidden="true">☰</span>
@@ -118,7 +118,7 @@
           <a href="${root}teeth-cleaning-scaling-punawale.html">Teeth Cleaning</a>
           <a href="${root}restorative-dentistry-punawale.html">Restorative</a>
           <a href="${root}blog/">Blog</a>
-          <a href="${root}contact.html">Contact Us</a>
+          <a href="${root}contact-us.html">Contact Us</a>
           <a href="${root}privacy-policy.html">Privacy Policy</a>
         </div>
         <p class="footer-copy">
