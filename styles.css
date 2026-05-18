@@ -29,6 +29,10 @@ body{
   width:100%;
   overflow-x:hidden;
 }
+img{
+  max-width:100%;
+  height:auto;
+}
 /* ── Header ── */
 .header {
   position:fixed; top:0; width:100%;
