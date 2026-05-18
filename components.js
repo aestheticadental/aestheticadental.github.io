@@ -57,7 +57,7 @@
           <li><a href="${root}index.html#areas"    class="nav-link">Areas</a></li>
           <li><a href="${root}index.html#about"    class="nav-link">About</a></li>
           <li><a href="${root}index.html#doctor"   class="nav-link">Our Doctor</a></li>
-          <li><a href="${root}blog/"               class="nav-link">Blog</a></li>
+          <li><a href="${root}/blog/index.html"    class="nav-link">Blog</a></li>
           <li><a href="${root}index.html#faq"      class="nav-link">FAQ</a></li>
           <li><a href="${root}contact-us.html"     class="nav-link">Contact</a></li>
         </ul>
