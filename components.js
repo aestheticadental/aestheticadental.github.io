@@ -59,7 +59,7 @@
           <li><a href="${root}index.html#doctor"   class="nav-link">Our Doctor</a></li>
           <li><a href="/blog/index.html"           class="nav-link">Blog</a></li>
           <li><a href="${root}index.html#faq"      class="nav-link">FAQ</a></li>
-          <li><a href="${root}contact-us.html"     class="nav-link">Contact</a></li>
+          <li><a href="/contact-us.html"     class="nav-link">Contact</a></li>
         </ul>
         <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
           <span aria-hidden="true">☰</span>
