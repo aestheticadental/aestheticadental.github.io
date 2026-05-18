@@ -193,6 +193,24 @@ body {
   display:inline-flex; align-items:center; gap:4px; font-size:.9rem;
 }
 .service-link:hover { color:var(--accent-teal); }
+.service-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card .service-link {
+  margin-top: auto;
+}
+.service-card:last-child {
+  background: linear-gradient(
+    135deg,
+    rgba(0,119,255,0.03),
+    rgba(0,119,255,0.08)
+  );
+  border-color: rgba(0,119,255,0.18);
+}
 
 /* ── About / features ── */
 .about { padding:5rem 0; background:var(--neutral-100); }
