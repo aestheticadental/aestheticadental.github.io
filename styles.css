@@ -535,3 +535,55 @@ img{
   .steps-grid { grid-template-columns:1fr 1fr; }
   .breadcrumb ol { font-size:.76rem; }
 }
+
+/* ===== MOBILE HEIGHT + OVERFLOW FIX ===== */
+
+html,
+body{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+}
+
+main{
+  overflow:hidden;
+}
+
+@media (max-width:768px){
+
+  .hero{
+    min-height:auto;
+    padding-top:110px;
+    padding-bottom:3rem;
+  }
+
+  .nav-menu.mobile-active{
+    position:fixed;
+    top:72px;
+    left:0;
+    right:0;
+    width:100%;
+    max-height:calc(100vh - 72px);
+    overflow-y:auto;
+  }
+
+  body.menu-open{
+    overflow:hidden;
+    height:100vh;
+  }
+
+  .stats-bar,
+  .services,
+  .about,
+  .doctor-bio,
+  .blog-section,
+  .faq-section,
+  .testimonials,
+  .reviews,
+  .contact,
+  .footer{
+    position:relative;
+    z-index:1;
+  }
+
+}
