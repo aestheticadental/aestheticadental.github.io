@@ -48,13 +48,153 @@
     .bio-details p{color:var(--neutral-600);line-height:1.75;margin-bottom:.85rem;font-size:.93rem;}
     .credential-list{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem;}
     .credential-list li{background:rgba(0,102,204,.08);color:var(--accent-blue);padding:3px 13px;border-radius:20px;font-size:.8rem;font-weight:500;}
-    <!-- .blog-section{padding:5rem 0;background:var(--primary-light);}
-    .blog-card{background:white;padding:1.75rem;border-radius:16px;box-shadow:var(--shadow-soft);border:1px solid var(--neutral-200);}
-    .blog-meta{font-size:.78rem;color:var(--neutral-600);margin-bottom:.5rem;}
-    .blog-card h3{font-size:1.05rem;font-weight:600;color:var(--primary-dark);margin-bottom:.65rem;}
-    .blog-card p{font-size:.88rem;color:var(--neutral-600);line-height:1.6;margin-bottom:1rem;}
-    .blog-card a{color:var(--accent-blue);font-weight:600;text-decoration:none;font-size:.88rem;}
-    .blog-card a:hover{color:var(--accent-teal);} -->
+    /* ───────────────── BLOG SECTION ───────────────── */
+
+.blog-section{
+  padding:5rem 0;
+  background:var(--primary-light);
+  overflow:hidden;
+}
+
+.blog-slider-wrapper{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+.blog-slider{
+  display:flex;
+  gap:1.5rem;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+  padding:.5rem;
+}
+
+.blog-slider::-webkit-scrollbar{
+  display:none;
+}
+
+.blog-card{
+  min-width:340px;
+  max-width:340px;
+  background:white;
+  padding:1.75rem;
+  border-radius:16px;
+  box-shadow:var(--shadow-soft);
+  border:1px solid var(--neutral-200);
+  flex-shrink:0;
+  transition:all .3s ease;
+}
+
+.blog-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-medium);
+  border-color:var(--accent-blue);
+}
+
+.blog-meta{
+  font-size:.78rem;
+  color:var(--neutral-600);
+  margin-bottom:.75rem;
+  line-height:1.5;
+}
+
+.blog-card h3{
+  font-size:1.1rem;
+  font-weight:600;
+  color:var(--primary-dark);
+  margin-bottom:.85rem;
+  line-height:1.5;
+}
+
+.blog-card p{
+  font-size:.9rem;
+  color:var(--neutral-600);
+  line-height:1.7;
+  margin-bottom:1.25rem;
+}
+
+.blog-card a{
+  color:var(--accent-blue);
+  font-weight:600;
+  text-decoration:none;
+  font-size:.9rem;
+}
+
+.blog-card a:hover{
+  color:var(--accent-teal);
+}
+
+/* ARROWS */
+
+.blog-arrow{
+  width:46px;
+  height:46px;
+  border:none;
+  border-radius:50%;
+  background:white;
+  box-shadow:var(--shadow-soft);
+  cursor:pointer;
+  font-size:1.4rem;
+  color:var(--primary-dark);
+  transition:all .25s ease;
+  z-index:5;
+  flex-shrink:0;
+}
+
+.blog-arrow:hover{
+  background:var(--accent-blue);
+  color:white;
+}
+
+.left-arrow{
+  margin-right:.75rem;
+}
+
+.right-arrow{
+  margin-left:.75rem;
+}
+
+/* VIEW ALL BUTTON */
+
+.view-all-wrapper{
+  text-align:center;
+  margin-top:2rem;
+}
+
+.view-all-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.9rem 1.5rem;
+  border-radius:999px;
+  background:var(--gradient-primary);
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  transition:all .3s ease;
+}
+
+.view-all-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-medium);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .blog-card{
+    min-width:85%;
+    max-width:85%;
+  }
+
+  .blog-arrow{
+    display:none;
+  }
+
+}
     .faq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:1.25rem;margin-top:2rem;}
     .faq-item{background:white;border-radius:12px;padding:1.5rem;box-shadow:var(--shadow-soft);border-left:4px solid var(--accent-blue);}
     .faq-item h3{font-size:.97rem;font-weight:600;color:var(--primary-dark);margin-bottom:.55rem;}
@@ -297,33 +437,107 @@
   </div>
 </section>
 
-<section class="blog-section" id="blog">
+<section class="blog-section">
+
   <div class="container">
+
     <div class="section-header">
-      <h2 class="section-title">Dental Tips &amp; Patient Guides</h2>
-      <p class="section-subtitle">Expert advice from Dr. Prachi Gupta Garg to help you make informed dental decisions.</p>
+      <h2 class="section-title">Dental Health Resources</h2>
+
+      <p class="section-subtitle">
+        Expert advice from Dr. Prachi Gupta Garg to help you make informed dental decisions.
+      </p>
     </div>
-    <div class="services-grid">
-      <div class="blog-card">
-        <p class="blog-meta">By Dr. Prachi Gupta Garg · Updated May 2026</p>
-        <h3>Cost of Root Canal Treatment in Punawale (2026 Guide)</h3>
-        <p>A complete breakdown of root canal costs in Punawale — what factors affect pricing, what's included, and what to expect at Aesthetica.</p>
-        <a href="blog/cost-of-root-canal-in-punawale.html">Read Full Guide →</a>
+
+    <div class="blog-slider-wrapper">
+
+      <!-- LEFT ARROW -->
+      <button class="blog-arrow left-arrow"
+              onclick="scrollBlogs(-1)"
+              aria-label="Previous blogs">
+        ❮
+      </button>
+
+      <!-- BLOG SLIDER -->
+      <div class="blog-slider" id="blogSlider">
+
+        <!-- BLOG 1 -->
+        <article class="blog-card">
+          <div class="blog-meta">
+            By Dr. Prachi Gupta Garg · Updated May 2026
+          </div>
+
+          <h3>
+            Cost of Root Canal Treatment in Punawale (2026 Guide)
+          </h3>
+
+          <p>
+            A complete breakdown of root canal costs in Punawale — what affects pricing and what to expect.
+          </p>
+
+          <a href="blogs/root-canal-cost-punawale.html">
+            Read Root Canal Cost Guide →
+          </a>
+        </article>
+
+        <!-- BLOG 2 -->
+        <article class="blog-card">
+          <div class="blog-meta">
+            By Dr. Prachi Gupta Garg · Updated May 2026
+          </div>
+
+          <h3>
+            Best Dentist Near Wakad vs Punawale — Local Comparison
+          </h3>
+
+          <p>
+            Comparing clinics in Wakad and Punawale? Here's how to choose the right dentist nearby.
+          </p>
+
+          <a href="blogs/best-dentist-wakad-vs-punawale.html">
+            Read Full Guide →
+          </a>
+        </article>
+
+        <!-- BLOG 3 -->
+        <article class="blog-card">
+          <div class="blog-meta">
+            By Dr. Prachi Gupta Garg · Updated May 2026
+          </div>
+
+          <h3>
+            7 Signs You Need a Root Canal
+          </h3>
+
+          <p>
+            Learn the early symptoms that may indicate you need root canal treatment.
+          </p>
+
+          <a href="blogs/signs-you-need-root-canal.html">
+            Read Symptoms Guide →
+          </a>
+        </article>
+
       </div>
-      <div class="blog-card">
-        <p class="blog-meta">By Dr. Prachi Gupta Garg · Updated May 2026</p>
-        <h3>Best Dentist Near Wakad vs Punawale — A Local Comparison</h3>
-        <p>Comparing dental clinics in Wakad and Punawale? This guide helps patients from Wakad find the closest, most trusted dental clinic nearby.</p>
-        <a href="blog/best-dentist-near-wakad.html">Read Full Guide →</a>
-      </div>
-      <div class="blog-card">
-        <p class="blog-meta">By Dr. Prachi Gupta Garg · Updated May 2026</p>
-        <h3>7 Signs You Need a Root Canal — Don't Ignore These Symptoms</h3>
-        <p>Persistent toothache? Sensitivity to hot or cold? Learn the early warning signs that may indicate you need root canal treatment.</p>
-        <a href="blog/signs-you-need-root-canal.html">Read Full Guide →</a>
-      </div>
+
+      <!-- RIGHT ARROW -->
+      <button class="blog-arrow right-arrow"
+              onclick="scrollBlogs(1)"
+              aria-label="Next blogs">
+        ❯
+      </button>
+
     </div>
+
+    <!-- VIEW ALL -->
+    <div class="view-all-wrapper">
+      <a href="blogs.html" class="view-all-btn">
+        View All Dental Articles →
+      </a>
+    </div>
+
   </div>
+
 </section>
 
 <section class="faq-section" id="faq" itemscope itemtype="https://schema.org/FAQPage">
@@ -648,6 +862,56 @@
     "https://www.youtube.com/@AestheticaDentalClinic"
   ]
 }
+</script>
+
+  <script>
+
+function scrollBlogs(direction){
+
+  const slider=document.getElementById('blogSlider');
+
+  /* Safety check */
+  if(!slider) return;
+
+  /* Check if blog cards exist */
+  const cards=slider.querySelectorAll('.blog-card');
+
+  if(cards.length===0) return;
+
+  /* Scroll */
+  const scrollAmount=380;
+
+  slider.scrollBy({
+    left:direction*scrollAmount,
+    behavior:'smooth'
+  });
+
+}
+
+/* Hide arrows if not enough blogs */
+
+document.addEventListener('DOMContentLoaded',()=>{
+
+  const slider=document.getElementById('blogSlider');
+
+  if(!slider) return;
+
+  const cards=slider.querySelectorAll('.blog-card');
+
+  const leftArrow=document.querySelector('.left-arrow');
+
+  const rightArrow=document.querySelector('.right-arrow');
+
+  if(cards.length<=1){
+
+    if(leftArrow) leftArrow.style.display='none';
+
+    if(rightArrow) rightArrow.style.display='none';
+
+  }
+
+});
+
 </script>
 
 </body>
