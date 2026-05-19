@@ -24,7 +24,16 @@ body {
   line-height:1.6; color:var(--neutral-800);
   background:var(--primary-light); overflow-x:hidden;
 }
-
+html,
+body{
+  width:100%;
+  overflow-x:hidden;
+}
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
 /* ── Header ── */
 .header {
   position:fixed; top:0; width:100%;
@@ -37,6 +46,9 @@ body {
   display:flex; align-items:center; justify-content:space-between; min-height:72px;
 }
 .logo-section { display:flex; flex-direction:column; align-items:flex-start; }
+.logo-section{
+  min-width:0;
+}
 .logo {
   display:flex; align-items:center; gap:10px;
   font-size:1.4rem; font-weight:700; color:var(--primary-dark);
@@ -44,16 +56,45 @@ body {
 }
 .logo-image { width:38px; height:38px; object-fit:contain; }
 .logo-text { display:inline-block; }
-.tagline {
-  font-size:.72rem; color:var(--accent-blue); font-weight:500;
-  letter-spacing:.5px; text-transform:uppercase; margin-left:48px; opacity:.9;
+.tagline{
+
+  font-size:.72rem;
+
+  color:var(--accent-blue);
+
+  font-weight:500;
+
+  letter-spacing:.5px;
+
+  text-transform:uppercase;
+
+  margin-left:48px;
+
+  opacity:.9;
+
+  white-space:nowrap;
+
+  overflow:hidden;
+
+  text-overflow:ellipsis;
+
+  max-width:240px;
+
 }
 .nav-menu { display:flex; list-style:none; gap:1.75rem; }
-.nav-menu.mobile-active {
-  display:flex; position:absolute; top:100%; left:0; right:0;
-  flex-direction:column; background:rgba(255,255,255,0.98);
-  backdrop-filter:blur(10px); padding:2rem; gap:1rem;
-  border-bottom:1px solid var(--neutral-200); box-shadow:var(--shadow-soft);
+.nav-menu.mobile-active{
+  display:flex;
+  position:absolute;
+  top:72px;
+  left:0;
+  width:100%;
+  flex-direction:column;
+  background:#111827;
+  padding:1.25rem;
+  gap:1rem;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+  z-index:999;
+  overflow:hidden;
 }
 .nav-link {
   text-decoration:none; color:var(--neutral-600); font-weight:500;
@@ -193,6 +234,24 @@ body {
   display:inline-flex; align-items:center; gap:4px; font-size:.9rem;
 }
 .service-link:hover { color:var(--accent-teal); }
+.service-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card .service-link {
+  margin-top: auto;
+}
+.service-card:last-child {
+  background: linear-gradient(
+    135deg,
+    rgba(0,119,255,0.03),
+    rgba(0,119,255,0.08)
+  );
+  border-color: rgba(0,119,255,0.18);
+}
 
 /* ── About / features ── */
 .about { padding:5rem 0; background:var(--neutral-100); }
@@ -253,48 +312,7 @@ body {
 }
 
 /* ── floating whatsapp section ── */
-.floating-whatsapp {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 62px;
-  height: 62px;
-  background: #25D366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 99999;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-  transition: all 0.3s ease;
-  animation: whatsappPulse 2s infinite;
-}
 
-.floating-whatsapp:hover {
-  transform: scale(1.08);
-}
-
-.floating-whatsapp svg {
-  width: 32px;
-  height: 32px;
-}
-
-@keyframes whatsappPulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37,211,102,0.7);
-  }
-
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 16px rgba(37,211,102,0);
-  }
-
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37,211,102,0);
-  }
-}
 
 /* ── FAQ (service pages) ── */
 .faq-section { padding:5rem 0; background:white; }
@@ -499,7 +517,7 @@ body {
   .contact-cta { justify-content:center; }
   .nav-container { padding-top:.75rem; padding-bottom:.75rem; }
   .sticky-cta-bar { display:flex; }
-  .has-sticky-cta { padding-bottom:72px; }
+  body { padding-bottom:72px; }
   .price-table { font-size:.83rem; }
   .price-table th, .price-table td { padding:.6rem .75rem; }
 }
@@ -516,4 +534,56 @@ body {
   .tagline { font-size:.65rem; margin-left:36px; }
   .steps-grid { grid-template-columns:1fr 1fr; }
   .breadcrumb ol { font-size:.76rem; }
+}
+
+/* ===== MOBILE HEIGHT + OVERFLOW FIX ===== */
+
+html,
+body{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+}
+
+main{
+  overflow:hidden;
+}
+
+@media (max-width:768px){
+
+  .hero{
+    min-height:auto;
+    padding-top:110px;
+    padding-bottom:3rem;
+  }
+
+  .nav-menu.mobile-active{
+    position:fixed;
+    top:72px;
+    left:0;
+    right:0;
+    width:100%;
+    max-height:calc(100vh - 72px);
+    overflow-y:auto;
+  }
+
+  body.menu-open{
+    overflow:hidden;
+    height:100vh;
+  }
+
+  .stats-bar,
+  .services,
+  .about,
+  .doctor-bio,
+  .blog-section,
+  .faq-section,
+  .testimonials,
+  .reviews,
+  .contact,
+  .footer{
+    position:relative;
+    z-index:1;
+  }
+
 }
