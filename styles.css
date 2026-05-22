@@ -585,5 +585,100 @@ main{
     position:relative;
     z-index:1;
   }
+/* ═══════════════════════════════════════════════
+   GOOGLE MAPS CARD
+═══════════════════════════════════════════════ */
 
+.location-section{
+  padding:5rem 0;
+  background:var(--neutral-100);
+}
+
+.map-card{
+  max-width:1200px;
+  margin:0 auto;
+  background:#fff;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--shadow-medium);
+  border:1px solid var(--neutral-200);
+}
+
+.map-card iframe{
+  width:100%;
+  height:460px;
+  border:0;
+  display:block;
+}
+
+.map-card-footer{
+  padding:1.75rem 2rem;
+}
+
+.map-card-footer p{
+  margin:0;
+  font-size:.98rem;
+  line-height:1.8;
+  color:var(--neutral-600);
+}
+
+.map-card-footer strong{
+  color:var(--primary-dark);
+  font-size:1.08rem;
+}
+
+.map-card-footer a{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin-top:12px;
+  color:var(--accent-blue);
+  text-decoration:none;
+  font-weight:600;
+  transition:all .3s ease;
+}
+
+.map-card-footer a:hover{
+  color:var(--accent-teal);
+  transform:translateX(3px);
+}
+
+/* ── Mobile Responsive ── */
+
+@media (max-width:768px){
+
+  .location-section{
+    padding:4rem 0;
+  }
+
+  .map-card{
+    border-radius:18px;
+  }
+
+  .map-card iframe{
+    height:340px;
+  }
+
+  .map-card-footer{
+    padding:1.25rem;
+  }
+
+  .map-card-footer p{
+    font-size:.92rem;
+    line-height:1.7;
+  }
+
+}
+
+@media (max-width:480px){
+
+  .map-card iframe{
+    height:280px;
+  }
+
+  .map-card-footer{
+    padding:1rem;
+  }
+
+}
 }
