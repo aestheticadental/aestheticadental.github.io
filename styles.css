@@ -585,80 +585,87 @@ main{
     position:relative;
     z-index:1;
   }
+}
+
 /* ═══════════════════════════════════════════════
-   CONTACT SECTION MAP FIX
+   PREMIUM CONTACT MAP
 ═══════════════════════════════════════════════ */
 
-.map-container{
-  background:rgba(255,255,255,.08);
-  border-radius:20px;
-  padding:1rem;
-  width:100%;
-  overflow:hidden;
+.contact-map-wrap{
+  height:100%;
+  display:flex;
+  align-items:stretch;
 }
 
-.map-card{
+.contact-map-card{
   width:100%;
-  background:#fff;
-  border-radius:18px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
   overflow:hidden;
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 40px rgba(0,0,0,.25);
 }
 
-.map-card iframe{
-  width:100% !important;
-  height:420px !important;
+.contact-map-card iframe{
+  width:100%;
+  height:100%;
+  min-height:520px;
   border:0;
   display:block;
 }
 
-.map-card-footer{
-  padding:1.5rem;
-  background:#fff;
+.contact-map-info{
+  padding:1.25rem 1.5rem;
+  border-top:1px solid rgba(255,255,255,.08);
 }
 
-.map-card-footer p{
-  margin:0;
-  font-size:.95rem;
-  line-height:1.8;
-  color:#334155;
+.contact-map-info h4{
+  color:#fff;
+  font-size:1.1rem;
+  margin-bottom:.45rem;
 }
 
-.map-card-footer strong{
-  color:#0f172a;
-  font-size:1.05rem;
+.contact-map-info p{
+  color:rgba(255,255,255,.75);
+  font-size:.9rem;
+  line-height:1.7;
+  margin-bottom:.75rem;
 }
 
-.map-card-footer a{
-  display:inline-block;
-  margin-top:10px;
-  color:var(--accent-blue);
+.contact-map-info a{
+  color:#38bdf8;
   text-decoration:none;
   font-weight:600;
+  transition:.3s ease;
 }
 
-.map-card-footer a:hover{
-  color:var(--accent-teal);
+.contact-map-info a:hover{
+  color:#67e8f9;
 }
 
 /* Mobile */
 
 @media (max-width:768px){
 
-  .map-card iframe{
-    height:320px !important;
-  }
-
-  .map-card-footer{
-    padding:1.1rem;
+  .contact-map-card iframe{
+    min-height:340px;
   }
 
 }
 
 @media (max-width:480px){
 
-  .map-card iframe{
-    height:260px !important;
+  .contact-map-card{
+    border-radius:18px;
   }
 
-}
+  .contact-map-card iframe{
+    min-height:280px;
+  }
+
+  .contact-map-info{
+    padding:1rem;
+  }
+
 }
