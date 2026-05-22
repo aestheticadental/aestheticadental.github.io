@@ -33,39 +33,79 @@
         content="https://aestheticadental.github.io/logo.webp">
 
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</noscript>
 
 </head>
 
 <body>
-
 <header class="header">
-
   <nav class="nav-container">
-
     <div class="logo-section">
+      <a href="index.html" class="logo">
+        <img
+          src="logo.webp"
+          alt="Aesthetica Dental Clinic"
+          class="logo-image">
 
-      <a href="/" class="logo">
-
-        <img src="logo.webp"
-             alt="Aesthetica Dental Clinic"
-             class="logo-image">
-
-        <span class="logo-text">AESTHETICA</span>
+        <span class="logo-text">
+          AESTHETICA
+        </span>
 
       </a>
-
       <div class="tagline">
         Your trusted dental care partner in Punawale
       </div>
-
     </div>
-
   </nav>
-
 </header>
 
-<main>
+<nav class="breadcrumb" aria-label="Breadcrumb">
 
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+
+    <li itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem">
+
+      <a href="index.html" itemprop="item">
+        <span itemprop="name">Home</span>
+      </a>
+
+      <meta itemprop="position" content="1">
+
+    </li>
+
+    <li itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem">
+
+      <span itemprop="name" aria-current="page">
+        Best Dentist in Punawale
+      </span>
+
+      <meta itemprop="position" content="2">
+
+    </li>
+
+  </ol>
+
+</nav>
+
+<main>
 <section class="hero hero-short">
 
   <div class="hero-container hero-single">
@@ -473,50 +513,177 @@
 </section>
 
 <section class="contact" id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3>          Visit Aesthetica Dental Clinic        </h3>
 
-        <p>1st floor, Shop no 103, Swaraaj Heights, Kate Wasti Rd, opp. Legacy IVy, Kate Wasti, Punawale, Pimpri-Chinchwad, Maharashtra 411033        </p>
+  <div class="container">
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+
+        <h3>
+          Visit Aesthetica Dental Clinic
+        </h3>
+
+        <p>
+          1st floor, Shop no 103, Swaraaj Heights,
+          Kate Wasti Rd, opp. Legacy Ivy,
+          Kate Wasti, Punawale,
+          Pimpri-Chinchwad, Maharashtra 411033
+        </p>
+
         <div class="clinic-hours">
 
-          <p>         <strong>Open 7 Days</strong><br>
-            Monday – Sunday: 10:15 AM – 8:30 PM          </p>        </div>
+          <p>
+            <strong>Open 7 Days</strong><br>
+            Monday – Sunday: 10:15 AM – 8:30 PM
+          </p>
+
+        </div>
 
         <div class="contact-methods">
-          <div class="contact-item">
-            <a href="tel:+919226680164">
-              <div class="contact-icon">📞</div>
-              <div class="contact-details">
-                <h4>Call Us</h4>
-                <p>+91 92266 80164</p>
-              </div>            </a>          </div>
 
           <div class="contact-item">
-            <a href="https://wa.me/919226680164"               target="_blank"
-              <div class="contact-icon">💬</div>
+
+            <a href="tel:+919226680164">
+
+              <div class="contact-icon">📞</div>
+
               <div class="contact-details">
+
+                <h4>Call Us</h4>
+
+                <p>+91 92266 80164</p>
+
+              </div>
+
+            </a>
+
+          </div>
+
+          <div class="contact-item">
+
+            <a
+              href="https://wa.me/919226680164"
+              target="_blank"
+              rel="noopener">
+
+              <div class="contact-icon">💬</div>
+
+              <div class="contact-details">
+
                 <h4>WhatsApp</h4>
+
                 <p>Message us anytime</p>
-              </div>            </a>
-          </div>        </div>      </div>
+
+              </div>
+
+            </a>
+
+          </div>
+
+          <div class="contact-item">
+
+            <a
+              href="https://maps.google.com/?q=Aesthetica+Dental+Clinic+Punawale"
+              target="_blank"
+              rel="noopener">
+
+              <div class="contact-icon">📍</div>
+
+              <div class="contact-details">
+
+                <h4>Get Directions</h4>
+
+                <p>Kate Wasti Road, Punawale</p>
+
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
 
       <!-- Premium Contact Map -->
-<div class="contact-map-wrap">  <div class="contact-map-card">
-    <iframe
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.9076944731596!2d73.72917131033374!3d18.623221082417306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb2992128b05%3A0x290e50e3505b5465!2sAesthetica%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1775192274966!5m2!1sen!2sin"
-      loading="lazy"
-      allowfullscreen
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Aesthetica Dental Clinic Location">  </iframe>
-    <div class="contact-map-info">  <h4>📍 Aesthetica Dental Clinic</h4>
-      <a href="https://maps.google.com/?q=Aesthetica+Dental+Clinic+Punawale"     target="_blank"    rel="noopener">  Open in Google Maps →   </a>   </div></div></div>
 
-    </div>  </div>
+      <div class="contact-map-wrap">
+
+        <div class="contact-map-card">
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.9076944731596!2d73.72917131033374!3d18.623221082417306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb2992128b05%3A0x290e50e3505b5465!2sAesthetica%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1775192274966!5m2!1sen!2sin"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Aesthetica Dental Clinic Location">
+          </iframe>
+
+          <div class="contact-map-info">
+
+            <h4>
+              📍 Aesthetica Dental Clinic
+            </h4>
+
+            <a
+              href="https://maps.google.com/?q=Aesthetica+Dental+Clinic+Punawale"
+              target="_blank"
+              rel="noopener">
+
+              Open in Google Maps →
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 </main>
 
 <script src="components.js"></script>
+  <footer class="footer">
+
+  <div class="container">
+
+    <div class="footer-links">
+
+      <a href="index.html">Home</a>
+
+      <a href="root-canal-punawale.html">
+        Root Canal
+      </a>
+
+      <a href="dental-implants-punawale.html">
+        Dental Implants
+      </a>
+
+      <a href="aligners-punawale.html">
+        Aligners
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </div>
+
+    <p class="footer-copy">
+
+      © 2026 Aesthetica Dental Clinic ·
+      Punawale, Pune · All Rights Reserved
+
+    </p>
+
+  </div>
+
+</footer>
 </body>
 </html>
