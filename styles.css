@@ -456,8 +456,8 @@ img{
 .linkedin-btn { background:#0077b5; }
 .icon-button:hover { transform:scale(1.1); box-shadow:var(--shadow-medium); }
 .whatsapp-icon, .email-icon { width:22px; height:22px; fill:white; }
-.map-container { background:rgba(255,255,255,.1); border-radius:16px; padding:1.75rem; }
-.map-embed { width:100%; height:280px; border:none; border-radius:12px; margin-bottom:1.25rem; }
+/* .map-container { background:rgba(255,255,255,.1); border-radius:16px; padding:1.75rem; }
+.map-embed { width:100%; height:280px; border:none; border-radius:12px; margin-bottom:1.25rem; } */
 
 /* ── Sticky CTA bar (mobile — service pages) ── */
 .sticky-cta-bar {
@@ -591,10 +591,14 @@ main{
    PREMIUM CONTACT MAP
 ═══════════════════════════════════════════════ */
 
+.contact-grid{
+  align-items:start;
+}
+
 .contact-map-wrap{
-  height:100%;
-  display:flex;
-  align-items:stretch;
+  width:100%;
+  max-width:540px;
+  margin-left:auto;
 }
 
 .contact-map-card{
@@ -609,8 +613,7 @@ main{
 
 .contact-map-card iframe{
   width:100%;
-  height:100%;
-  min-height:520px;
+  height:380px;
   border:0;
   display:block;
 }
@@ -644,12 +647,22 @@ main{
   color:#67e8f9;
 }
 
+/* Tablet */
+
+@media (max-width:992px){
+
+  .contact-map-wrap{
+    max-width:100%;
+  }
+
+}
+
 /* Mobile */
 
 @media (max-width:768px){
 
   .contact-map-card iframe{
-    min-height:340px;
+    height:320px;
   }
 
 }
@@ -661,7 +674,7 @@ main{
   }
 
   .contact-map-card iframe{
-    min-height:280px;
+    height:260px;
   }
 
   .contact-map-info{
