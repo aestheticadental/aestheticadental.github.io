@@ -509,7 +509,7 @@ img { max-width:100%; height:auto; display:block; }
   .doctor-card { max-width:280px; padding:1.5rem; }
   .contact-cta { justify-content:center; }
   .sticky-cta-bar { display:flex; }
-  body { padding-bottom:72px; }
+  /* body { padding-bottom:72px; } */
   .blog-card { min-width:85%; max-width:85%; }
   .blog-arrow { display:none; }
   .treatments-section { padding:50px 16px; }
