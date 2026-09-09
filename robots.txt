@@ -1,4 +1,6 @@
+# Robots.txt for Aesthetica Dental Clinic (https://aestheticadental.github.io/)
 User-agent: *
 Allow: /
 
+# Direct search engine bots to the sitemap index
 Sitemap: https://aestheticadental.github.io/sitemap.xml
