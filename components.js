@@ -53,12 +53,12 @@
           <div class="tagline">Your trusted dental care partner in Punawale</div>
         </div>
         <ul class="nav-menu" id="navMenu">
-          <li><a href="${root}index.html#services" class="nav-link">Services</a></li>
+          <li><a href="/services.html" class="nav-link">Services</a></li>
           <li><a href="${root}index.html#areas"    class="nav-link">Areas</a></li>
           <li><a href="${root}index.html#about"    class="nav-link">About</a></li>
           <li><a href="${root}index.html#doctor"   class="nav-link">Our Doctor</a></li>
           <li><a href="/blog/index.html"           class="nav-link">Blog</a></li>
-          <li><a href="${root}index.html#faq"      class="nav-link">FAQ</a></li>
+          <li><a href="/blog/dental-clinic-faq.html"      class="nav-link">FAQ</a></li>
           <li><a href="/contact-us.html"     class="nav-link">Contact</a></li>
         </ul>
         <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
