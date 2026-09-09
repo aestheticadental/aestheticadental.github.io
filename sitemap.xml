@@ -1,125 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+  <!-- 1. Homepage -->
   <url>
     <loc>https://aestheticadental.github.io/</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- 2. Core Clinical Treatment Pillars -->
+  <url>
+    <loc>https://aestheticadental.github.io/root-canal-treatment-punawale.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://aestheticadental.github.io/root-canal-punawale.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://aestheticadental.github.io/clear-aligners-punawale.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://aestheticadental.github.io/dental-implants-punawale.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://aestheticadental.github.io/aligners-punawale.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://aestheticadental.github.io/emergency-dental-care-punawale.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://aestheticadental.github.io/teeth-whitening-punawale.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://aestheticadental.github.io/pediatric-dentist-punawale.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 3. AEO Price & Transparency Authority -->
+  <url>
+    <loc>https://aestheticadental.github.io/dental-treatment-costs-punawale.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 4. Hyper-Local Geo Proximity Hubs -->
+  <url>
+    <loc>https://aestheticadental.github.io/dentist-near-hinjawadi.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://aestheticadental.github.io/veneers-punawale.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://aestheticadental.github.io/dentist-near-wakad.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://aestheticadental.github.io/paediatric-dentist-punawale.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://aestheticadental.github.io/dentist-near-tathawade.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
   </url>
 
+  <!-- 5. Clinician Authority & E-E-A-T -->
   <url>
-    <loc>https://aestheticadental.github.io/teeth-cleaning-scaling-punawale.html</loc>
-    <lastmod>2026-05-18</lastmod>
-  </url>
-
-  <url>
-    <loc>https://aestheticadental.github.io/restorative-dentistry-punawale.html</loc>
-    <lastmod>2026-05-18</lastmod>
-  </url>
-
-  <url>
-    <loc>https://aestheticadental.github.io/dentist-near-me-punawale-pune.html</loc>
-    <lastmod>2026-05-18</lastmod>
-  </url>
-
-  <url>
-    <loc>https://aestheticadental.github.io/privacy-policy.html</loc>
-    <lastmod>2026-05-18</lastmod>
-  </url>
-
-  <url>
-    <loc>https://aestheticadental.github.io/services.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://aestheticadental.github.io/about-dr-prachi-gupta-garg.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://aestheticadental.github.io/contact-us.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- 6. Educational Guides & Articles -->
+  <url>
+    <loc>https://aestheticadental.github.io/wisdom-tooth-extraction-punawale.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://aestheticadental.github.io/blog/</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://aestheticadental.github.io/wisdom-tooth-pain-punawale.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://aestheticadental.github.io/blog/cost-of-root-canal-in-punawale.html</loc>
-    <lastmod>2026-05-18</lastmod>
+    <loc>https://aestheticadental.github.io/service-areas.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
-
-  <url>
-    <loc>https://aestheticadental.github.io/blog/best-dentist-near-wakad.html</loc>
-    <lastmod>2026-05-18</lastmod>
-  </url>
-
-  <url>
-    <loc>https://aestheticadental.github.io/blog/signs-you-need-root-canal.html</loc>
-    <lastmod>2026-05-18</lastmod>
-  </url>
-
-
-
-<url>
-  <loc>
-    https://aestheticadental.github.io/blog/wisdom-tooth-pain-punawale.html
-  </loc>
-</url>
-
-
-
-
-<url>
-  <loc>
-    https://aestheticadental.github.io/blog/wisdom-tooth-extraction-punawale.html
-  </loc>
-</url>
-
-
-
-
-<url>
-  <loc>
-    https://aestheticadental.github.io/blog/frequently-asked-questions-at-dental-clinic.html
-  </loc>
-</url>
-
-
-
-
-<url>
-  <loc>
-    https://aestheticadental.github.io/blog/painless-root-canal-treatment-punawale.html
-  </loc>
-</url>
-
 
 </urlset>
