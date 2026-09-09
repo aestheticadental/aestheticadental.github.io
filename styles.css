@@ -1320,3 +1320,391 @@ html,
 body {
   padding-bottom: 0 !important;
 }
+/* =========================================================
+   AESTHETICA — HOMEPAGE FOOTER
+   Large multi-column footer inspired by premium clinic sites
+   ========================================================= */
+
+.site-footer {
+  background: var(--primary-dark);
+  color: #ffffff;
+  margin-top: 0;
+}
+
+/* ── Main Footer ── */
+
+.footer-main {
+  padding: 4.5rem 0 4rem;
+}
+
+.footer-container {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns:
+    minmax(260px, 1.45fr)
+    repeat(3, minmax(170px, 1fr));
+
+  gap: 3.5rem;
+}
+
+
+/* ── Brand ── */
+
+.footer-brand {
+  min-width: 0;
+}
+
+.footer-logo {
+  display: inline-flex;
+  text-decoration: none;
+  margin-bottom: .25rem;
+}
+
+.footer-logo-mark {
+  display: inline-block;
+
+  font-size: 2.7rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -.045em;
+
+  color: #ffffff;
+}
+
+.footer-tagline {
+  margin: .45rem 0 1.25rem;
+
+  color: var(--accent-teal);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.footer-description {
+  max-width: 330px;
+
+  color: rgba(255,255,255,.68);
+  font-size: .9rem;
+  line-height: 1.75;
+
+  margin-bottom: 2rem;
+}
+
+
+/* ── Connect ── */
+
+.footer-connect h3,
+.footer-column h3 {
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  margin: 0 0 1.35rem;
+}
+
+.footer-connect h3 {
+  color: var(--accent-teal);
+  font-size: 1.05rem;
+}
+
+.footer-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: .95rem;
+  font-weight: 600;
+
+  transition: color .25s ease;
+}
+
+.footer-phone:hover {
+  color: var(--accent-teal);
+}
+
+.footer-phone-icon {
+  font-size: 1rem;
+}
+
+
+/* ── Social links ── */
+
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: .55rem;
+
+  margin-top: 1.35rem;
+}
+
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 42px;
+  height: 38px;
+
+  padding: 0 .65rem;
+
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 8px;
+
+  color: rgba(255,255,255,.78);
+  text-decoration: none;
+
+  font-size: .7rem;
+  font-weight: 600;
+
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    color .25s ease,
+    transform .25s ease;
+}
+
+.footer-social:hover {
+  background: rgba(0,180,166,.12);
+  border-color: var(--accent-teal);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+
+/* ── Footer columns ── */
+
+.footer-column {
+  min-width: 0;
+}
+
+.footer-column h3 {
+  color: var(--accent-teal);
+  font-size: 1.05rem;
+}
+
+.footer-column ul {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: .72rem;
+}
+
+.footer-column li {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column a {
+  color: rgba(255,255,255,.72);
+
+  text-decoration: none;
+
+  font-size: .86rem;
+  line-height: 1.45;
+
+  transition:
+    color .25s ease,
+    padding-left .25s ease;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+
+/* ── Bottom footer ── */
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.16);
+
+  padding: 1.35rem 0;
+}
+
+.footer-bottom-container {
+  width: min(1200px, calc(100% - 4rem));
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1.5rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: rgba(255,255,255,.55);
+
+  font-size: .76rem;
+  line-height: 1.6;
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.footer-legal a {
+  color: rgba(255,255,255,.7);
+
+  text-decoration: none;
+
+  font-size: .78rem;
+
+  transition: color .25s ease;
+}
+
+.footer-legal a:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   FOOTER — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .footer-container {
+    grid-template-columns:
+      1.4fr 1fr 1fr;
+
+    gap: 2.5rem;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+
+    padding-bottom: 1rem;
+  }
+
+  .footer-description {
+    max-width: 600px;
+  }
+
+}
+
+
+/* =========================================================
+   FOOTER — MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .footer-main {
+    padding: 3.25rem 0 2.75rem;
+  }
+
+  .footer-container {
+    width: min(100% - 2rem, 560px);
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 2.5rem 1.5rem;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+
+    padding-bottom: .5rem;
+  }
+
+  .footer-logo-mark {
+    font-size: 2.25rem;
+  }
+
+  .footer-description {
+    font-size: .86rem;
+    max-width: 100%;
+  }
+
+  .footer-column h3,
+  .footer-connect h3 {
+    font-size: .95rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-column ul {
+    gap: .6rem;
+  }
+
+  .footer-column a {
+    font-size: .8rem;
+  }
+
+  .footer-bottom {
+    padding: 1.25rem 0;
+  }
+
+  .footer-bottom-container {
+    width: min(100% - 2rem, 560px);
+
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    gap: .85rem;
+  }
+
+  .footer-bottom p {
+    font-size: .7rem;
+  }
+
+  .footer-legal {
+    gap: 1rem;
+  }
+
+  .footer-legal a {
+    font-size: .72rem;
+  }
+
+}
+
+
+/* =========================================================
+   FOOTER — SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    grid-column: 1;
+  }
+
+  .footer-logo-mark {
+    font-size: 2rem;
+  }
+
+  .footer-socials {
+    gap: .45rem;
+  }
+
+  .footer-social {
+    height: 36px;
+    font-size: .66rem;
+  }
+
+}
