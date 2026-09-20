@@ -53,13 +53,14 @@
           <div class="tagline">Your trusted dental care partner in Punawale</div>
         </div>
         <ul class="nav-menu" id="navMenu">
-          <li><a href="/services.html" class="nav-link">Services</a></li>
-          <li><a href="${root}index.html#areas"    class="nav-link">Areas</a></li>
-          <li><a href="${root}index.html#about"    class="nav-link">About</a></li>
-          <li><a href="${root}index.html#doctor"   class="nav-link">Our Doctor</a></li>
-          <li><a href="/blog/index.html"           class="nav-link">Blog</a></li>
-          <li><a href="/blog/dental-clinic-faq.html"      class="nav-link">FAQ</a></li>
-          <li><a href="/contact-us.html"     class="nav-link">Contact</a></li>
+          <li><a href="${root}services.html" class="nav-link">Services</a></li>
+          <li><a href="${root}dental-tourism-pune.html" class="nav-link">International</a></li>
+          <li><a href="${root}dental-treatment-costs-punawale.html" class="nav-link">Costs</a></li>
+          <li><a href="${root}service-areas.html" class="nav-link">Areas</a></li>
+          <li><a href="${root}about-us.html" class="nav-link">About</a></li>
+          <li><a href="${root}blog/dental-clinic-faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="${root}blog/index.html" class="nav-link">Blog</a></li>
+          <li><a href="${root}contact-us.html" class="nav-link">Contact</a></li>
         </ul>
         <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
           <span aria-hidden="true">☰</span>
@@ -108,16 +109,22 @@
     footer.setAttribute('role', 'contentinfo');
     footer.innerHTML = `
       <div class="container">
-        <div class="footer-links">
-          <a href="${root}root-canal-punawale.html">Root Canal</a>
+        <div class="footer-links" style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 1.5rem;margin-bottom:1.5rem;">
+          <a href="${root}root-canal-treatment-punawale.html">Root Canal</a>
           <a href="${root}dental-implants-punawale.html">Dental Implants</a>
-          <a href="${root}aligners-punawale.html">Aligners</a>
+          <a href="${root}clear-aligners-punawale.html">Clear Aligners</a>
           <a href="${root}teeth-whitening-punawale.html">Teeth Whitening</a>
-          <a href="${root}veneers-punawale.html">Veneers</a>
-          <a href="${root}paediatric-dentist-punawale.html">Paediatric Dentist</a>
+          <a href="${root}veneers-punawale.html">Veneers & Crowns</a>
+          <a href="${root}pediatric-dentist-punawale.html">Pediatric Dentistry</a>
           <a href="${root}teeth-cleaning-scaling-punawale.html">Teeth Cleaning</a>
-          <a href="${root}restorative-dentistry-punawale.html">Restorative</a>
-          <a href="${root}blog/">Blog</a>
+          <a href="${root}restorative-dentistry-punawale.html">Restorative Fillings</a>
+          <a href="${root}emergency-dental-care-punawale.html">Emergency Dental Care</a>
+          <a href="${root}dental-tourism-pune.html">Dental Tourism</a>
+          <a href="${root}dental-treatment-costs-punawale.html">Treatment Costs</a>
+          <a href="${root}service-areas.html">Areas We Serve</a>
+          <a href="${root}blog/dental-clinic-faq.html">FAQs</a>
+          <a href="${root}blog/index.html">Blog</a>
+          <a href="${root}sitemap.html">HTML Sitemap</a>
           <a href="${root}contact-us.html">Contact Us</a>
           <a href="${root}privacy-policy.html">Privacy Policy</a>
         </div>

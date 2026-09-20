@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Sitemap | Aesthetica Dental Clinic Punawale Pune</title>
+  <meta name="description" content="Complete HTML sitemap and page directory for Aesthetica Dental Clinic in Punawale, Pune. Explore all dental services, international patient guides, treatment pricing, service areas and dental health articles.">
+  <link rel="canonical" href="https://aestheticadental.github.io/sitemap.html">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Website Sitemap | Aesthetica Dental Clinic Punawale">
+  <meta property="og:description" content="Explore all dental services, treatment costs, international patient guides, service areas and clinic resources at Aesthetica Dental Clinic, Punawale.">
+  <meta property="og:url" content="https://aestheticadental.github.io/sitemap.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://aestheticadental.github.io/images/clinic-og-banner.jpg">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Website Sitemap | Aesthetica Dental Clinic Punawale">
+  <meta name="twitter:description" content="Explore all dental services, treatment costs, international patient guides, service areas and clinic resources at Aesthetica Dental Clinic.">
+  <meta name="twitter:image" content="https://aestheticadental.github.io/images/clinic-og-banner.jpg">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --secondary: #0f172a;
+      --accent-teal: #0d9488;
+      --text-body: #475569;
+      --text-muted: #64748b;
+      --bg-light: #f8fafc;
+      --bg-white: #ffffff;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 14px rgba(0,0,0,0.08);
+      --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font); color: var(--secondary); background: var(--bg-white); line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Breadcrumbs */
+    .breadcrumbs { background: var(--bg-light); padding: 12px 20px; font-size: 0.88rem; color: var(--text-muted); border-bottom: 1px solid var(--border); margin-top: 70px; }
+    .breadcrumb-inner { max-width: 1140px; margin: 0 auto; }
+    .breadcrumbs a { color: var(--primary); font-weight: 500; }
+    .breadcrumbs a:hover { text-decoration: underline; }
+    .breadcrumbs span { margin: 0 6px; }
+
+    /* Hero */
+    .sitemap-hero { background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); padding: 50px 20px 40px; text-align: center; border-bottom: 1px solid var(--border); }
+    .sitemap-hero h1 { font-size: 2.4rem; font-weight: 800; color: var(--secondary); margin-bottom: 12px; letter-spacing: -0.02em; }
+    .sitemap-hero p { max-width: 760px; margin: 0 auto 20px; font-size: 1.05rem; color: var(--text-body); }
+    .quick-meta { display: inline-flex; align-items: center; gap: 16px; background: white; padding: 8px 18px; border-radius: 999px; border: 1px solid var(--border); font-size: 0.85rem; font-weight: 600; color: var(--text-muted); box-shadow: var(--shadow-sm); }
+    .quick-meta strong { color: var(--primary); }
+
+    /* Sitemap Grid Container */
+    .sitemap-container { max-width: 1140px; margin: 0 auto; padding: 60px 20px; }
+    .sitemap-pillar-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
+
+    /* Pillar Card */
+    .pillar-card { background: white; border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.2s, box-shadow 0.2s; }
+    .pillar-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    
+    .pillar-header { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 20px 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .pillar-header-left { display: flex; align-items: center; gap: 12px; }
+    .pillar-icon { font-size: 1.6rem; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: white; border-radius: 10px; box-shadow: var(--shadow-sm); }
+    .pillar-title { font-size: 1.25rem; font-weight: 700; color: var(--secondary); }
+    .pillar-badge { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: var(--primary-light); color: var(--primary-dark); padding: 4px 12px; border-radius: 999px; }
+
+    /* Pillar Content Links */
+    .pillar-links { padding: 24px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+    .sitemap-item { display: flex; flex-direction: column; padding: 12px 14px; border-radius: 8px; border: 1px solid transparent; transition: background 0.15s, border-color 0.15s; }
+    .sitemap-item:hover { background: #f0f9ff; border-color: #bae6fd; }
+    .sitemap-item-title { font-weight: 600; font-size: 0.95rem; color: var(--secondary); margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+    .sitemap-item:hover .sitemap-item-title { color: var(--primary); }
+    .sitemap-item-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.4; }
+    .arrow-icon { color: var(--primary); font-size: 0.85rem; transition: transform 0.15s; }
+    .sitemap-item:hover .arrow-icon { transform: translateX(3px); }
+
+    /* XML Sitemap Strip */
+    .xml-sitemap-strip { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; border-radius: var(--radius-lg); padding: 32px; margin-top: 50px; text-align: center; }
+    .xml-sitemap-strip h3 { font-size: 1.35rem; font-weight: 700; margin-bottom: 8px; color: #38bdf8; }
+    .xml-sitemap-strip p { font-size: 0.95rem; color: #cbd5e1; max-width: 650px; margin: 0 auto 20px; }
+    .xml-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: white; padding: 10px 22px; border-radius: 8px; font-weight: 600; font-size: 0.92rem; transition: background 0.2s; }
+    .xml-btn:hover { background: var(--primary-dark); }
+
+    @media (max-width: 768px) {
+      .sitemap-hero h1 { font-size: 1.85rem; }
+      .pillar-links { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aestheticadental.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Sitemap", "item": "https://aestheticadental.github.io/sitemap.html" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Dynamic Header Injection -->
+  <div id="header-container"></div>
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span aria-current="page">Sitemap</span>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="sitemap-hero">
+      <div class="container">
+        <h1>Website Sitemap &amp; Directory</h1>
+        <p>A comprehensive architectural directory of all clinical service pages, international patient resources, treatment pricing guides, service areas and educational blog articles at Aesthetica Dental Clinic.</p>
+        <div class="quick-meta">
+          <span>🏛️ Clinic: <strong>Aesthetica Dental Clinic</strong></span>
+          <span>📍 Locality: <strong>Punawale, Pune</strong></span>
+          <span>📄 Canonical Pages: <strong>43</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Sections -->
+    <div class="sitemap-container">
+      <div class="sitemap-pillar-grid">
+
+        <!-- Pillar 1: Dental Services -->
+        <section class="pillar-card" aria-labelledby="p1-title">
+          <div class="pillar-header">
+            <div class="pillar-header-left">
+              <div class="pillar-icon">🦷</div>
+              <h2 class="pillar-title" id="p1-title">Pillar 1: Dental Services &amp; Clinical Specialties</h2>
+            </div>
+            <span class="pillar-badge">10 Pages</span>
+          </div>
+          <div class="pillar-links">
+            <a href="services.html" class="sitemap-item">
+              <div class="sitemap-item-title">All Dental Services Hub <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Master category hub overviewing all dental treatments offered in Punawale.</div>
+            </a>
+            <a href="root-canal-treatment-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Root Canal Treatment (RCT) <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Single-sitting painless root canal therapy using rotary endodontics.</div>
+            </a>
+            <a href="dental-implants-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Dental Implants <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Permanent tooth replacement with biocompatible titanium implants &amp; crowns.</div>
+            </a>
+            <a href="clear-aligners-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Clear Aligners &amp; Invisible Braces <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Wire-free orthodontic teeth straightening for teens and adults.</div>
+            </a>
+            <a href="emergency-dental-care-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Emergency Dental Care <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Same-day relief for acute toothache, trauma, broken teeth and facial swelling.</div>
+            </a>
+            <a href="pediatric-dentist-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Pediatric Dentistry <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Gentle, child-friendly preventive care, fluoride and milk tooth treatments.</div>
+            </a>
+            <a href="teeth-cleaning-scaling-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Teeth Cleaning &amp; Scaling <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Ultrasonic plaque removal, stain polishing &amp; deep gum health maintenance.</div>
+            </a>
+            <a href="teeth-whitening-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">In-Clinic Teeth Whitening <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Professional 1-hour whitening brightening teeth 4–8 shades safely.</div>
+            </a>
+            <a href="veneers-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Porcelain Veneers &amp; Smile Makeovers <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Ultra-thin aesthetic veneers to transform chipped, stained or gapped teeth.</div>
+            </a>
+            <a href="restorative-dentistry-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Restorative Dentistry &amp; Fillings <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Tooth-coloured composite fillings, dental inlays, onlays and bridges.</div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Pillar 2: International Patients & Dental Tourism -->
+        <section class="pillar-card" aria-labelledby="p2-title">
+          <div class="pillar-header">
+            <div class="pillar-header-left">
+              <div class="pillar-icon">✈️</div>
+              <h2 class="pillar-title" id="p2-title">Pillar 2: International Patients &amp; Dental Tourism</h2>
+            </div>
+            <span class="pillar-badge">8 Pages</span>
+          </div>
+          <div class="pillar-links">
+            <a href="dental-tourism-pune.html" class="sitemap-item">
+              <div class="sitemap-item-title">Dental Tourism in Pune Hub <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Save 70–80% on implants &amp; crowns. Expressway access from Mumbai Airport.</div>
+            </a>
+            <a href="dental-treatment-in-india.html" class="sitemap-item">
+              <div class="sitemap-item-title">Dental Treatment in India Guide <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Essential guide for overseas patients: standards, materials and safety.</div>
+            </a>
+            <a href="nri-dental-care-pune.html" class="sitemap-item">
+              <div class="sitemap-item-title">NRI Dental Care in Pune <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Express turnaround dental care scheduled efficiently around India trips.</div>
+            </a>
+            <a href="how-to-plan-dental-treatment-during-india-trip.html" class="sitemap-item">
+              <div class="sitemap-item-title">How to Plan Dental Work on Trip <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Step-by-step itinerary planning, pre-flight consultations and scheduling.</div>
+            </a>
+            <a href="how-long-to-stay-in-pune-for-dental-treatment.html" class="sitemap-item">
+              <div class="sitemap-item-title">How Long to Stay in Pune <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Procedure-by-procedure stay duration breakdowns for RCT, crowns and implants.</div>
+            </a>
+            <a href="pune-vs-mumbai-dental-treatment.html" class="sitemap-item">
+              <div class="sitemap-item-title">Pune vs Mumbai Dental Care <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Cost, hotel accommodation, traffic and clinical quality comparison.</div>
+            </a>
+            <a href="dental-records-before-traveling-to-india.html" class="sitemap-item">
+              <div class="sitemap-item-title">What Dental Records to Send <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Preparing OPG X-rays, 3D CBCT scans and photos for remote assessment.</div>
+            </a>
+            <a href="combine-holiday-with-dental-treatment-india.html" class="sitemap-item">
+              <div class="sitemap-item-title">Combine Holiday with Treatment <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Vacation ideas in Pune, Lonavala and Western Ghats between appointments.</div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Pillar 3: Patient Resources, Diagnostics & Pricing -->
+        <section class="pillar-card" aria-labelledby="p3-title">
+          <div class="pillar-header">
+            <div class="pillar-header-left">
+              <div class="pillar-icon">💡</div>
+              <h2 class="pillar-title" id="p3-title">Pillar 3: Patient Resources, Diagnostics &amp; Pricing</h2>
+            </div>
+            <span class="pillar-badge">5 Pages</span>
+          </div>
+          <div class="pillar-links">
+            <a href="dental-treatment-costs-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Dental Treatment Costs &amp; Price List <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Transparent 2026 fee schedule for all treatments with zero hidden costs.</div>
+            </a>
+            <a href="dental-cleaning-cost-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Teeth Cleaning Cost &amp; Charges <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Scaling and polishing pricing tiers and gum health treatment guide.</div>
+            </a>
+            <a href="dental-x-ray-near-me.html" class="sitemap-item">
+              <div class="sitemap-item-title">Digital Dental RVG X-Ray Near Me <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Instant chairside low-radiation digital imaging for immediate diagnosis.</div>
+            </a>
+            <a href="what-is-a-dental-crown.html" class="sitemap-item">
+              <div class="sitemap-item-title">What is a Dental Crown? Guide <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Comparing Zirconia vs PFM caps, durability, procedure and post-RCT care.</div>
+            </a>
+            <a href="blog/dental-clinic-faq.html" class="sitemap-item">
+              <div class="sitemap-item-title">Comprehensive Clinic FAQ Hub <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Direct answers to 40+ common patient questions on treatments and recovery.</div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Pillar 4: Areas We Serve (Geo Proximity) -->
+        <section class="pillar-card" aria-labelledby="p4-title">
+          <div class="pillar-header">
+            <div class="pillar-header-left">
+              <div class="pillar-icon">📍</div>
+              <h2 class="pillar-title" id="p4-title">Pillar 4: Areas We Serve (Hyper-Local Proximity)</h2>
+            </div>
+            <span class="pillar-badge">5 Pages</span>
+          </div>
+          <div class="pillar-links">
+            <a href="service-areas.html" class="sitemap-item">
+              <div class="sitemap-item-title">Western Pune Service Areas Hub <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Coverage across Punawale, Hinjawadi, Wakad, Tathawade, Ravet &amp; Marunji.</div>
+            </a>
+            <a href="dentist-near-hinjawadi.html" class="sitemap-item">
+              <div class="sitemap-item-title">Dentist Near Hinjawadi Phase 1 <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">5–7 minutes from Hinjawadi IT Park. Late evening appointments available.</div>
+            </a>
+            <a href="dentist-near-wakad.html" class="sitemap-item">
+              <div class="sitemap-item-title">Dentist Near Wakad &amp; Bhumkar Chowk <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">5–8 minutes via direct Kate Wasti Road connection with on-site parking.</div>
+            </a>
+            <a href="dentist-near-tathawade.html" class="sitemap-item">
+              <div class="sitemap-item-title">Dentist Near Tathawade &amp; JSPM <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">3–5 minutes from JSPM college campus with student-friendly preventive care.</div>
+            </a>
+            <a href="blog/best-dentist-near-wakad.html" class="sitemap-item">
+              <div class="sitemap-item-title">Why Wakad Patients Choose Aesthetica <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Commute and clinic comparison guide for Wakad and Bhumkar Chowk residents.</div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Pillar 5: Clinic Authority, Clinician Profile & Dental Health Blog -->
+        <section class="pillar-card" aria-labelledby="p5-title">
+          <div class="pillar-header">
+            <div class="pillar-header-left">
+              <div class="pillar-icon">📚</div>
+              <h2 class="pillar-title" id="p5-title">Pillar 5: Clinic Authority &amp; Dental Health Blog</h2>
+            </div>
+            <span class="pillar-badge">15 Pages</span>
+          </div>
+          <div class="pillar-links">
+            <a href="index.html" class="sitemap-item">
+              <div class="sitemap-item-title">Homepage <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Aesthetica Dental Clinic official home in Punawale, Pune.</div>
+            </a>
+            <a href="about-us.html" class="sitemap-item">
+              <div class="sitemap-item-title">About Aesthetica Dental Clinic <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Clinic mission, sterilization benchmarks, technology and patient-first ethos.</div>
+            </a>
+            <a href="about-dr-prachi-gupta-garg.html" class="sitemap-item">
+              <div class="sitemap-item-title">Meet Dr. Prachi Gupta Garg <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Chief Dental Surgeon qualifications, BDS, cosmetologist certification &amp; E-E-A-T.</div>
+            </a>
+            <a href="contact-us.html" class="sitemap-item">
+              <div class="sitemap-item-title">Contact Us &amp; Appointments <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Phone, WhatsApp, clinic location, opening hours and appointment booking.</div>
+            </a>
+            <a href="privacy-policy.html" class="sitemap-item">
+              <div class="sitemap-item-title">Privacy Policy <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Patient data protection, medical confidentiality and website privacy guidelines.</div>
+            </a>
+            <a href="blog/index.html" class="sitemap-item">
+              <div class="sitemap-item-title">Dental Health Blog Hub <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Educational guides, oral care advice and treatment breakdowns by Dr. Prachi.</div>
+            </a>
+            <a href="blog/painless-root-canal-treatment-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Why RCT Does Not Have to Hurt <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">How rotary endodontics and modern anaesthesia dispel root canal fears.</div>
+            </a>
+            <a href="blog/cost-of-root-canal-in-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Cost of Root Canal in Punawale <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Complete 2026 pricing breakdown for anterior, premolar and molar RCT.</div>
+            </a>
+            <a href="blog/signs-you-need-root-canal.html" class="sitemap-item">
+              <div class="sitemap-item-title">7 Signs You Need a Root Canal <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Key symptoms to never ignore: throbbing pain, heat sensitivity and swelling.</div>
+            </a>
+            <a href="blog/tooth-pain-at-night-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Tooth Pain at Night Causes &amp; Care <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Why toothaches intensify while lying down and emergency remedies before clinic visit.</div>
+            </a>
+            <a href="blog/wisdom-tooth-extraction-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Wisdom Tooth Extraction Guide <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">When extraction is necessary, surgical steps, recovery timeline and aftercare.</div>
+            </a>
+            <a href="blog/wisdom-tooth-pain-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Wisdom Tooth Pain Warning Signs <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Identifying pericoronitis, impacted wisdom teeth, jaw stiffness and nerve pain.</div>
+            </a>
+            <a href="blog/dental-implants-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">Dental Implants Cost &amp; Q&amp;A <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Honest clinician answers on implant success rates, bone grafting and longevity.</div>
+            </a>
+            <a href="blog/what-is-teeth-whitening-punawale.html" class="sitemap-item">
+              <div class="sitemap-item-title">What is Teeth Whitening Science <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">In-office vs home kits, bleach concentrations, enamel safety and realistic results.</div>
+            </a>
+            <a href="sitemap.html" class="sitemap-item" aria-current="page">
+              <div class="sitemap-item-title">HTML Sitemap (Current Page) <span class="arrow-icon">→</span></div>
+              <div class="sitemap-item-desc">Complete index and navigation directory for all website pages.</div>
+            </a>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Search Engine XML Sitemap Link -->
+      <div class="xml-sitemap-strip">
+        <h3>Looking for Search Engine Crawlers?</h3>
+        <p>Aesthetica Dental Clinic maintains an XML Sitemap conforming to the sitemaps.org protocol for Googlebot, Bingbot and search engine indexing.</p>
+        <a href="sitemap.xml" class="xml-btn" target="_blank" rel="noopener">
+          <span>⚙️</span> View XML Sitemap (sitemap.xml)
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Dynamic Footer Injection -->
+  <div id="footer-container"></div>
+
+  <script src="components.js"></script>
+</body>
+</html>
