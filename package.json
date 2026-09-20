@@ -1,0 +1,10 @@
+{
+  "name": "aesthetica-dental",
+  "version": "2.0.0",
+  "description": "Aesthetica Dental Clinic website technical SEO suite and quality guardrails",
+  "scripts": {
+    "seo:audit": "node scripts/seo-audit.js"
+  },
+  "author": "Aesthetica Dental Clinic",
+  "license": "UNLICENSED"
+}
