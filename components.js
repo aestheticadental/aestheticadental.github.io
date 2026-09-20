@@ -18,8 +18,8 @@
      Pages in /blog/ need "../" prefix for root assets.
      All other pages (root-level service pages, index) use "./".
   ────────────────────────────────────────────────────────────────────── */
-  const isInSubfolder = window.location.pathname.split('/').filter(Boolean).length > 1 &&
-                        !window.location.pathname.endsWith('/');
+  const currentPath = window.location.pathname.toLowerCase();
+  const isInSubfolder = currentPath.includes('/blog/') || currentPath.endsWith('/blog') || currentPath.endsWith('/blog/');
   const root = isInSubfolder ? '../' : '';
 
   /* ── WhatsApp number & default message ─────────────────────────────── */

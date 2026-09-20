@@ -1,72 +1,92 @@
 # Aesthetica Dental Clinic — New Page SEO Quality Gate Checklist
 
-**Purpose**: This checklist serves as the mandatory pre-publication gatekeeper for any new service page, patient resource, location guide, or blog article.  
-**Rule**: No page may be merged into the repository or deployed to production unless all 20 quality checks are verified and checked off.  
+**Purpose**: This checklist serves as the mandatory pre-publication architectural gatekeeper for any new service page, patient resource, location guide, or blog article.  
+**Rule**: No page may be merged into the repository or deployed to production unless all 15 core architectural questions and technical quality checks are verified and approved.
+
+> [!CAUTION]
+> **STRICT REJECTION CRITERIA**: A page **MUST FAIL** this checklist and be rejected if it is merely *another keyword variation of an existing page* or a templated *doorway page* (e.g. `best-dentist-*`, `dentist-in-[neighborhood]`, `cheap-dentist-*`).
 
 ---
 
-## Pre-Publication 20-Point Quality Gate
+## 15 Mandatory Pre-Publication Architectural Questions
 
-### 1. Intent & Cannibalization Prevention
-- [ ] **1. What search intent does this page satisfy?**  
-  *Define precisely: Informational, Commercial Investigation, Transactional, or Urgent. If the intent cannot be clearly articulated, do not build the page.*
-- [ ] **2. Does another page already satisfy this intent?**  
-  *Check `SEO_SEARCH_INTENT_MAP.md` and `CONTENT_CONSOLIDATION_PLAN.md`. If an existing page covers this topic, improve the existing page instead of creating a competing URL.*
-- [ ] **3. Is the content genuinely unique and valuable?**  
-  *Does it provide unique clinical insights, real treatment explanations, or localized details? Reject templated doorway content or AI-generated filler.*
+Before writing a single line of HTML or staging content, answer and record the following 15 questions:
 
-### 2. URL, Title & Metadata Hygiene
-- [ ] **4. Does it have a clean, unique URL?**  
-  *Must be lowercase, hyphen-separated, evergreen, and located in the correct directory (e.g., `/blog/` for articles, root for service pillars). No uppercase characters, underscores, or dates.*
-- [ ] **5. Does it have a unique, descriptive page title?**  
-  *Under 60 characters. Clearly communicates topic, intent, and clinic name where appropriate. No keyword stuffing.*
-- [ ] **6. Does it have a single, intent-aligned `<h1>`?**  
-  *Exactly one `<h1>` per page. Directly addresses the user's primary query.*
-- [ ] **7. Does it have a compelling meta description?**  
-  *Between 120 and 155 characters. Accurately summarizes page content and provides an incentive for searchers to click.*
-- [ ] **8. Does it have an absolute self-referencing canonical tag?**  
-  *`<link rel="canonical" href="https://aestheticadental.github.io/exact-slug.html">`. Must use HTTPS and match the preferred file convention.*
-
-### 3. Architecture, Breadcrumbs & Discoverability
-- [ ] **9. Does it have visible breadcrumb navigation?**  
-  *Visible to users at the top of the content with crawlable `<a href="...">` links representing a realistic user path.*
-- [ ] **10. Does it have matching `BreadcrumbList` schema?**  
-  *Valid Schema.org JSON-LD matching the visible breadcrumb trail.*
-- [ ] **11. Is it linked from a relevant parent hub?**  
-  *Must be linked from its logical parent (`services.html`, `service-areas.html`, `dental-tourism-pune.html`, or `blog/index.html`). Never create orphan pages.*
-- [ ] **12. Does it link out to 3–8 relevant pages?**  
-  *Contextually connects to related procedures, treatment costs, and emergency care. No arbitrary link counts; prioritize semantic relevance.*
-- [ ] **13. Does at least one relevant blog post link to it?**  
-  *For service pages: ensure supporting educational articles pass topical relevance to the commercial pillar.*
-
-### 4. Indexation & Technical SEO
-- [ ] **14. Is it included in `sitemap.xml`?**  
-  *Add to sitemap with correct canonical URL, current date in `<lastmod>`, and priority aligned with the page tier.*
-- [ ] **15. Is it included in the HTML sitemap (`sitemap.html`)?**  
-  *Listed under the appropriate category header for human navigation.*
-- [ ] **16. Is it verified as indexable?**  
-  *Confirm `<meta name="robots" content="index, follow">` is present. Ensure it is not blocked by `robots.txt`.*
-- [ ] **17. Does it include appropriate structured data?**  
-  *Implement `MedicalProcedure`, `MedicalWebPage`, `LocalBusiness`, or `FAQPage` where visible on-page content justifies it.*
-
-### 5. Conversion, Assets & Experience
-- [ ] **18. Are all images optimized and tagged?**  
-  *Modern WebP format under 150 KB. Explicit `width` and `height` attributes to prevent CLS. Contextual, descriptive `alt` text.*
-- [ ] **19. Is the page fully mobile-responsive and accessible?**  
-  *Tested on mobile viewport (<768px). Touch targets ≥48px. Clean font legibility, no horizontal overflow.*
-- [ ] **20. Does it have a clear, patient-first conversion path?**  
-  *Prominent, frictionless action steps: WhatsApp consultation link with pre-filled text, direct phone call button, or clinic address for urgent walk-ins.*
+- [ ] **1. What user/search intent does this page satisfy?**  
+  *Define specifically: Informational, Commercial Investigation, Local Transactional, or Urgent Care. Vague queries (e.g., "dental ranking") are rejected.*
+- [ ] **2. Does an existing page already satisfy that intent?**  
+  *Cross-reference `SEO_URL_INVENTORY.md` and `SEO_SEARCH_INTENT_MAP.md`. If an existing URL addresses this query, update that page instead of creating a competing page.*
+- [ ] **3. If an existing page touches this topic, why isn't the existing page sufficient?**  
+  *Document the exact gap. Merely wanting a different keyword in the URL is NOT an acceptable rationale.*
+- [ ] **4. What unique information will this page provide?**  
+  *Identify clinic-specific photos, unique doctor explanations, proprietary procedures, or distinct local travel/neighborhood guidance.*
+- [ ] **5. Which architecture pillar does it belong to?**  
+  *Must fit cleanly into one of the 5 established pillars:*
+  1. *Dental Services Pillar*
+  2. *International Patients & Dental Tourism Pillar*
+  3. *Patient Resources & Pricing Pillar*
+  4. *Areas We Serve (Location) Pillar*
+  5. *Clinic Authority / Blog Pillar*
+- [ ] **6. Which canonical URL should exist?**  
+  *Must follow established URL conventions (e.g., root-level for core pillars, `/blog/[slug].html` for articles). Exact lowercase, hyphenated.*
+- [ ] **7. Which existing pages should link to it?**  
+  *List at least 2–4 existing pages that will provide natural contextual discovery paths (including its parent hub).*
+- [ ] **8. Which pages should it link to?**  
+  *List downstream pages: consultation booking, parent pillar, related treatments, and transparent pricing.*
+- [ ] **9. Does it risk keyword cannibalization?**  
+  *Confirm that this page will not compete with existing target rankings for primary keywords.*
+- [ ] **10. Is it a doorway/localization page?**  
+  *If this is a location page, does it provide genuine neighborhood value (parking, metro/bus transit, landmarks, localized emergency care), or is it just swapped neighborhood text? Swapped text is strictly prohibited.*
+- [ ] **11. Is it indexable?**  
+  *Confirm `<meta name="robots" content="index, follow">`. If it is a utility, staging, or legal page, assign `<meta name="robots" content="noindex, follow">`.*
+- [ ] **12. Should it be in `sitemap.xml`?**  
+  *Only canonical, indexable, high-value pages belong in `sitemap.xml`.*
+- [ ] **13. Does it require `BreadcrumbList`?**  
+  *Child pages require visible breadcrumbs AND matching Schema.org `BreadcrumbList` with at least 2 sequential `ListItem` positions.*
+- [ ] **14. Does it require `Article` or other structured data?**  
+  *Select relevant schemas: `MedicalProcedure`, `Dentist`, `FAQPage`, `Article`. Markup must strictly reflect visible page text.*
+- [ ] **15. What measurable business/user purpose does it serve?**  
+  *Explain how it assists the patient (e.g., alleviates dental anxiety, clarifies treatment cost, guides an overseas patient) and converts to an appointment.*
 
 ---
 
-## Verification Sign-Off
+## Technical & On-Page Implementation Standards
 
-Before publishing, run the repository validation tool:
+### A. Head & Metadata Hygiene
+- [ ] **Canonical Tag**: Single, absolute canonical pointing to production HTTPS URL (`<link rel="canonical" href="https://aestheticadental.github.io/...">`).
+- [ ] **Page Title**: Unique, natural, descriptive, under 70 characters. Clinic branding included.
+- [ ] **Meta Description**: Compelling, informative summary between 120 and 160 characters.
+- [ ] **Single H1**: Exactly one `<h1>` that aligns with the search intent.
+- [ ] **Open Graph Tags**: Complete `og:title`, `og:description`, `og:url`, `og:image` pointing to `/images/clinic-og-banner.jpg`.
+
+### B. Medical Content Integrity (YMYL / Healthcare Quality)
+- [ ] **Clinician Attribution**: Attributed to Dr. Prachi Gupta Garg (BDS, PGDEMS).
+- [ ] **Responsible Medical Phrasing**: No guaranteed outcomes, no "100% painless" claims, no fabricated statistics, and transparent discussion of treatment longevity, candidacy, and maintenance.
+- [ ] **Transparent Costs**: Any price references must match the official fee schedule in `dental-treatment-costs-punawale.html`.
+
+### C. Components & Navigation
+- [ ] **Global Injections**: Script `components.js` loaded.
+- [ ] **Relative Path Safety**: If in a subfolder (e.g., `/blog/`), component injection pathing must be verified.
+- [ ] **Emergency Contact CTAs**: Direct WhatsApp link (`https://wa.me/919011016358`) and phone call (`tel:+919011016358`) functioning.
+
+---
+
+## Automated Verification Sign-Off
+
+Before any pull request is submitted or code is merged to `main`, run:
+
 ```bash
+# 1. Run full repository audit suite
 npm run seo:audit
+
+# 2. Run live HTTP production validation (if updating production)
+npm run seo:live
 ```
-Confirm:
-- [ ] 0 Errors
-- [ ] 0 Broken Links
-- [ ] 0 Unintentional Orphans
-- [ ] 0 Canonical Mismatches
+
+Required pass metrics:
+- [ ] **0 Errors**
+- [ ] **0 Broken Links**
+- [ ] **0 Unintentional Orphans**
+- [ ] **0 Canonical Mismatches**
+- [ ] **0 Invalid JSON-LD Syntax Errors**
+- [ ] **0 Exposed Credentials/Secrets**
