@@ -22,10 +22,26 @@
   const isInSubfolder = currentPath.includes('/blog/') || currentPath.endsWith('/blog') || currentPath.endsWith('/blog/');
   const root = isInSubfolder ? '../' : '';
 
-  /* ── WhatsApp number & default message ─────────────────────────────── */
+  /* ── WhatsApp number & dynamic contextual message ─────────────────── */
   const WA_NUMBER  = '919226680164';
-  const WA_DEFAULT = 'Hello%2C%20I%20want%20to%20book%20a%20dental%20appointment%20at%20Aesthetica%20Dental%20Clinic%2C%20Punawale.';
-  const WA_LINK    = `https://wa.me/${WA_NUMBER}?text=${WA_DEFAULT}`;
+  function getContextualWaLink() {
+    let topic = 'a dental appointment';
+    const path = window.location.pathname.toLowerCase();
+    if (path.includes('root-canal') || path.includes('rct')) topic = 'Root Canal Treatment (RCT)';
+    else if (path.includes('aligner')) topic = 'Clear Aligners';
+    else if (path.includes('implant')) topic = 'Dental Implants';
+    else if (path.includes('whitening')) topic = 'Teeth Whitening';
+    else if (path.includes('emergency') || path.includes('tooth-pain')) topic = 'Urgent Emergency Dental Care';
+    else if (path.includes('tourism') || path.includes('nri') || path.includes('india')) topic = 'Dental Tourism & NRI Care';
+    else if (path.includes('cost') || path.includes('price')) topic = 'Treatment Pricing & EMI Plans';
+    else if (path.includes('pediatric') || path.includes('paediatric')) topic = 'Pediatric Dental Care for my child';
+    else if (path.includes('crown') || path.includes('veneer')) topic = 'Dental Crowns & Veneers';
+    else if (path.includes('clean') || path.includes('scaling')) topic = 'Teeth Cleaning & Scaling';
+    else if (path.includes('x-ray')) topic = 'Digital Dental X-Ray (RVG)';
+    const text = encodeURIComponent(`Hello Dr. Prachi, I would like to consult and book an appointment for ${topic} at Aesthetica Dental Clinic, Punawale.`);
+    return `https://wa.me/${WA_NUMBER}?text=${text}`;
+  }
+  const WA_LINK = getContextualWaLink();
 
   /* ── WhatsApp SVG ───────────────────────────────────────────────────── */
   const WA_SVG = `<svg viewBox="0 0 24 24" fill="white" aria-hidden="true" style="width:22px;height:22px;">
@@ -46,7 +62,7 @@
     header.innerHTML = `
       <nav class="nav-container" aria-label="Main navigation">
         <div class="logo-section">
-          <a href="${root}index.html" class="logo">
+          <a href="${root || "/"}" class="logo">
             <img src="${root}logo.webp" alt="Aesthetica Dental Clinic" class="logo-image" width="38" height="38">
             <span class="logo-text">AESTHETICA</span>
           </a>
@@ -218,6 +234,151 @@
   }
 
   /* ══════════════════════════════════════════════════════════════════════
+     INTERACTIVE TOOL: DENTAL COST ESTIMATOR & EMI CALCULATOR
+  ══════════════════════════════════════════════════════════════════════ */
+  function initCostCalculator() {
+    const rootEl = document.getElementById('dental-cost-calculator');
+    if (!rootEl) return;
+
+    const treatments = {
+      rct: { name: 'Single-Sitting Root Canal (Rotary)', minINR: 3500, maxINR: 5500, perTooth: true },
+      crown: { name: 'Zirconia Crown (CAD/CAM Metal-Free)', minINR: 6500, maxINR: 10000, perTooth: true },
+      implant: { name: 'Dental Implant (Titanium + Abutment)', minINR: 25000, maxINR: 35000, perTooth: true },
+      aligner: { name: 'Clear Aligners (Invisible Braces)', minINR: 60000, maxINR: 95000, perTooth: false },
+      whitening: { name: 'Professional Teeth Whitening', minINR: 4000, maxINR: 7000, perTooth: false },
+      scaling: { name: 'Ultrasonic Teeth Cleaning & Polishing', minINR: 800, maxINR: 1500, perTooth: false }
+    };
+
+    const rates = { INR: 1, USD: 0.012, AED: 0.044, GBP: 0.0095 };
+    const symbols = { INR: '₹', USD: '$', AED: 'AED ', GBP: '£' };
+
+    let currentCur = 'INR';
+    const selectEl = rootEl.querySelector('#calc-treatment-select');
+    const qtySlider = rootEl.querySelector('#calc-qty-slider');
+    const qtyVal = rootEl.querySelector('#calc-qty-val');
+    const displayEl = rootEl.querySelector('#calc-price-display');
+    const emiEl = rootEl.querySelector('#calc-emi-badge');
+    const ctaBtn = rootEl.querySelector('#calc-wa-cta');
+    const pills = rootEl.querySelectorAll('.currency-pill');
+
+    function update() {
+      const key = selectEl ? selectEl.value : 'rct';
+      const t = treatments[key] || treatments.rct;
+      const qty = t.perTooth && qtySlider ? parseInt(qtySlider.value, 10) : 1;
+      
+      if (qtySlider) {
+        qtySlider.disabled = !t.perTooth;
+        if (qtyVal) qtyVal.textContent = t.perTooth ? `${qty} Tooth/Teeth` : 'Full Procedure';
+      }
+
+      const totalMinINR = t.minINR * qty;
+      const totalMaxINR = t.maxINR * qty;
+
+      const rate = rates[currentCur] || 1;
+      const sym = symbols[currentCur] || '₹';
+
+      const dispMin = Math.round(totalMinINR * rate).toLocaleString();
+      const dispMax = Math.round(totalMaxINR * rate).toLocaleString();
+
+      if (displayEl) displayEl.textContent = `${sym}${dispMin} – ${sym}${dispMax}`;
+
+      const emiINR = Math.round(totalMinINR / 6).toLocaleString();
+      if (emiEl) emiEl.textContent = `Or ₹${emiINR} / mo (No-Cost EMI Available)`;
+
+      if (ctaBtn) {
+        const msg = encodeURIComponent(`Hello Dr. Prachi, I used the online cost calculator for ${t.name} (Estimated ${sym}${dispMin} - ${sym}${dispMax}). I would like to schedule a consultation.`);
+        ctaBtn.href = `https://wa.me/919226680164?text=${msg}`;
+      }
+    }
+
+    pills.forEach(p => {
+      p.addEventListener('click', () => {
+        pills.forEach(x => x.classList.remove('active'));
+        p.classList.add('active');
+        currentCur = p.getAttribute('data-cur') || 'INR';
+        update();
+      });
+    });
+
+    if (selectEl) selectEl.addEventListener('change', update);
+    if (qtySlider) qtySlider.addEventListener('input', update);
+    update();
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     INTERACTIVE TOOL: EMERGENCY SYMPTOM CHECKER & TRIAGE
+  ══════════════════════════════════════════════════════════════════════ */
+  function initSymptomChecker() {
+    const rootEl = document.getElementById('symptom-checker');
+    if (!rootEl) return;
+
+    let painType = 'throbbing';
+    let nightPain = 'yes';
+    let visible = 'swelling';
+
+    const painOptions = rootEl.querySelectorAll('[data-pain]');
+    const nightOptions = rootEl.querySelectorAll('[data-night]');
+    const visibleOptions = rootEl.querySelectorAll('[data-visible]');
+
+    const badgeEl = rootEl.querySelector('#triage-badge');
+    const titleEl = rootEl.querySelector('#triage-title');
+    const adviceEl = rootEl.querySelector('#triage-advice');
+    const ctaBtn = rootEl.querySelector('#triage-wa-cta');
+
+    function evaluate() {
+      let dx = 'Acute Dental Pulpitis (Infected Tooth Nerve)';
+      let urgency = 'urgency-high';
+      let urgencyText = '🚨 High Urgency — Same Day RCT Recommended';
+      let advice = 'The infection has reached the internal tooth pulp. Pain radiates when lying down. Modern single-sitting rotary RCT completely removes the infected nerve under targeted anesthesia, stopping pain in 45 minutes.';
+
+      if (visible === 'swelling') {
+        dx = 'Periapical Abscess / Active Infection';
+        urgency = 'urgency-high';
+        urgencyText = '🚨 Urgent — Immediate Drainage & Evaluation Required';
+        advice = 'Facial or gum swelling indicates active infection spreading beyond the root apex. Please call or visit immediately. Keep head elevated, apply a cold compress externally, and do NOT apply heat.';
+      } else if (painType === 'sharp' && nightPain === 'no') {
+        dx = 'Dental Enamel Sensitivity / Early Cavity';
+        urgency = 'urgency-med';
+        urgencyText = '⚠️ Moderate — Dental Checkup Advised';
+        advice = 'Likely exposed dentin or early cavity. Avoid ice-cold or very sweet foods. An in-clinic fluoride varnish or composite filling can seal the tooth and prevent root canal need.';
+      } else if (painType === 'trauma') {
+        dx = 'Traumatic Tooth Fracture / Chipped Tooth';
+        urgency = 'urgency-high';
+        urgencyText = '🚨 Urgent — Tooth Preservation Critical';
+        advice = 'Broken tooth structure leaves nerve exposed to oral bacteria. Prompt restorative bonding or crown placement preserves tooth vitality.';
+      }
+
+      if (badgeEl) {
+        badgeEl.className = `triage-urgency-badge ${urgency}`;
+        badgeEl.textContent = urgencyText;
+      }
+      if (titleEl) titleEl.textContent = dx;
+      if (adviceEl) adviceEl.textContent = advice;
+      if (ctaBtn) {
+        const msg = encodeURIComponent(`Hello Dr. Prachi, I completed the emergency symptom triage on your website. Result: "${dx}". Symptoms: ${painType} pain, night pain: ${nightPain}, physical signs: ${visible}. Please let me know when I can visit.`);
+        ctaBtn.href = `https://wa.me/919226680164?text=${msg}`;
+      }
+    }
+
+    function setupGroup(options, setter) {
+      options.forEach(opt => {
+        opt.addEventListener('click', () => {
+          options.forEach(o => o.classList.remove('selected'));
+          opt.classList.add('selected');
+          setter(opt.getAttribute('data-val'));
+          evaluate();
+        });
+      });
+    }
+
+    setupGroup(painOptions, val => { painType = val; });
+    setupGroup(nightOptions, val => { nightPain = val; });
+    setupGroup(visibleOptions, val => { visible = val; });
+
+    evaluate();
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
      INIT — run after DOM is ready
   ══════════════════════════════════════════════════════════════════════ */
   function init() {
@@ -228,6 +389,8 @@
     initSmoothScroll();
     initAnimations();
     initTracking();
+    initCostCalculator();
+    initSymptomChecker();
   }
 
   if (document.readyState === 'loading') {

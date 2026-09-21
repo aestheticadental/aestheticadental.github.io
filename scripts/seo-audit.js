@@ -265,6 +265,10 @@ async function runAudit() {
         errors++;
       }
     }
+    if (jsonLdMatches.length === 0 && page !== 'privacy-policy.html') {
+      console.warn(`  ⚠️ [WARNING] Page missing JSON-LD structured data: ${page}`);
+      warnings++;
+    }
   }
   infoMetrics['Valid JSON-LD Blocks'] = validSchemas;
   console.log(`  ✓ Successfully parsed ${validSchemas} structured data blocks with 0 syntax errors.`);
@@ -336,7 +340,7 @@ async function runAudit() {
       }
     }
   }
-  // Check clinic OG banner
+  // Check clinic OG banner & favicon
   const ogBannerPath = path.join(ROOT_DIR, 'images', 'clinic-og-banner.jpg');
   if (!fs.existsSync(ogBannerPath)) {
     console.error('  ❌ [ERROR] Open Graph banner missing: images/clinic-og-banner.jpg');
@@ -344,6 +348,30 @@ async function runAudit() {
   } else {
     console.log('  ✓ Social preview image (images/clinic-og-banner.jpg) verified on disk.');
   }
+
+  const faviconPath = path.join(ROOT_DIR, 'favicon.png');
+  if (!fs.existsSync(faviconPath)) {
+    console.error('  ❌ [ERROR] Favicon missing: favicon.png');
+    errors++;
+  } else {
+    console.log('  ✓ Favicon (favicon.png) verified on disk.');
+  }
+
+  // Check image sizes (< 250 KB for Core Web Vitals)
+  const imageFiles = getAllFiles(ROOT_DIR, ['.webp', '.jpg', '.jpeg', '.png']).filter(f => !f.includes('node_modules') && !f.includes('.git') && !f.includes('scratch'));
+  let oversizedImages = 0;
+  for (const imgPath of imageFiles) {
+    const size = fs.statSync(imgPath).size;
+    if (size > 250 * 1024) {
+      console.warn(`  ⚠️ [WARNING] Image file > 250KB: ${path.relative(ROOT_DIR, imgPath)} (${Math.round(size/1024)} KB)`);
+      warnings++;
+      oversizedImages++;
+    }
+  }
+  if (oversizedImages === 0) {
+    console.log('  ✓ All image assets optimized under 250KB for Core Web Vitals performance.');
+  }
+
   if (brokenImages === 0) {
     console.log('  ✓ All inline <img> references resolve to existing assets on disk.');
   }
