@@ -172,7 +172,7 @@ The clinic's Name, Address, and Phone number are standardized across all 43 page
 * **Name:** Aesthetica Dental Clinic
 * **Chief Clinician:** Dr. Prachi Gupta Garg (BDS, Certified Cosmetologist, Dental Council of India registered)
 * **Phone / Emergency Hotline:** `+91 92266 80164` / `092266 80164`
-* **Address:** Shop No. 103, 1st Floor, Swaraaj Heights, Kate Wasti Road, Opp. Legacy Ivy, Kate Wasti, Punawale, Pimpri-Chinchwad, Pune, Maharashtra 411033
+* **Address:** 1st floor, Shop no 103, Swaraaj Heights, Kate Wasti Rd, opp. Legacy IVy, Kate Wasti, Punawale, Pimpri-Chinchwad, Maharashtra 411033
 * **Operating Hours:** Monday – Sunday, 10:15 AM – 8:30 PM (Open 7 Days)
 * **Google Maps CID:** `https://maps.google.com/maps?cid=2958390942464955493`
 

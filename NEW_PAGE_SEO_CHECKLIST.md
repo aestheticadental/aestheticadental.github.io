@@ -67,7 +67,7 @@ Before writing a single line of HTML or staging content, answer and record the f
 ### C. Components & Navigation
 - [ ] **Global Injections**: Script `components.js` loaded.
 - [ ] **Relative Path Safety**: If in a subfolder (e.g., `/blog/`), component injection pathing must be verified.
-- [ ] **Emergency Contact CTAs**: Direct WhatsApp link (`https://wa.me/919011016358`) and phone call (`tel:+919011016358`) functioning.
+- [ ] **Emergency Contact CTAs**: Direct WhatsApp link (`https://wa.me/919226680164`) and phone call (`tel:+919226680164`) functioning.
 
 ---
 

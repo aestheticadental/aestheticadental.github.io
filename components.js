@@ -35,9 +35,15 @@
     else if (path.includes('tourism') || path.includes('nri') || path.includes('india')) topic = 'Dental Tourism & NRI Care';
     else if (path.includes('cost') || path.includes('price')) topic = 'Treatment Pricing & EMI Plans';
     else if (path.includes('pediatric') || path.includes('paediatric')) topic = 'Pediatric Dental Care for my child';
-    else if (path.includes('crown') || path.includes('veneer')) topic = 'Dental Crowns & Veneers';
+    else if (path.includes('crown') || path.includes('veneer') || path.includes('makeover')) topic = 'Dental Crowns & Cosmetic Veneers';
     else if (path.includes('clean') || path.includes('scaling')) topic = 'Teeth Cleaning & Scaling';
     else if (path.includes('x-ray')) topic = 'Digital Dental X-Ray (RVG)';
+    else if (path.includes('tmj') || path.includes('bruxism') || path.includes('night-guard')) topic = 'TMJ Jaw Pain & Nightguards';
+    else if (path.includes('steriliz') || path.includes('safety')) topic = 'Clinic Sterilization & Safety Standards';
+    else if (path.includes('laser') || path.includes('depigmentation')) topic = 'Laser Dentistry & Gum Aesthetics';
+    else if (path.includes('diabetic') || path.includes('cardiac')) topic = 'Dental Care for Medical Conditions';
+    else if (path.includes('aftercare') || path.includes('post-op')) topic = 'Post-Treatment Recovery & Aftercare';
+    else if (path.includes('pregnancy')) topic = 'Dental Care During Pregnancy';
     const text = encodeURIComponent(`Hello Dr. Prachi, I would like to consult and book an appointment for ${topic} at Aesthetica Dental Clinic, Punawale.`);
     return `https://wa.me/${WA_NUMBER}?text=${text}`;
   }
@@ -144,10 +150,11 @@
           <a href="${root}contact-us.html">Contact Us</a>
           <a href="${root}privacy-policy.html">Privacy Policy</a>
         </div>
-        <p class="footer-copy">
+        <p class="footer-copy" style="text-align:center;font-size:0.86rem;line-height:1.7;color:#94a3b8;margin-top:1rem;">
           &copy; ${year} Aesthetica Dental Clinic &middot;
-          Shop 103, Swaraaj Heights, Kate Wasti Rd, Punawale, Pune 411033 &middot;
-          +91 92266 80164
+          1st floor, Shop no 103, Swaraaj Heights, Kate Wasti Rd, opp. Legacy IVy, Kate Wasti, Punawale, Pimpri-Chinchwad, Maharashtra 411033<br>
+          Phone: <a href="tel:+919226680164" style="color:#38bdf8;text-decoration:none;">092266 80164</a> &middot;
+          Hours: Monday-Sunday 10:15 am–8:30 pm
         </p>
       </div>`;
     document.body.appendChild(footer);
@@ -379,6 +386,72 @@
   }
 
   /* ══════════════════════════════════════════════════════════════════════
+     INTERACTIVE BEFORE/AFTER CASE SLIDER
+  ══════════════════════════════════════════════════════════════════════ */
+  function initBeforeAfterSliders() {
+    const containers = document.querySelectorAll('.ba-compare-container');
+    containers.forEach(container => {
+      const visual = container.querySelector('.ba-slider-visual');
+      const divider = container.querySelector('.ba-divider');
+      const afterLayer = container.querySelector('.ba-after-layer');
+      if (!visual || !divider || !afterLayer) return;
+
+      let isDragging = false;
+
+      function updatePosition(clientX) {
+        const rect = visual.getBoundingClientRect();
+        let posX = clientX - rect.left;
+        if (posX < 0) posX = 0;
+        if (posX > rect.width) posX = rect.width;
+        const percent = (posX / rect.width) * 100;
+        divider.style.left = `${percent}%`;
+        afterLayer.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+      }
+
+      function onPointerMove(e) {
+        if (!isDragging) return;
+        updatePosition(e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : 0));
+      }
+
+      function stopDrag() {
+        isDragging = false;
+        window.removeEventListener('pointermove', onPointerMove);
+        window.removeEventListener('pointerup', stopDrag);
+        window.removeEventListener('touchmove', onPointerMove);
+        window.removeEventListener('touchend', stopDrag);
+      }
+
+      divider.addEventListener('pointerdown', e => {
+        isDragging = true;
+        window.addEventListener('pointermove', onPointerMove);
+        window.addEventListener('pointerup', stopDrag);
+      });
+
+      divider.addEventListener('touchstart', e => {
+        isDragging = true;
+        window.addEventListener('touchmove', onPointerMove, { passive: true });
+        window.addEventListener('touchend', stopDrag);
+      }, { passive: true });
+
+      visual.addEventListener('click', e => {
+        updatePosition(e.clientX);
+      });
+    });
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     POST-OPERATIVE CARE PRINT & SHARE HELPER
+  ══════════════════════════════════════════════════════════════════════ */
+  function initPostOpPrint() {
+    const printBtns = document.querySelectorAll('.print-care-btn');
+    printBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        window.print();
+      });
+    });
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
      INIT — run after DOM is ready
   ══════════════════════════════════════════════════════════════════════ */
   function init() {
@@ -391,6 +464,8 @@
     initTracking();
     initCostCalculator();
     initSymptomChecker();
+    initBeforeAfterSliders();
+    initPostOpPrint();
   }
 
   if (document.readyState === 'loading') {

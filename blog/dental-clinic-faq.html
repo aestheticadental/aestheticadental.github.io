@@ -10,341 +10,228 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="canonical" href="https://aestheticadental.github.io/blog/dental-clinic-faq.html">
    <link rel="stylesheet" href="../styles.css">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --cream: #FAF8F3;
-    --deep: #1A2B24;
-    --teal: #1D7A60;
-    --teal-light: #E6F4EF;
-    --teal-mid: #C0E5D8;
-    --gold: #C9923A;
-    --gold-light: #FDF3E5;
-    --text: #2C3E35;
-    --muted: #6B7E75;
-    --border: #DDE8E3;
-    --white: #ffffff;
+  html {
+    scroll-behavior: smooth;
   }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    line-height: 1.7;
-    font-size: 16px;
-  }
-
-  .page-header {
-    background: var(--deep);
-    color: white;
-    padding: 72px 24px 64px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .page-header::before {
-    content: '';
-    position: absolute;
-    top: -80px; right: -80px;
-    width: 320px; height: 320px;
-    border-radius: 50%;
-    background: rgba(29,122,96,0.18);
-  }
-
-  .page-header::after {
-    content: '';
-    position: absolute;
-    bottom: -60px; left: -40px;
-    width: 200px; height: 200px;
-    border-radius: 50%;
-    background: rgba(201,146,58,0.12);
-  }
-
-  .header-eyebrow {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #7EC9B0;
-    margin-bottom: 16px;
-  }
-
-  .header-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(32px, 5vw, 52px);
-    line-height: 1.15;
-    color: white;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .header-title em {
-    font-style: italic;
-    color: #7EC9B0;
-  }
-
-  .header-sub {
-    font-size: 17px;
-    color: rgba(255,255,255,0.65);
-    max-width: 540px;
+  /* Page Wrapper */
+  .faq-page-wrap {
+    max-width: 880px;
     margin: 0 auto;
-    font-weight: 300;
-    position: relative;
-    z-index: 1;
+    padding: 2.5rem 1.25rem 5rem;
   }
 
-  .container {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 64px 24px 96px;
+  /* Sticky Category Filter Tabs */
+  .category-tabs-wrap {
+    position: sticky;
+    top: 72px;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 12px 0;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--neutral-200);
   }
 
   .category-tabs {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 48px;
+    justify-content: center;
+    max-width: 880px;
+    margin: 0 auto;
   }
 
   .cat-tab {
-    font-size: 13px;
-    font-weight: 400;
-    padding: 7px 18px;
-    border-radius: 24px;
-    border: 1px solid var(--border);
-    background: white;
-    color: var(--muted);
-    cursor: pointer;
-    transition: all 0.18s;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--neutral-200);
+    background: #ffffff;
+    color: var(--neutral-600);
     text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
   }
 
-  .cat-tab:hover { border-color: var(--teal); color: var(--teal); }
-  .cat-tab.active { background: var(--teal); color: white; border-color: var(--teal); font-weight: 500; }
+  .cat-tab:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 102, 204, 0.1);
+  }
 
-  .faq-section { margin-bottom: 56px; }
+  .cat-tab.active {
+    background: var(--accent-blue);
+    color: #ffffff;
+    border-color: var(--accent-blue);
+    box-shadow: 0 4px 14px rgba(0, 102, 204, 0.25);
+  }
+
+  /* FAQ Sections */
+  .faq-section {
+    margin-bottom: 3.5rem;
+    scroll-margin-top: 150px;
+  }
+
+  .section-header-block {
+    margin-bottom: 1.5rem;
+  }
 
   .section-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 22px;
-    color: var(--deep);
-    margin-bottom: 6px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 0.35rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
   }
 
   .section-icon {
-    width: 32px; height: 32px;
-    border-radius: 8px;
-    background: var(--teal-light);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(0, 102, 204, 0.08);
+    color: var(--accent-blue);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
     flex-shrink: 0;
+    border: 1px solid rgba(0, 102, 204, 0.12);
   }
 
   .section-desc {
-    font-size: 14px;
-    color: var(--muted);
-    margin-bottom: 24px;
-    padding-left: 42px;
+    font-size: 0.95rem;
+    color: var(--neutral-600);
+    margin: 0 0 1.25rem 50px;
+    line-height: 1.6;
   }
 
-  .faq-list { display: flex; flex-direction: column; gap: 2px; }
-
-  .faq-item {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: border-color 0.18s;
-  }
-
-  .faq-item:hover { border-color: var(--teal-mid); }
-  .faq-item.open { border-color: var(--teal); }
-
-  .faq-question {
-    padding: 18px 22px;
-    cursor: pointer;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 16px;
-    list-style: none;
-    font-weight: 500;
-    font-size: 15px;
-    color: var(--deep);
-    user-select: none;
-  }
-
-  .faq-question::marker, .faq-question::-webkit-details-marker { display: none; }
-
-  .faq-chevron {
-    width: 20px; height: 20px;
-    border: 1.5px solid var(--border);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-    margin-top: 2px;
-    transition: all 0.22s;
-    color: var(--muted);
-    font-size: 11px;
-  }
-
-  details[open] .faq-chevron {
-    background: var(--teal);
-    border-color: var(--teal);
-    color: white;
-    transform: rotate(180deg);
-  }
-
-  .faq-answer {
-    padding: 0 22px 20px;
-    font-size: 15px;
-    color: var(--text);
-    line-height: 1.75;
-    font-weight: 300;
-  }
-
-  .faq-answer p { margin-bottom: 10px; }
-  .faq-answer p:last-child { margin-bottom: 0; }
-
-  .faq-answer strong {
-    font-weight: 500;
-    color: var(--deep);
-  }
-
-  .faq-answer ul {
-    padding-left: 20px;
-    margin: 8px 0;
-  }
-
-  .faq-answer li {
-    margin-bottom: 6px;
-  }
-
+  /* Styled Callout Boxes */
   .highlight-box {
-    background: var(--teal-light);
-    border-left: 3px solid var(--teal);
-    border-radius: 0 8px 8px 0;
+    background: #f0f7ff;
+    border: 1px solid rgba(0, 102, 204, 0.16);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 10px;
     padding: 12px 16px;
-    margin-top: 10px;
-    font-size: 14px;
-    color: var(--teal);
+    margin-top: 12px;
+    font-size: 0.92rem;
+    color: var(--primary-dark);
+    line-height: 1.65;
   }
 
   .gold-box {
-    background: var(--gold-light);
-    border-left: 3px solid var(--gold);
-    border-radius: 0 8px 8px 0;
+    background: #fffbeb;
+    border: 1px solid #fef3c7;
+    border-left: 4px solid #f59e0b;
+    border-radius: 10px;
     padding: 12px 16px;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #7A5020;
+    margin-top: 12px;
+    font-size: 0.92rem;
+    color: #92400e;
+    line-height: 1.65;
   }
 
-  .cta-strip {
-    background: var(--deep);
-    border-radius: 16px;
-    padding: 40px 36px;
-    text-align: center;
-    margin-top: 64px;
-  }
-
-  .cta-strip h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 26px;
-    color: white;
-    margin-bottom: 10px;
-  }
-
-  .cta-strip p {
-    font-size: 15px;
-    color: rgba(255,255,255,0.6);
-    margin-bottom: 24px;
-    font-weight: 300;
-  }
-
-  .cta-btn {
-    display: inline-block;
-    background: var(--teal);
-    color: white;
-    padding: 13px 32px;
-    border-radius: 50px;
-    font-size: 15px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background 0.18s;
-  }
-
-  .cta-btn:hover { background: #165e48; }
-
-  .divider {
+  .section-divider {
     height: 1px;
-    background: var(--border);
-    margin: 40px 0;
+    background: var(--neutral-200);
+    margin: 3.5rem 0;
   }
 
-  @media (max-width: 600px) {
-    .page-header { padding: 48px 20px 44px; }
-    .container { padding: 40px 16px 64px; }
-    .faq-question { font-size: 14px; padding: 15px 16px; }
-    .faq-answer { font-size: 14px; padding: 0 16px 16px; }
-    .cta-strip { padding: 28px 20px; }
+  @media (max-width: 768px) {
+    .faq-page-wrap {
+      padding: 1.5rem 1rem 3.5rem;
+    }
+    .category-tabs-wrap {
+      top: 64px;
+      padding: 8px 0;
+      margin-bottom: 2rem;
+    }
+    .cat-tab {
+      font-size: 0.78rem;
+      padding: 6px 12px;
+    }
+    .section-title {
+      font-size: 1.3rem;
+    }
+    .section-desc {
+      margin-left: 0;
+      padding-left: 0;
+    }
   }
-html {
-  scroll-behavior: smooth;
-}
 </style>
   <meta property="og:image" content="https://aestheticadental.github.io/images/clinic-og-banner.jpg">
   <meta name="twitter:image" content="https://aestheticadental.github.io/images/clinic-og-banner.jpg">
 </head>
 <body>
 
-<!-- Visible Breadcrumb for Navigation & SEO -->
-<nav class="breadcrumb" aria-label="Breadcrumb" style="background:#FAF8F3;padding:12px 24px;font-size:0.88rem;border-bottom:1px solid #DDE8E3;">
-  <div style="max-width:960px;margin:0 auto;">
-    <a href="../index.html" style="color:#1D7A60;text-decoration:none;font-weight:500;">Home</a>
-    <span style="margin:0 8px;color:#6B7E75;">/</span>
-    <span style="color:#6B7E75;">Patient Resources</span>
-    <span style="margin:0 8px;color:#6B7E75;">/</span>
-    <span aria-current="page" style="color:#2C3E35;font-weight:600;">Dental FAQs</span>
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumbs" aria-label="Breadcrumb" style="background: var(--neutral-100); padding: 12px 20px; font-size: 0.85rem; border-bottom: 1px solid var(--neutral-200);">
+  <div style="max-width: 880px; margin: 0 auto;">
+    <a href="../index.html" style="color: var(--accent-blue); text-decoration: none; font-weight: 500;">Home</a>
+    <span style="margin: 0 6px; color: var(--neutral-400);">/</span>
+    <span style="color: var(--neutral-500);">Patient Resources</span>
+    <span style="margin: 0 6px; color: var(--neutral-400);">/</span>
+    <span aria-current="page" style="color: var(--neutral-700); font-weight: 600;">Dental FAQs</span>
   </div>
 </nav>
 
-<header class="page-header">
-  <p class="header-eyebrow">Patient Resources</p>
-  <h1 class="header-title">Your questions,<br><em>honestly</em> answered.</h1>
-  <p class="header-sub">We believe informed patients make better decisions. Here's everything you want to know before your visit.</p>
-</header>
+<!-- Hero Section -->
+<section class="faq-hero" style="background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%); padding: 4.5rem 1.5rem 3.5rem; text-align: center; border-bottom: 1px solid var(--neutral-200);">
+  <div style="max-width: 880px; margin: 0 auto;">
+    <span style="display: inline-flex; align-items: center; gap: 6px; background: #e0f2fe; color: var(--accent-blue); font-size: 0.8rem; font-weight: 700; padding: 5px 16px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1.25rem; border: 1px solid #bae6fd;">
+      Patient Resources &bull; 22 Expert Answers
+    </span>
+    <h1 style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 800; line-height: 1.25; color: var(--primary-dark); margin-bottom: 1rem;">
+      Your Questions, <span style="color: var(--accent-blue);">Honestly</span> Answered
+    </h1>
+    <p style="font-size: 1.12rem; color: var(--neutral-600); max-width: 680px; margin: 0 auto 1.75rem; line-height: 1.7;">
+      We believe informed patients make better clinical decisions. Here is transparent medical guidance on pain, root canals, implants, costs, and gentle pediatric care.
+    </p>
+    <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+      <a href="https://wa.me/919226680164?text=Hello%20Dr.%20Prachi,%20I%20have%20a%20question%20about%20dental%20treatment." class="btn btn-wa" style="display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:8px; font-weight:600; text-decoration:none; background:var(--accent-green, #10b981); color:#ffffff;" target="_blank" rel="noopener">
+        💬 Ask Dr. Prachi on WhatsApp
+      </a>
+      <a href="tel:+919226680164" class="btn btn-call" style="display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:8px; font-weight:600; text-decoration:none; background:var(--primary-dark); color:#ffffff;">
+        📞 Call Clinic: 092266 80164
+      </a>
+    </div>
+  </div>
+</section>
 
-<div class="container">
-
-  <!-- ─── CATEGORY QUICK LINKS ─── -->
+<div class="category-tabs-wrap">
   <nav class="category-tabs" aria-label="FAQ categories">
-    <a class="cat-tab active" href="#pain">Pain & Comfort</a>
+    <a class="cat-tab active" href="#pain">Pain &amp; Comfort</a>
     <a class="cat-tab" href="#treatments">Treatments</a>
     <a class="cat-tab" href="#anxiety">Dental Anxiety</a>
     <a class="cat-tab" href="#children">Children</a>
-    <a class="cat-tab" href="#cost">Cost & Booking</a>
+    <a class="cat-tab" href="#cost">Cost &amp; Booking</a>
     <a class="cat-tab" href="#second-opinion">Second Opinions</a>
   </nav>
+</div>
+
+<main class="faq-page-wrap">
 
 
   <!-- ─── SECTION 1: PAIN & COMFORT ─── -->
   <section class="faq-section" id="pain">
     <h2 class="section-title"><span class="section-icon">🦷</span> Pain & Comfort</h2>
     <p class="section-desc">The most common questions we hear — answered without sugarcoating.</p>
-    <div class="faq-list">
+    <div class="faq-accordion">
 
       <details class="faq-item">
-        <summary class="faq-question">Will my root canal treatment be painful?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>Will my root canal treatment be painful?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>This is the question almost every patient asks — and the honest answer is: with modern techniques, a root canal should feel no different from a regular filling.</p>
           <p>The discomfort people fear is usually from the <strong>infection</strong> that made the root canal necessary, not from the procedure itself. Once the area is properly numbed with local anaesthesia, you should feel pressure and movement — but not pain.</p>
@@ -353,9 +240,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">What if I can still feel pain after the anaesthetic injection?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>What if I can still feel pain after the anaesthetic injection?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>Please tell us immediately — we will never proceed if you're in pain. Some teeth, especially those with active infection, require additional or supplementary anaesthesia techniques. This is completely normal and we have solutions for it.</p>
           <p>You are always in control. Raise your hand at any point and we stop.</p>
@@ -363,9 +248,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">Will I have pain or swelling after the procedure?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>Will I have pain or swelling after the procedure?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>Mild soreness for 2–3 days after root canal treatment or extractions is normal and expected. Significant swelling is uncommon when treatment is done correctly.</p>
           <p>We will provide you with:</p>
@@ -379,9 +262,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">Is teeth scaling (cleaning) painful?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>Is teeth scaling (cleaning) painful?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>For most patients, scaling is mildly uncomfortable at most — similar to a tickling or vibrating sensation. Patients with sensitive gums or heavy tartar buildup may experience more sensitivity, which we manage with gentle technique and breaks.</p>
           <p>After scaling, your gums may feel tender for a day or two as they heal and tighten around your teeth — this is a good sign that circulation has improved.</p>
@@ -391,19 +272,17 @@ html {
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="section-divider"></div>
 
 
   <!-- ─── SECTION 2: TREATMENTS ─── -->
   <section class="faq-section" id="treatments">
     <h2 class="section-title"><span class="section-icon">⚕️</span> Treatments Explained</h2>
     <p class="section-desc">What to expect, how many sittings, and what happens after.</p>
-    <div class="faq-list">
+    <div class="faq-accordion">
 
       <details class="faq-item">
-        <summary class="faq-question">How many sittings does a root canal treatment take?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>How many sittings does a root canal treatment take?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>Most root canals today are completed in <strong>1 to 2 sittings</strong>, depending on the severity of infection and the type of tooth involved. Molar teeth (back teeth) have more canals and may require an additional appointment.</p>
           <ul>
@@ -416,9 +295,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">My wisdom tooth is growing at an angle and causing pain — should I remove it?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>My wisdom tooth is growing at an angle and causing pain — should I remove it?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>An impacted or angularly growing wisdom tooth (also called a horizontally impacted or semi-impacted wisdom tooth) often does need to be removed — but not always immediately. We take an X-ray to assess the exact position and risk.</p>
           <p>Removal is generally recommended when:</p>
@@ -433,9 +310,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">What is the difference between a dental crown and a cap?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>What is the difference between a dental crown and a cap?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>They are the same thing. A <strong>dental crown</strong> (commonly called a cap) is a tooth-shaped covering that fits over a damaged or root-canal-treated tooth. It restores the tooth's shape, function, and appearance.</p>
           <p>Crowns are typically recommended after root canal treatment on back teeth because those teeth experience heavy biting forces and are at risk of fracture without protection.</p>
@@ -443,9 +318,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">Can a tooth that had a root canal years ago be retreated?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>Can a tooth that had a root canal years ago be retreated?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>Yes — re-root canal treatment (retreatment) is possible and often successful. Reasons a previously treated tooth may need retreatment include:</p>
           <ul>
@@ -458,9 +331,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">My gums bleed when I brush — should I be worried?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>My gums bleed when I brush — should I be worried?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>Bleeding gums are <em>not</em> normal and should not be ignored. It is typically an early sign of <strong>gingivitis</strong> (gum inflammation) or the more serious <strong>periodontitis</strong> (gum disease).</p>
           <p>The good news: when caught early, gingivitis is completely reversible with professional scaling and improved home care. Left untreated, gum disease can lead to bone loss and eventually tooth loss.</p>
@@ -471,19 +342,17 @@ html {
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="section-divider"></div>
 
 
   <!-- ─── SECTION 3: DENTAL ANXIETY ─── -->
   <section class="faq-section" id="anxiety">
     <h2 class="section-title"><span class="section-icon">🫁</span> Dental Anxiety</h2>
     <p class="section-desc">You are not alone. Dental fear is one of the most common reasons people delay treatment — and we take it seriously.</p>
-    <div class="faq-list">
+    <div class="faq-accordion">
 
       <details class="faq-item">
-        <summary class="faq-question">I have been terrified of dentists since childhood. Can you still help me?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>I have been terrified of dentists since childhood. Can you still help me?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>Absolutely — and you would not be the first patient to walk in visibly anxious and leave feeling relieved. Dental fear rooted in a bad childhood experience is extremely common.</p>
           <p>When you arrive, simply tell us you're anxious. We will:</p>
@@ -498,9 +367,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">I've been avoiding the dentist for years because of a bad experience. Where do I start?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>I've been avoiding the dentist for years because of a bad experience. Where do I start?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>Start with a <strong>consultation visit</strong> — no treatment, no instruments, no pressure. Just a conversation about your concerns, a look in your mouth, and a clear plan.</p>
           <p>There is no obligation to commit to treatment on the first visit. Our goal is to help you feel safe enough to take the first step.</p>
@@ -508,9 +375,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">Is there anything I can do to feel calmer before my appointment?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>Is there anything I can do to feel calmer before my appointment?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>Yes — a few things that genuinely help:</p>
           <ul>
@@ -526,19 +391,17 @@ html {
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="section-divider"></div>
 
 
   <!-- ─── SECTION 4: CHILDREN ─── -->
   <section class="faq-section" id="children">
     <h2 class="section-title"><span class="section-icon">👧</span> Children's Dental Care</h2>
     <p class="section-desc">A child's first dental experience shapes their attitude for life. We make it a good one.</p>
-    <div class="faq-list">
+    <div class="faq-accordion">
 
       <details class="faq-item">
-        <summary class="faq-question">At what age should I bring my child for their first dental visit?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>At what age should I bring my child for their first dental visit?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>The ideal time for a first dental visit is when the first milk tooth appears, or by the child's first birthday — whichever comes first. Early visits are not about treatment; they're about:</p>
           <ul>
@@ -551,9 +414,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">My child is terrified and won't open their mouth. What do you do?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>My child is terrified and won't open their mouth. What do you do?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>We are experienced with anxious and resistant children. Our approach is patient and unhurried — we use the <strong>"Tell-Show-Do"</strong> technique: we explain what we'll do, show the child the instrument (making it non-threatening), and only then proceed.</p>
           <p>We never restrain or rush a frightened child. Sometimes the first visit is just about letting the child sit in the chair and look around. That's perfectly fine — building trust is the goal.</p>
@@ -562,9 +423,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">Do milk teeth need root canal treatment? They fall out anyway, right?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>Do milk teeth need root canal treatment? They fall out anyway, right?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>Yes, milk teeth can require root canal treatment (called a <strong>pulpectomy</strong> in children) — and it is often necessary to save the tooth.</p>
           <p>This matters because:</p>
@@ -580,19 +439,17 @@ html {
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="section-divider"></div>
 
 
   <!-- ─── SECTION 5: COST & BOOKING ─── -->
   <section class="faq-section" id="cost">
     <h2 class="section-title"><span class="section-icon">💳</span> Cost, Booking & Practicalities</h2>
     <p class="section-desc">No hidden surprises. We discuss costs clearly before starting any treatment.</p>
-    <div class="faq-list">
+    <div class="faq-accordion">
 
       <details class="faq-item">
-        <summary class="faq-question">How much does a root canal cost in Punawale?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>How much does a root canal cost in Punawale?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>Root canal treatment costs vary based on the tooth (front teeth are simpler than molars), the complexity of the case, and whether a crown is needed afterward. We provide a complete treatment plan and cost estimate <strong>before beginning treatment</strong> — no surprises mid-procedure.</p>
           <div class="gold-box">Call us or WhatsApp for an indicative quote. We believe dental care should be accessible, and we are transparent about costs from the start.</div>
@@ -600,9 +457,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">Do you accept dental insurance or offer EMI options?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>Do you accept dental insurance or offer EMI options?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>Please contact us to discuss insurance and payment options — we can guide you on what documentation your insurer requires and help process claims where possible.</p>
           <p>For larger treatment plans, we can discuss payment scheduling to make your care manageable.</p>
@@ -610,9 +465,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">How do I book an appointment?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>How do I book an appointment?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>You can book by:</p>
           <ul>
@@ -624,9 +477,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">What should I bring to my first appointment?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>What should I bring to my first appointment?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>For a routine visit, nothing special is required. However, if applicable, please bring:</p>
           <ul>
@@ -641,19 +492,17 @@ html {
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="section-divider"></div>
 
 
   <!-- ─── SECTION 6: SECOND OPINION ─── -->
   <section class="faq-section" id="second-opinion">
     <h2 class="section-title"><span class="section-icon">🔍</span> Second Opinions</h2>
     <p class="section-desc">If something doesn't feel right about a diagnosis or treatment plan elsewhere — you deserve clarity.</p>
-    <div class="faq-list">
+    <div class="faq-accordion">
 
       <details class="faq-item">
-        <summary class="faq-question">I was told I need multiple teeth removed. I'd like a second opinion — is that awkward?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>I was told I need multiple teeth removed. I'd like a second opinion — is that awkward?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>Not at all — and it is absolutely the right thing to do for any significant treatment recommendation. A good dentist will never take offence at a patient seeking a second opinion.</p>
           <p>Bring your previous X-rays if possible — this avoids repeating radiation unnecessarily. We will give you an honest, independent assessment and explain our reasoning clearly.</p>
@@ -662,9 +511,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">I was diagnosed with gum disease at another clinic but felt the treatment plan was excessive. What should I do?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>I was diagnosed with gum disease at another clinic but felt the treatment plan was excessive. What should I do?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>Gum disease treatment varies widely — from basic scaling and improved home care to surgical intervention. The right approach depends on the severity, which can only be assessed with a proper clinical examination and X-rays.</p>
           <p>Come in for an independent assessment. We will examine your gums, review any existing records, and give you an honest recommendation with no pressure to proceed.</p>
@@ -672,9 +519,7 @@ html {
       </details>
 
       <details class="faq-item">
-        <summary class="faq-question">My toothache has been diagnosed differently by two dentists. Who is right?
-          <span class="faq-chevron">▾</span>
-        </summary>
+        <summary class="faq-question"><span>My toothache has been diagnosed differently by two dentists. Who is right?</span><span class="faq-icon" aria-hidden="true"></span></summary>
         <div class="faq-answer">
           <p>Dental diagnosis can sometimes be genuinely complex — especially in cases involving referred pain, cracked tooth syndrome, or early-stage issues on X-rays that are open to interpretation.</p>
           <p>When you visit us, we take a systematic approach: a full clinical examination, appropriate X-rays, and if needed, specific tests to isolate the source of pain. We will explain our findings in plain language so you can make an informed decision.</p>
@@ -684,6 +529,8 @@ html {
     </div>
   </section>
 
+
+</main>
 
 <!-- Contact -->
 <section class="contact" id="contact">
@@ -709,7 +556,7 @@ html {
             <div class="contact-item">
               <a href="tel:+919226680164" itemprop="telephone" content="+919226680164">
                 <div class="contact-icon">📞</div>
-                <div class="contact-details"><h4>Call Us</h4><p>+91 92266 80164</p></div>
+                <div class="contact-details"><h4>Call Us</h4><p>092266 80164</p></div>
               </a>
             </div>
             <div class="contact-item">
@@ -750,29 +597,75 @@ html {
 </section>
 
 <script>
-const sections = document.querySelectorAll('.faq-section');
-const tabs = document.querySelectorAll('.cat-tab');
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.faq-section');
+  const tabs = document.querySelectorAll('.cat-tab');
 
-window.addEventListener('scroll', () => {
- let current = '';
+  // Smooth scroll with offset for sticky tabs
+  tabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+      const targetId = tab.getAttribute('href');
+      if (targetId.startsWith('#')) {
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          e.preventDefault();
+          const topOffset = targetSection.getBoundingClientRect().top + window.pageYOffset - 140;
+          window.scrollTo({ top: topOffset, behavior: 'smooth' });
+        }
+      }
+    });
+  });
 
- sections.forEach(section => {
-   const top = section.offsetTop - 150;
-   if(pageYOffset >= top){
-      current = section.getAttribute('id');
-   }
- });
+  // Scroll spy to highlight active tab
+  window.addEventListener('scroll', () => {
+    let currentId = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 180;
+      if (window.pageYOffset >= sectionTop) {
+        currentId = section.getAttribute('id');
+      }
+    });
 
- tabs.forEach(tab => {
-   tab.classList.remove('active');
-   if(tab.getAttribute('href') === '#' + current){
-      tab.classList.add('active');
-   }
- });
+    if (currentId) {
+      tabs.forEach(tab => {
+        tab.classList.toggle('active', tab.getAttribute('href') === '#' + currentId);
+      });
+    }
+  }, { passive: true });
 });
 </script>
 
- <script src="../components.js"></script>
+   <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-links" style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 1.5rem;margin-bottom:1.5rem;">
+        <a href="../root-canal-treatment-punawale.html">Root Canal</a>
+        <a href="../dental-implants-punawale.html">Dental Implants</a>
+        <a href="../clear-aligners-punawale.html">Clear Aligners</a>
+        <a href="../teeth-whitening-punawale.html">Teeth Whitening</a>
+        <a href="../veneers-punawale.html">Veneers &amp; Crowns</a>
+        <a href="../pediatric-dentist-punawale.html">Pediatric Dentistry</a>
+        <a href="../teeth-cleaning-scaling-punawale.html">Teeth Cleaning</a>
+        <a href="../restorative-dentistry-punawale.html">Restorative Fillings</a>
+        <a href="../emergency-dental-care-punawale.html">Emergency Dental Care</a>
+        <a href="../dental-tourism-pune.html">Dental Tourism</a>
+        <a href="../dental-treatment-costs-punawale.html">Treatment Costs</a>
+        <a href="../service-areas.html">Areas We Serve</a>
+        <a href="dental-clinic-faq.html">FAQs</a>
+        <a href="index.html">Blog</a>
+        <a href="../sitemap.html">HTML Sitemap</a>
+        <a href="../contact-us.html">Contact Us</a>
+        <a href="../privacy-policy.html">Privacy Policy</a>
+      </div>
+      <p class="footer-copy" style="text-align:center;font-size:0.86rem;line-height:1.7;color:#94a3b8;margin-top:1rem;">
+        &copy; 2026 Aesthetica Dental Clinic &middot;
+        1st floor, Shop no 103, Swaraaj Heights, Kate Wasti Rd, opp. Legacy IVy, Kate Wasti, Punawale, Pimpri-Chinchwad, Maharashtra 411033<br>
+        Phone: <a href="tel:+919226680164" style="color:#38bdf8;text-decoration:none;">092266 80164</a> &middot;
+        Hours: Monday-Sunday 10:15 am–8:30 pm
+      </p>
+    </div>
+  </footer>
+
+<script src="../components.js"></script>
 
 <script type="application/ld+json">
 {

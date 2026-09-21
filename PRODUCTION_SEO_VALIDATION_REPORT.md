@@ -215,7 +215,7 @@ A strict audit of Name, Address, Phone (NAP) and local geo-signals was conducted
 - **Chief Doctor**: Standardized as **Dr. Prachi Gupta Garg**.
 - **Clinic Address**: Standardized across all pages, footers, and schemas:
   `Shop No 05, Ground Floor, Golden Palms, 18 Latitude Mall Rd, Kate Wasti, Punawale, Pimpri-Chinchwad, Pune, Maharashtra 411033`.
-- **Primary Phone / WhatsApp**: `+91 90110 16358` / `9011016358`.
+- **Primary Phone / WhatsApp**: `+91 92266 80164` / `9226680164`.
 - **Target Micro-Markets**: Natural integration of primary catchment areas (Punawale, Wakad, Hinjawadi, Tathawade, Ravet) without keyword spamming.
 
 ---
@@ -347,7 +347,7 @@ Per Section 3 of the audit directive, Search Console verification cannot be assu
 1. **Google Search Console Sitemap Submission**: Webmaster must manually submit `sitemap.xml` in GSC.
 2. **Google Rich Results Test**: Run representative URLs (Homepage, RCT, Aligners, FAQ) through Google's Rich Results Testing Tool.
 3. **Google Business Profile (GBP) Primary Landing Page**: Ensure GBP listing matches `https://aestheticadental.github.io/` with identical NAP details.
-4. **Local WhatsApp Routing**: Confirm WhatsApp CTA opens the designated clinic number (`+91 90110 16358`) on physical mobile devices.
+4. **Local WhatsApp Routing**: Confirm WhatsApp CTA opens the designated clinic number (`+91 92266 80164`) on physical mobile devices.
 
 ---
 

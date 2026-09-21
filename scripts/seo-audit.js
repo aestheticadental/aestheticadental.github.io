@@ -467,6 +467,155 @@ async function runAudit() {
   }
   console.log('');
 
+  // 11. Strict NAP (Name, Address, Phone, Hours) Consistency Suite
+  console.log('--- SUITE 11: NAP (Name, Address, Phone, Hours) Strict Compliance ---');
+  const REQUIRED_NAP_ADDRESS = '1st floor, Shop no 103, Swaraaj Heights, Kate Wasti Rd, opp. Legacy IVy, Kate Wasti';
+  const REQUIRED_NAP_PIN = '411033';
+  const REQUIRED_NAP_PHONE = '092266 80164';
+  const FORBIDDEN_ADDRESS_PATTERNS = [/vision\s*one/i, /vision\s*1/i];
+  const FORBIDDEN_PHONE_PATTERNS = [/90110\s*16358/];
+
+  let napErrors = 0;
+
+  // 11A. Check for forbidden/outdated address & phone across all project files
+  for (const f of allProjectFiles) {
+    const rel = path.relative(ROOT_DIR, f).replace(/\\/g, '/');
+    if (rel.startsWith('scratch/') || rel === 'scripts/test-nap-failure.js') continue;
+    const content = fs.readFileSync(f, 'utf8');
+
+    for (const pat of FORBIDDEN_ADDRESS_PATTERNS) {
+      if (pat.test(content)) {
+        console.error(`  ❌ [ERROR] Outdated address pattern ${pat} detected in ${rel}!`);
+        napErrors++;
+        errors++;
+      }
+    }
+    for (const pat of FORBIDDEN_PHONE_PATTERNS) {
+      if (pat.test(content)) {
+        console.error(`  ❌ [ERROR] Outdated phone number ${pat} detected in ${rel}!`);
+        napErrors++;
+        errors++;
+      }
+    }
+  }
+
+  // 11B. Check all canonical pages for strict NAP presence
+  for (const page of retainedPages) {
+    const filePath = path.join(ROOT_DIR, page);
+    const content = fs.readFileSync(filePath, 'utf8');
+
+    const hasAddress = content.includes(REQUIRED_NAP_ADDRESS) && content.includes(REQUIRED_NAP_PIN);
+    const hasPhone = content.includes(REQUIRED_NAP_PHONE);
+    const hasHours = content.includes('10:15') && (content.includes('8:30') || content.includes('20:30'));
+
+    if (!hasAddress) {
+      console.error(`  ❌ [ERROR] Canonical page missing standard address (${REQUIRED_NAP_ADDRESS}, 411033): ${page}`);
+      napErrors++;
+      errors++;
+    }
+    if (!hasPhone) {
+      console.error(`  ❌ [ERROR] Canonical page missing standard phone (${REQUIRED_NAP_PHONE}): ${page}`);
+      napErrors++;
+      errors++;
+    }
+    if (!hasHours) {
+      console.error(`  ❌ [ERROR] Canonical page missing standard clinic hours (10:15 am–8:30 pm): ${page}`);
+      napErrors++;
+      errors++;
+    }
+  }
+
+  // 11C. Check JSON-LD schema NAP compliance across all HTML files
+  for (const f of allHtmlFiles) {
+    const filePath = path.join(ROOT_DIR, f);
+    const content = fs.readFileSync(filePath, 'utf8');
+    const jsonLdMatches = [...content.matchAll(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi)];
+
+    for (const m of jsonLdMatches) {
+      try {
+        const data = JSON.parse(m[1].trim());
+        const items = Array.isArray(data) ? data : (data['@graph'] ? data['@graph'] : [data]);
+        for (const item of items) {
+          if (item['@type'] === 'Dentist' || item['@type'] === 'LocalBusiness' || item['@type'] === 'MedicalBusiness') {
+            if (item.address) {
+              const street = typeof item.address === 'string' ? item.address : item.address.streetAddress;
+              const pin = item.address.postalCode;
+              if (!street || !street.includes('Swaraaj Heights') || !street.includes('Kate Wasti')) {
+                console.error(`  ❌ [ERROR] JSON-LD schema streetAddress non-compliant in ${f}: "${street}"`);
+                napErrors++;
+                errors++;
+              }
+              if (pin && pin !== REQUIRED_NAP_PIN) {
+                console.error(`  ❌ [ERROR] JSON-LD schema postalCode non-compliant in ${f}: "${pin}"`);
+                napErrors++;
+                errors++;
+              }
+            }
+            if (item.telephone && !item.telephone.includes('9226680164') && !item.telephone.includes('092266 80164')) {
+              console.error(`  ❌ [ERROR] JSON-LD schema telephone non-compliant in ${f}: "${item.telephone}"`);
+              napErrors++;
+              errors++;
+            }
+            if (item.openingHours) {
+              const oh = Array.isArray(item.openingHours) ? item.openingHours.join(', ') : item.openingHours;
+              if (!oh.includes('10:15') || !oh.includes('20:30')) {
+                console.error(`  ❌ [ERROR] JSON-LD schema openingHours non-compliant in ${f}: "${oh}"`);
+                napErrors++;
+                errors++;
+              }
+            }
+            if (item.openingHoursSpecification) {
+              const specs = Array.isArray(item.openingHoursSpecification) ? item.openingHoursSpecification : [item.openingHoursSpecification];
+              for (const sp of specs) {
+                if (sp.opens !== '10:15' || sp.closes !== '20:30') {
+                  console.error(`  ❌ [ERROR] JSON-LD schema openingHoursSpecification non-compliant in ${f}: opens ${sp.opens}, closes ${sp.closes}`);
+                  napErrors++;
+                  errors++;
+                }
+              }
+            }
+          }
+        }
+      } catch (e) {
+        // Syntax validation handled in Suite 6
+      }
+    }
+  }
+
+  // 11D. Shared UI components NAP compliance
+  const sharedComponents = [
+    { file: 'components/footer.html', checkHours: true },
+    { file: 'components/cta.html', checkHours: true },
+    { file: 'components.js', checkHours: true }
+  ];
+  for (const comp of sharedComponents) {
+    const compPath = path.join(ROOT_DIR, comp.file);
+    if (fs.existsSync(compPath)) {
+      const compContent = fs.readFileSync(compPath, 'utf8');
+      if (!compContent.includes(REQUIRED_NAP_ADDRESS)) {
+        console.error(`  ❌ [ERROR] Shared component ${comp.file} missing standard address!`);
+        napErrors++;
+        errors++;
+      }
+      if (!compContent.includes(REQUIRED_NAP_PHONE)) {
+        console.error(`  ❌ [ERROR] Shared component ${comp.file} missing standard phone (${REQUIRED_NAP_PHONE})!`);
+        napErrors++;
+        errors++;
+      }
+      if (comp.checkHours && (!compContent.includes('10:15') || (!compContent.includes('8:30') && !compContent.includes('20:30')))) {
+        console.error(`  ❌ [ERROR] Shared component ${comp.file} missing standard hours (10:15 am–8:30 pm)!`);
+        napErrors++;
+        errors++;
+      }
+    }
+  }
+
+  if (napErrors === 0) {
+    console.log(`  ✓ Strict NAP verified: 100% adherence across all ${retainedPages.length} canonical pages, structured data & components.`);
+    infoMetrics['NAP Strict Adherence'] = '100% (Address, Phone: 092266 80164, Hours: Monday-Sunday 10:15 am–8:30 pm)';
+  }
+  console.log('');
+
   // Summary Metrics & Exit Status
   console.log('=============================================================');
   console.log('  AUDIT METRICS:');

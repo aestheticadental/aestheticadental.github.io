@@ -5,7 +5,8 @@
   "scripts": {
     "seo:audit": "node scripts/seo-audit.js",
     "seo:live": "node scripts/production-test.js",
-    "test": "node scripts/seo-audit.js"
+    "test": "node scripts/seo-audit.js",
+    "test:nap:fail": "node scripts/test-nap-failure.js"
   },
   "author": "Aesthetica Dental Clinic",
   "license": "UNLICENSED"
