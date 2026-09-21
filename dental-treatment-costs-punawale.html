@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO Meta Tags -->
-  <title>Dental Treatment Costs &amp; Price List in Punawale, Pune | Aesthetica Dental</title>
-  <meta name="title" content="Dental Treatment Costs &amp; Price List in Punawale, Pune | Aesthetica Dental">
-  <meta name="description" content="Transparent dental treatment charges in Punawale, Pune. Compare costs for root canal (RCT), teeth cleaning, clear aligners, dental implants &amp; crowns. Zero hidden fees.">
+  <title>Dental Treatment Costs in Punawale, Pune | Aesthetica Price List</title>
+  <meta name="title" content="Dental Treatment Costs in Punawale, Pune | Aesthetica Price List">
+  <meta name="description" content="Transparent dental treatment price list in Punawale, Pune. View costs for root canal, dental implants, aligners, braces, crowns, and cleaning. EMI available.">
   <meta name="keywords" content="dental treatment costs punawale, root canal cost punawale, teeth cleaning price pune, clear aligners cost punawale, dental implant price pune, wisdom tooth extraction charges wakad, rct crown price hinjawadi, aesthetica dental clinic charges">
   <meta name="author" content="Dr. Prachi Gupta Garg">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -17,8 +17,8 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://aestheticadental.github.io/dental-treatment-costs-punawale.html">
   <meta property="og:site_name" content="Aesthetica Dental Clinic">
-  <meta property="og:title" content="Dental Treatment Costs in Punawale, Pune | Transparent Price Guide">
-  <meta property="og:description" content="View transparent starting prices for RCT, teeth cleaning, crowns, clear aligners &amp; dental implants at Aesthetica Dental Clinic, Punawale. No hidden charges.">
+  <meta property="og:title" content="Dental Treatment Costs in Punawale, Pune | Aesthetica Price List">
+  <meta property="og:description" content="Transparent dental treatment price list in Punawale, Pune. View costs for root canal, dental implants, aligners, braces, crowns, and cleaning. EMI available.">
   <meta property="og:image" content="https://aestheticadental.github.io/images/clinic-og-banner.jpg">
 
   <!-- Local Geo Tags -->
@@ -55,6 +55,13 @@
         "@type": ["Dentist", "MedicalBusiness"],
         "@id": "https://aestheticadental.github.io/#dentist",
         "name": "Aesthetica Dental Clinic",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "168",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
         "telephone": "+919226680164",
         "url": "https://aestheticadental.github.io/",
         "hasMap": "https://maps.google.com/maps?cid=2958390942464955493",
@@ -276,9 +283,9 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-brand">Aesthetica <span>Dental</span></a>
+      <a href="/" class="nav-brand">Aesthetica <span>Dental</span></a>
       <div class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
+        <a href="/" class="nav-link">Home</a>
         <a href="index.html#services" class="nav-link">Treatments</a>
         <a href="root-canal-treatment-punawale.html" class="nav-link">Root Canal</a>
         <a href="clear-aligners-punawale.html" class="nav-link">Clear Aligners</a>
@@ -291,7 +298,7 @@
   <!-- Breadcrumbs -->
   <div class="breadcrumbs">
     <div class="breadcrumb-inner">
-      <a href="index.html">Home</a> <span>/</span> Dental Treatment Costs in Punawale
+      <a href="/">Home</a> <span>/</span> Dental Treatment Costs in Punawale
     </div>
   </div>
 
@@ -342,6 +349,68 @@
         </div>
         <div class="aeo-pill">
           <strong>From ₹25,000</strong> Titanium Dental Implants
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Cost & EMI Estimator Tool -->
+  <section class="interactive-tool-section" id="cost-calculator">
+    <div class="container" style="max-width: 960px; margin: 0 auto; padding: 0 1.5rem;">
+      <div style="text-align: center;">
+        <span class="tool-badge">🧮 Interactive Patient Tool</span>
+        <h2 style="font-size: 1.85rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 0.5rem;">Instant Dental Treatment Cost &amp; EMI Estimator</h2>
+        <p style="color: var(--neutral-600); max-width: 600px; margin: 0 auto;">Select your required treatment, adjust the number of teeth, and calculate your estimated price and easy zero-cost EMI plans.</p>
+      </div>
+
+      <div class="interactive-tool-card" id="dental-cost-calculator">
+        <div class="tool-grid">
+          <div>
+            <div class="calc-field-group">
+              <label class="calc-field-label" for="calc-treatment-select">Select Dental Treatment</label>
+              <select class="calc-select" id="calc-treatment-select">
+                <option value="rct">Single-Sitting Root Canal Treatment (Rotary RCT)</option>
+                <option value="crown">Zirconia Metal-Free Dental Crown (Post-RCT Cap)</option>
+                <option value="implant">Dental Implant (Titanium Fixture + Abutment)</option>
+                <option value="aligner">Clear Aligners (Invisible Braces - Full Arch)</option>
+                <option value="whitening">Professional In-Clinic Teeth Whitening</option>
+                <option value="scaling">Ultrasonic Teeth Cleaning &amp; Polishing</option>
+              </select>
+            </div>
+
+            <div class="calc-field-group">
+              <label class="calc-field-label">Number of Teeth / Units: <span id="calc-qty-val" style="color: var(--accent-blue); font-weight: 700;">1 Tooth/Teeth</span></label>
+              <input type="range" class="calc-range" id="calc-qty-slider" min="1" max="6" value="1">
+            </div>
+
+            <div class="calc-field-group">
+              <label class="calc-field-label">Preferred Currency</label>
+              <div class="currency-pills">
+                <button type="button" class="currency-pill active" data-cur="INR">₹ INR</button>
+                <button type="button" class="currency-pill" data-cur="USD">$ USD</button>
+                <button type="button" class="currency-pill" data-cur="AED">AED</button>
+                <button type="button" class="currency-pill" data-cur="GBP">£ GBP</button>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="calc-output-box">
+              <div class="calc-output-heading">Estimated Treatment Investment</div>
+              <div class="calc-price-display" id="calc-price-display">₹3,500 – ₹5,500</div>
+              <div class="calc-emi-badge" id="calc-emi-badge">Or ₹583 / mo (No-Cost EMI Available)</div>
+              
+              <ul style="list-style: none; padding: 0; margin: 0 0 1.25rem; font-size: 0.84rem; color: var(--neutral-600); text-align: left; display: flex; flex-direction: column; gap: 0.4rem;">
+                <li>✓ Includes digital X-ray diagnosis &amp; consultation</li>
+                <li>✓ ISO 9001 hospital-grade autoclaved sterilization</li>
+                <li>✓ Written itemized estimate with zero hidden fees</li>
+              </ul>
+
+              <a href="https://wa.me/919226680164" class="calc-cta-btn" id="calc-wa-cta" target="_blank" rel="noopener">
+                <span>💬 Lock In Estimate on WhatsApp</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -717,7 +786,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 Aesthetica Dental Clinic. All Rights Reserved. | <a href="index.html" style="color:#94a3b8;">Home</a> | <a href="root-canal-treatment-punawale.html" style="color:#94a3b8;">Root Canal</a> | <a href="clear-aligners-punawale.html" style="color:#94a3b8;">Clear Aligners</a> | <a href="dental-treatment-costs-punawale.html" style="color:#38bdf8;">Treatment Costs</a></p>
+      <p>© 2026 Aesthetica Dental Clinic. All Rights Reserved. | <a href="/" style="color:#94a3b8;">Home</a> | <a href="root-canal-treatment-punawale.html" style="color:#94a3b8;">Root Canal</a> | <a href="clear-aligners-punawale.html" style="color:#94a3b8;">Clear Aligners</a> | <a href="dental-treatment-costs-punawale.html" style="color:#38bdf8;">Treatment Costs</a></p>
     </div>
   </footer>
 

@@ -8,12 +8,12 @@
 ## Pages
 
 - [Homepage](https://aestheticadental.github.io/): Overview of all services, doctor profile, FAQ, contact
-- [Root Canal Treatment in Punawale](https://aestheticadental.github.io/root-canal-punawale.html): Painless RCT using rotary endodontics
+- [Root Canal Treatment in Punawale](https://aestheticadental.github.io/root-canal-treatment-punawale.html): Painless single-sitting RCT using rotary endodontics
 - [Dental Implants in Punawale](https://aestheticadental.github.io/dental-implants-punawale.html): Permanent tooth replacement
-- [Clear Aligners in Punawale](https://aestheticadental.github.io/aligners-punawale.html): Invisible orthodontic treatment
+- [Clear Aligners in Punawale](https://aestheticadental.github.io/clear-aligners-punawale.html): Invisible orthodontic treatment
 - [Teeth Whitening in Punawale](https://aestheticadental.github.io/teeth-whitening-punawale.html): Professional in-clinic whitening
 - [Veneers & Crowns in Punawale](https://aestheticadental.github.io/veneers-punawale.html): Porcelain veneers and dental crowns
-- [Paediatric Dentist in Punawale](https://aestheticadental.github.io/paediatric-dentist-punawale.html): Gentle dental care for children
+- [Pediatric Dentist in Punawale](https://aestheticadental.github.io/pediatric-dentist-punawale.html): Gentle dental care for children
 - [Root Canal Cost Guide 2026](https://aestheticadental.github.io/blog/cost-of-root-canal-in-punawale.html): Pricing breakdown
 - [7 Signs You Need Root Canal](https://aestheticadental.github.io/blog/signs-you-need-root-canal.html): Symptoms guide
 - [Best Dentist Near Wakad vs Punawale](https://aestheticadental.github.io/blog/best-dentist-near-wakad.html): Local comparison guide

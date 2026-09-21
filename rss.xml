@@ -1,1 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aesthetica Dental Clinic | Dental Health &amp; Care Insights</title>
+    <link>https://aestheticadental.github.io/</link>
+    <description>Latest dental health guides, treatment updates, root canal care, clear aligners, and dental tourism insights from Dr. Prachi Gupta Garg in Punawale, Pune.</description>
+    <language>en-in</language>
+    <lastBuildDate>Mon, 21 Sep 2026 00:00:00 +0530</lastBuildDate>
+    <atom:link href="https://aestheticadental.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Single-Sitting Root Canal Treatment in Punawale: Painless Rotary RCT</title>
+      <link>https://aestheticadental.github.io/root-canal-treatment-punawale.html</link>
+      <guid>https://aestheticadental.github.io/root-canal-treatment-punawale.html</guid>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0530</pubDate>
+      <description>Learn how computerized rotary endodontics and digital apex locators make single-sitting root canal therapy virtually painless under targeted local anesthesia.</description>
+    </item>
 
+    <item>
+      <title>Clear Aligners in Punawale: Invisible Teeth Straightening</title>
+      <link>https://aestheticadental.github.io/clear-aligners-punawale.html</link>
+      <guid>https://aestheticadental.github.io/clear-aligners-punawale.html</guid>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 +0530</pubDate>
+      <description>Discover modern custom transparent orthodontic aligners to straighten crowded teeth, close gaps, and correct bite alignment discreetly.</description>
+    </item>
+
+    <item>
+      <title>Dental Implants in Punawale: Permanent Tooth Replacement &amp; Costs</title>
+      <link>https://aestheticadental.github.io/dental-implants-punawale.html</link>
+      <guid>https://aestheticadental.github.io/dental-implants-punawale.html</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0530</pubDate>
+      <description>Permanent single tooth replacement and full-mouth rehabilitation with titanium implants and custom crowns restoring 100% natural bite strength.</description>
+    </item>
+
+    <item>
+      <title>Tooth Pain at Night? Emergency Triage for Punawale Patients</title>
+      <link>https://aestheticadental.github.io/blog/tooth-pain-at-night-punawale.html</link>
+      <guid>https://aestheticadental.github.io/blog/tooth-pain-at-night-punawale.html</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0530</pubDate>
+      <description>Understand why dental pain worsens when lying down flat at night and how to relieve acute nocturnal pulpitis safely before your morning appointment.</description>
+    </item>
+
+    <item>
+      <title>Dental Tourism in Pune, India: 70-80% Savings on Implants &amp; Smile Makeovers</title>
+      <link>https://aestheticadental.github.io/dental-tourism-pune.html</link>
+      <guid>https://aestheticadental.github.io/dental-tourism-pune.html</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 +0530</pubDate>
+      <description>International patient guide to combining holidays with world-class dental care in Pune, India with fast-track 3-7 day treatment protocols.</description>
+    </item>
+
+    <item>
+      <title>Wisdom Tooth Extraction in Punawale: Symptoms, Procedure &amp; Recovery</title>
+      <link>https://aestheticadental.github.io/blog/wisdom-tooth-extraction-punawale.html</link>
+      <guid>https://aestheticadental.github.io/blog/wisdom-tooth-extraction-punawale.html</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0530</pubDate>
+      <description>Everything you need to know about impacted wisdom teeth, surgical vs non-surgical extraction, local anesthesia, and soft-food recovery diet.</description>
+    </item>
+  </channel>
+</rss>
